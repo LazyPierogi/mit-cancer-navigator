@@ -4,7 +4,7 @@ type EvidenceItem = {
   title: string;
   ersTotal: number;
   mappingLabel: string;
-  mappedTopicTitle: string;
+  mappedTopicTitle: string | null;
   applicabilityNote: string;
   ersBreakdown: {
     evidenceStrength: number;
@@ -30,7 +30,7 @@ export function EvidenceRibbon({ items }: { items: EvidenceItem[] }) {
           <div className="ribbon-body">
             <div className="eyebrow">{item.evidenceId}</div>
             <h3>{item.title}</h3>
-            <p>{item.mappedTopicTitle}</p>
+            <p>{item.mappedTopicTitle ?? "No guideline topic matched this evidence item."}</p>
             <p className="muted">{item.applicabilityNote}</p>
             <div className="score-grid compact">
               <div>
@@ -59,4 +59,3 @@ export function EvidenceRibbon({ items }: { items: EvidenceItem[] }) {
     </div>
   );
 }
-

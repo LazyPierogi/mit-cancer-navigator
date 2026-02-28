@@ -323,6 +323,16 @@ li {
   font: inherit;
 }
 
+.form-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.form-error {
+  color: var(--rust);
+  margin: 0;
+}
+
 .embedding-stage {
   min-height: 360px;
   border-radius: var(--radius-lg);
@@ -382,4 +392,3 @@ li {
     padding-top: 0;
   }
 }
-

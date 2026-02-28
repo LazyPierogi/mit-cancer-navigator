@@ -7,6 +7,7 @@ from app.api.routes.governance import router as governance_router
 from app.api.routes.imports import router as imports_router
 from app.api.routes.runs import router as runs_router
 from app.config.settings import settings
+from app.repositories.bootstrap import bootstrap_database
 
 app = FastAPI(
     title=settings.app_name,
@@ -29,7 +30,11 @@ app.include_router(governance_router)
 app.include_router(imports_router)
 
 
+@app.on_event("startup")
+def startup_event():
+    bootstrap_database()
+
+
 @app.get("/health")
 def healthcheck():
-    return {"status": "ok", "service": settings.app_name}
-
+    return {"status": "ok", "service": settings.app_name, "databaseUrl": settings.database_url}

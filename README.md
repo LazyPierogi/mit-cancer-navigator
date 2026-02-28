@@ -34,6 +34,7 @@ npm run dev:web
 
 ```bash
 uv sync --project apps/api
+npm run migrate:api
 uv run --project apps/api uvicorn app.main:app --reload
 ```
 
@@ -44,3 +45,7 @@ uv sync --project apps/worker
 uv run --project apps/worker python -m app.worker
 ```
 
+## Notes
+
+- The API defaults to a local SQLite bootstrap database at `apps/api/navigator.db` so the scaffold runs immediately.
+- For the intended stack, set `DATABASE_URL` to PostgreSQL/pgvector and keep using the same Alembic workflow.
