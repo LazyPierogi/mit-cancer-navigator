@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/json",
+  "mcpServers": {
+    "github": {
+      "repo": "https://github.com/github/github-mcp-server",
+      "notes": "Install and configure according to upstream README."
+    },
+    "codegraphcontext": {
+      "repo": "https://github.com/CodeGraphContext/CodeGraphContext",
+      "notes": "Use for large-repo code context graph and semantic navigation."
+    },
+    "context7": {
+      "repo": "https://github.com/upstash/context7",
+      "notes": "Use for docs-aware retrieval and live framework/library lookup."
+    },
+    "deepwiki": {
+      "repo": "https://docs.devin.ai/work-with-devin/deepwiki-mcp",
+      "notes": "Use with GitHub MCP/GitHub CLI to quickly understand repository architecture, implementations, and reusable code paths."
+    },
+    "firecrawl": {
+      "repo": "https://github.com/mendableai/firecrawl",
+      "notes": "Use for web crawling, extraction, and page intelligence."
+    },
+    "playwright": {
+      "repo": "https://github.com/microsoft/playwright-mcp",
+      "notes": "Use for browser automation, UI checks, and user-flow testing."
+    }
+  }
+}

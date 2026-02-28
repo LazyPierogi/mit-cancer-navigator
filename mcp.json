@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "lastReviewedOn": "2026-02-28",
+    "decision": "No runnable MCP servers are required for the current bootstrap stage.",
+    "rationale": [
+      "The repository currently contains setup documents and architecture notes, not an active implementation workflow.",
+      "PubMed, Qdrant, and the ESMO topic catalog are runtime application integrations, not current agent-MCP dependencies."
+    ]
+  },
+  "mcpServers": {}
+}

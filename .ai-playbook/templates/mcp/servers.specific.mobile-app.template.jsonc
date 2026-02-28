@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/json",
+  "mcpServers": {
+    "xcode": {
+      "command": "xcrun",
+      "args": ["mcpbridge"],
+      "notes": "Xcode Tools MCP bridge. In Xcode: Settings > Intelligence > Model Context Protocol > enable Xcode Tools."
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/json",
+  "mcpServers": {
+    "unity": {
+      "repo": "https://github.com/CoplayDev/unity-mcp",
+      "notes": "Game-dev specific MCP server. Install and configure per upstream README."
+    }
+  }
+}

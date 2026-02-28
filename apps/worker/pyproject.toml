@@ -1,0 +1,13 @@
+[project]
+name = "navigator-worker"
+version = "0.1.0"
+description = "Async worker for ingestion and evaluation jobs"
+requires-python = ">=3.11"
+dependencies = [
+  "dramatiq>=1.17.0",
+  "redis>=5.0.8"
+]
+
+[tool.uv]
+package = true
+

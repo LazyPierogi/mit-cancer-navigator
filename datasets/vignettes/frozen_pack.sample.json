@@ -1,0 +1,27 @@
+{
+  "packId": "frozen-pack-v1",
+  "cases": [
+    {
+      "caseId": "VIG-001",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "histology": "adenocarcinoma",
+        "performanceStatus": "1",
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "ge50"
+        }
+      },
+      "reference": {
+        "expectedTopEvidence": ["PMID-10001"],
+        "expectedLabelByEvidenceId": {
+          "PMID-10001": "aligned"
+        }
+      }
+    }
+  ]
+}
+

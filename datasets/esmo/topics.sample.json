@@ -1,0 +1,27 @@
+[
+  {
+    "topicId": "TB_TOPIC_07",
+    "topicTitle": "Metastatic NSCLC, driver-negative, PD-L1 >=50: first systemic therapy evidence",
+    "topicApplicability": {
+      "diseaseSetting": ["metastatic"],
+      "histology": ["adenocarcinoma"],
+      "biomarkerConditions": ["EGFR=no", "ALK=no", "ROS1=no", "PDL1Bucket=ge50"]
+    },
+    "topicInterventionTags": ["PD-1", "PD-L1", "immunotherapy", "pembrolizumab"],
+    "guidelineStance": "recommend",
+    "stanceNotes": "Curated excerpt placeholder for metastatic driver-negative high PD-L1 disease."
+  },
+  {
+    "topicId": "TB_TOPIC_11",
+    "topicTitle": "Metastatic squamous NSCLC, driver-negative, platinum doublet intensification",
+    "topicApplicability": {
+      "diseaseSetting": ["metastatic"],
+      "histology": ["squamous"],
+      "biomarkerConditions": ["EGFR=no", "ALK=no", "ROS1=no"]
+    },
+    "topicInterventionTags": ["platinum", "doublet", "chemotherapy"],
+    "guidelineStance": "conditional",
+    "stanceNotes": "Placeholder topic to exercise conditional mapping."
+  }
+]
+
