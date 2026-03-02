@@ -10,6 +10,7 @@
       "disease": "NSCLC",
       "diseaseSetting": "metastatic",
       "histology": "adenocarcinoma",
+      "lineOfTherapy": "first_line",
       "biomarkers": {
         "EGFR": "no",
         "ALK": "no",
@@ -31,6 +32,7 @@
       "disease": "NSCLC",
       "diseaseSetting": "mixed",
       "histology": "mixed",
+      "lineOfTherapy": "later_line",
       "biomarkers": {
         "EGFR": "unspecified",
         "ALK": "unspecified",
@@ -52,6 +54,7 @@
       "disease": "NSCLC",
       "diseaseSetting": "metastatic",
       "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
       "biomarkers": {
         "EGFR": "yes"
       }
@@ -60,4 +63,3 @@
     "outcomeTags": ["OS", "PFS"]
   }
 ]
-

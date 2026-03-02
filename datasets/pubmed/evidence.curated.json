@@ -1,0 +1,292 @@
+[
+  {
+    "evidenceId": "PMID-40118215",
+    "title": "Cemiplimab Monotherapy for First-Line Treatment of Patients with Advanced NSCLC With PD-L1 Expression of 50% or Higher: Five-Year Outcomes of EMPOWER-Lung 1.",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 712,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "no",
+        "ALK": "no",
+        "ROS1": "no",
+        "PDL1Bucket": "ge50"
+      }
+    },
+    "interventionTags": [
+      "pd1",
+      "ici",
+      "immunotherapy-monotherapy",
+      "cemiplimab"
+    ],
+    "outcomeTags": [
+      "OS",
+      "progression-free survival",
+      "ORR",
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40446626",
+    "title": "Nivolumab plus ipilimumab with chemotherapy as first-line treatment of patients with metastatic non-small-cell lung cancer: final, 6-year outcomes from CheckMate 9LA.",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 719,
+    "sourceCategory": "specialty_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "mixed",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "no",
+        "ALK": "no",
+        "ROS1": "no",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "pd1",
+      "ctla4",
+      "dual-ici",
+      "chemo-ici",
+      "platinum-doublet",
+      "nivolumab",
+      "ipilimumab"
+    ],
+    "outcomeTags": [
+      "OS",
+      "progression-free survival",
+      "ORR",
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40473437",
+    "title": "Sacituzumab tirumotecan versus docetaxel for previously treated EGFR-mutated advanced non-small cell lung cancer: multicentre, open label, randomised controlled trial.",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 137,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "second_line",
+      "biomarkers": {
+        "EGFR": "yes",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "trop2-adc",
+      "docetaxel",
+      "sacituzumab-tirumotecan"
+    ],
+    "outcomeTags": [
+      "OS",
+      "progression-free survival",
+      "ORR",
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-39622410",
+    "title": "RELAY: Final Overall Survival for Erlotinib Plus Ramucirumab or Placebo in Untreated, EGFR-Mutated Metastatic NSCLC.",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 224,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "yes",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "egfr-targeted",
+      "egfr-tki",
+      "antiangiogenic",
+      "erlotinib",
+      "ramucirumab"
+    ],
+    "outcomeTags": [
+      "OS",
+      "PFS",
+      "progression-free survival",
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40923969",
+    "title": "Enhanced Versus Standard Dermatologic Management With Amivantamab-Lazertinib in EGFR-Mutated Advanced NSCLC: The COCOON Global Randomized Controlled Trial.",
+    "publicationYear": 2025,
+    "evidenceType": "phase2_rct",
+    "relevantN": 201,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "yes",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified",
+        "MET": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "supportive-care",
+      "egfr-met-bispecific",
+      "egfr-tki",
+      "amivantamab",
+      "lazertinib"
+    ],
+    "outcomeTags": [
+      "progression-free survival",
+      "AE",
+      "QoL"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40379995",
+    "title": "Atezolizumab plus bevacizumab and chemotherapy in metastatic nonsquamous NSCLC: the randomized double-blind phase 3 IMpower151 trial.",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 305,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "unspecified",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "pdl1",
+      "antiangiogenic",
+      "chemo-ici",
+      "platinum-doublet",
+      "atezolizumab",
+      "bevacizumab"
+    ],
+    "outcomeTags": [
+      "OS",
+      "PFS",
+      "progression-free survival",
+      "ORR",
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40897431",
+    "title": "Cardiovascular adverse events associated with epidermal growth factor receptor tyrosine kinase inhibitors in EGFR-mutated non-small cell lung cancer: systematic review and network meta-analysis.",
+    "publicationYear": 2025,
+    "evidenceType": "systematic_review",
+    "relevantN": null,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "mixed",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "mixed",
+      "biomarkers": {
+        "EGFR": "yes",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "egfr-targeted",
+      "egfr-tki",
+      "antiangiogenic"
+    ],
+    "outcomeTags": [
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40617394",
+    "title": "Lazertinib Versus Osimertinib in Previously Untreated EGFR-Mutant Advanced NSCLC: A Randomized, Double-Blind, Exploratory Analysis From MARIPOSA.",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 1074,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "yes",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "egfr-targeted",
+      "egfr-tki",
+      "lazertinib",
+      "osimertinib"
+    ],
+    "outcomeTags": [
+      "OS",
+      "PFS",
+      "progression-free survival",
+      "ORR",
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40516821",
+    "title": "A Pooled Analysis of Datopotamab Deruxtecan in Patients With EGFR-Mutated NSCLC.",
+    "publicationYear": 2025,
+    "evidenceType": "phase2_rct",
+    "relevantN": 117,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "later_line",
+      "biomarkers": {
+        "EGFR": "yes",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "trop2-adc",
+      "datopotamab-deruxtecan"
+    ],
+    "outcomeTags": [
+      "OS",
+      "progression-free survival",
+      "ORR",
+      "AE"
+    ]
+  }
+]

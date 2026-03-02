@@ -7,6 +7,7 @@
         "cancerType": "NSCLC",
         "diseaseSetting": "metastatic",
         "histology": "adenocarcinoma",
+        "lineOfTherapy": "first_line",
         "performanceStatus": "1",
         "biomarkers": {
           "EGFR": "no",
@@ -24,4 +25,3 @@
     }
   ]
 }
-

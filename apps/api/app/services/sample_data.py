@@ -11,6 +11,7 @@ from app.domain.contracts import (
     TopicApplicability,
     VignetteInput,
 )
+from app.repositories.corpus_store import corpus_store
 
 
 ROOT = Path(__file__).resolve().parents[4]
@@ -20,8 +21,21 @@ def _load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _load_first_available(paths: list[Path]):
+    for path in paths:
+        if path.exists():
+            return _load_json(path)
+    missing = ", ".join(str(path.relative_to(ROOT)) for path in paths)
+    raise FileNotFoundError(f"No dataset found. Checked: {missing}")
+
+
 def load_sample_topics() -> list[GuidelineTopic]:
-    payload = _load_json(ROOT / "datasets" / "esmo" / "topics.sample.json")
+    payload = corpus_store.get_guideline_topics() or _load_first_available(
+        [
+            ROOT / "datasets" / "esmo" / "topics.curated.json",
+            ROOT / "datasets" / "esmo" / "topics.sample.json",
+        ]
+    )
     return [
         GuidelineTopic(
             topicId=item["topicId"],
@@ -37,7 +51,12 @@ def load_sample_topics() -> list[GuidelineTopic]:
 
 
 def load_sample_evidence() -> list[EvidenceRecord]:
-    payload = _load_json(ROOT / "datasets" / "pubmed" / "evidence.sample.json")
+    payload = corpus_store.get_evidence_studies() or _load_first_available(
+        [
+            ROOT / "datasets" / "pubmed" / "evidence.curated.json",
+            ROOT / "datasets" / "pubmed" / "evidence.sample.json",
+        ]
+    )
     return [
         EvidenceRecord(
             evidenceId=item["evidenceId"],
@@ -55,7 +74,12 @@ def load_sample_evidence() -> list[EvidenceRecord]:
 
 
 def load_sample_vignette() -> VignetteInput:
-    payload = _load_json(ROOT / "datasets" / "vignettes" / "frozen_pack.sample.json")
+    payload = _load_first_available(
+        [
+            ROOT / "datasets" / "vignettes" / "frozen_pack.curated.json",
+            ROOT / "datasets" / "vignettes" / "frozen_pack.sample.json",
+        ]
+    )
     case = payload["cases"][0]["vignette"]
     return VignetteInput(
         cancerType=case["cancerType"],
@@ -63,9 +87,14 @@ def load_sample_vignette() -> VignetteInput:
         histology=case["histology"],
         performanceStatus=case["performanceStatus"],
         biomarkers=Biomarkers(**case["biomarkers"]),
+        lineOfTherapy=case.get("lineOfTherapy", "unspecified"),
     )
 
 
 def load_frozen_pack() -> dict:
-    return _load_json(ROOT / "datasets" / "vignettes" / "frozen_pack.sample.json")
-
+    return _load_first_available(
+        [
+            ROOT / "datasets" / "vignettes" / "frozen_pack.curated.json",
+            ROOT / "datasets" / "vignettes" / "frozen_pack.sample.json",
+        ]
+    )

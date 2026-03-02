@@ -10,14 +10,26 @@ const initialPayload: VignetteInput = {
   cancerType: "NSCLC",
   diseaseSetting: "metastatic",
   histology: "adenocarcinoma",
+  lineOfTherapy: "first_line",
   performanceStatus: "1",
   biomarkers: {
     EGFR: "no",
     ALK: "no",
     ROS1: "no",
-    PDL1Bucket: "ge50"
+    PDL1Bucket: "ge50",
+    BRAF: "unspecified",
+    RET: "unspecified",
+    MET: "unspecified",
+    KRAS: "unspecified",
+    NTRK: "unspecified",
+    HER2: "unspecified",
+    EGFRExon20ins: "unspecified"
   }
 };
+
+const biomarkerOptions = ["yes", "no", "unspecified"] as const;
+const pdl1Options = ["lt1", "1to49", "ge50", "unspecified"] as const;
+const advancedBiomarkers = ["BRAF", "RET", "MET", "KRAS", "NTRK", "HER2", "EGFRExon20ins"] as const;
 
 export function WorkspaceForm() {
   const router = useRouter();
@@ -29,7 +41,7 @@ export function WorkspaceForm() {
     setPayload((current) => ({ ...current, [key]: value }));
   }
 
-  function updateBiomarker(key: keyof VignetteInput["biomarkers"], value: "yes" | "no" | "lt1" | "1to49" | "ge50") {
+  function updateBiomarker<K extends keyof VignetteInput["biomarkers"]>(key: K, value: VignetteInput["biomarkers"][K]) {
     setPayload((current) => ({
       ...current,
       biomarkers: {
@@ -70,7 +82,21 @@ export function WorkspaceForm() {
         Histology
         <select value={payload.histology} onChange={(event) => updateField("histology", event.target.value as VignetteInput["histology"])}>
           <option value="adenocarcinoma">adenocarcinoma</option>
+          <option value="non_squamous">non_squamous</option>
           <option value="squamous">squamous</option>
+        </select>
+      </label>
+      <label>
+        Line of therapy
+        <select
+          value={payload.lineOfTherapy}
+          onChange={(event) => updateField("lineOfTherapy", event.target.value as VignetteInput["lineOfTherapy"])}
+        >
+          <option value="first_line">first_line</option>
+          <option value="second_line">second_line</option>
+          <option value="later_line">later_line</option>
+          <option value="mixed">mixed</option>
+          <option value="unspecified">unspecified</option>
         </select>
       </label>
       <label>
@@ -88,33 +114,62 @@ export function WorkspaceForm() {
       </label>
       <label>
         PD-L1 bucket
-        <select value={payload.biomarkers.PDL1Bucket} onChange={(event) => updateBiomarker("PDL1Bucket", event.target.value as "lt1" | "1to49" | "ge50")}>
-          <option value="lt1">lt1</option>
-          <option value="1to49">1to49</option>
-          <option value="ge50">ge50</option>
+        <select
+          value={payload.biomarkers.PDL1Bucket}
+          onChange={(event) => updateBiomarker("PDL1Bucket", event.target.value as VignetteInput["biomarkers"]["PDL1Bucket"])}
+        >
+          {pdl1Options.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
         </select>
       </label>
       <label>
         EGFR
-        <select value={payload.biomarkers.EGFR} onChange={(event) => updateBiomarker("EGFR", event.target.value as "yes" | "no")}>
-          <option value="yes">yes</option>
-          <option value="no">no</option>
+        <select value={payload.biomarkers.EGFR} onChange={(event) => updateBiomarker("EGFR", event.target.value as VignetteInput["biomarkers"]["EGFR"])}>
+          {biomarkerOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
         </select>
       </label>
       <label>
         ALK
-        <select value={payload.biomarkers.ALK} onChange={(event) => updateBiomarker("ALK", event.target.value as "yes" | "no")}>
-          <option value="yes">yes</option>
-          <option value="no">no</option>
+        <select value={payload.biomarkers.ALK} onChange={(event) => updateBiomarker("ALK", event.target.value as VignetteInput["biomarkers"]["ALK"])}>
+          {biomarkerOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
         </select>
       </label>
       <label>
         ROS1
-        <select value={payload.biomarkers.ROS1} onChange={(event) => updateBiomarker("ROS1", event.target.value as "yes" | "no")}>
-          <option value="yes">yes</option>
-          <option value="no">no</option>
+        <select value={payload.biomarkers.ROS1} onChange={(event) => updateBiomarker("ROS1", event.target.value as VignetteInput["biomarkers"]["ROS1"])}>
+          {biomarkerOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
         </select>
       </label>
+      {advancedBiomarkers.map((marker) => (
+        <label key={marker}>
+          {marker}
+          <select
+            value={payload.biomarkers[marker]}
+            onChange={(event) => updateBiomarker(marker, event.target.value as VignetteInput["biomarkers"][typeof marker])}
+          >
+            {biomarkerOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </label>
+      ))}
       <div className="form-actions">
         <button type="submit" disabled={isPending}>
           {isPending ? "Running analysis..." : "Run deterministic analysis"}
@@ -124,4 +179,3 @@ export function WorkspaceForm() {
     </form>
   );
 }
-

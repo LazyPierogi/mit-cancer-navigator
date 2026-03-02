@@ -125,7 +125,19 @@ This means the foundation is real, but the project is **not yet clinically/data-
   - [topics.sample.json](/Users/mario/Repo/mit-cancer-navigator/datasets/esmo/topics.sample.json)
   - [evidence.sample.json](/Users/mario/Repo/mit-cancer-navigator/datasets/pubmed/evidence.sample.json)
   - [frozen_pack.sample.json](/Users/mario/Repo/mit-cancer-navigator/datasets/vignettes/frozen_pack.sample.json)
-- `IN PROGRESS` Canonical dataset shapes are established, but real ESMO and PubMed corpora are not loaded yet
+- `IN PROGRESS` Curated preview datasets now exist in:
+  - [topics.curated.json](/Users/mario/Repo/mit-cancer-navigator/datasets/esmo/topics.curated.json)
+  - [evidence.curated.json](/Users/mario/Repo/mit-cancer-navigator/datasets/pubmed/evidence.curated.json)
+  - [frozen_pack.curated.json](/Users/mario/Repo/mit-cancer-navigator/datasets/vignettes/frozen_pack.curated.json)
+- `IN PROGRESS` Canonical dataset shapes now support `lineOfTherapy`, richer biomarker coverage, and range/OR applicability rules, but the import path is still preview-grade
+- `IN PROGRESS` Dataset validation CLI now exists for incoming drops:
+  - [validate_data_drop.py](/Users/mario/Repo/mit-cancer-navigator/scripts/validate_data_drop.py)
+  - [VALIDATION_WORKFLOW.md](/Users/mario/Repo/mit-cancer-navigator/docs/data-team/VALIDATION_WORKFLOW.md)
+- `IN PROGRESS` Import pipeline skeleton now exists:
+  - [import_pipeline.py](/Users/mario/Repo/mit-cancer-navigator/apps/api/app/services/import_pipeline.py)
+  - [import_data_drop.py](/Users/mario/Repo/mit-cancer-navigator/scripts/import_data_drop.py)
+  - [IMPORT_WORKFLOW.md](/Users/mario/Repo/mit-cancer-navigator/docs/data-team/IMPORT_WORKFLOW.md)
+- `IN PROGRESS` Curated imports now persist to DB-backed corpus tables and analysis can read those records at runtime
 - `IN PROGRESS` API defaults to SQLite for fast local boot, while intended long-term target remains PostgreSQL + pgvector
 
 ### Evaluation
@@ -167,6 +179,7 @@ Goal: move from static fixture loading to reproducible ingest workflows.
 - `NEXT` Persist import batch metadata and provenance
 - `NEXT` Add import status pages and job output visibility
 - `NEXT` Add deterministic normalization/tagging rules for imported records
+- `NEXT` Provide stable delivery templates to Data Team so new ESMO and PubMed drops arrive already canonical
 
 Definition of done:
 

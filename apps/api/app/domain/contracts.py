@@ -8,7 +8,8 @@ from typing import Literal
 BiomarkerFlag = Literal["yes", "no", "unspecified"]
 PDL1Bucket = Literal["lt1", "1to49", "ge50", "unspecified"]
 DiseaseSetting = Literal["early", "locally_advanced", "metastatic", "mixed"]
-Histology = Literal["adenocarcinoma", "squamous", "mixed", "all_nsclc"]
+Histology = Literal["adenocarcinoma", "squamous", "non_squamous", "mixed", "all_nsclc"]
+LineOfTherapy = Literal["first_line", "second_line", "later_line", "mixed", "unspecified"]
 PerformanceStatus = Literal["0", "1", "2", "3", "4"]
 EvidenceType = Literal[
     "guideline",
@@ -36,16 +37,24 @@ class Biomarkers:
     EGFR: BiomarkerFlag
     ALK: BiomarkerFlag
     ROS1: BiomarkerFlag
-    PDL1Bucket: PDL1Bucket
+    PDL1Bucket: PDL1Bucket = "unspecified"
+    BRAF: BiomarkerFlag = "unspecified"
+    RET: BiomarkerFlag = "unspecified"
+    MET: BiomarkerFlag = "unspecified"
+    KRAS: BiomarkerFlag = "unspecified"
+    NTRK: BiomarkerFlag = "unspecified"
+    HER2: BiomarkerFlag = "unspecified"
+    EGFRExon20ins: BiomarkerFlag = "unspecified"
 
 
 @dataclass(slots=True)
 class VignetteInput:
     cancerType: Literal["NSCLC"]
     diseaseSetting: Literal["early", "locally_advanced", "metastatic"]
-    histology: Literal["adenocarcinoma", "squamous"]
+    histology: Literal["adenocarcinoma", "squamous", "non_squamous"]
     performanceStatus: PerformanceStatus
     biomarkers: Biomarkers
+    lineOfTherapy: LineOfTherapy = "unspecified"
 
 
 @dataclass(slots=True)
@@ -54,6 +63,7 @@ class PopulationTags:
     diseaseSetting: DiseaseSetting
     histology: Histology
     biomarkers: dict[str, str]
+    lineOfTherapy: LineOfTherapy = "unspecified"
 
 
 @dataclass(slots=True)
@@ -72,8 +82,9 @@ class EvidenceRecord:
 @dataclass(slots=True)
 class TopicApplicability:
     diseaseSetting: list[Literal["early", "locally_advanced", "metastatic"]]
-    histology: list[Literal["adenocarcinoma", "squamous"]]
+    histology: list[Literal["adenocarcinoma", "squamous", "non_squamous"]]
     biomarkerConditions: list[str]
+    lineOfTherapy: list[LineOfTherapy] = field(default_factory=lambda: ["unspecified"])
 
 
 @dataclass(slots=True)
@@ -145,4 +156,3 @@ class AnalyzeRunResponse:
     uncertaintyFlags: list[str]
     safetyFooterKey: str
     traceId: str
-

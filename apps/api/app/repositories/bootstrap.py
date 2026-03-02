@@ -1,14 +1,45 @@
 from __future__ import annotations
 
-from sqlalchemy import select
+from sqlalchemy import inspect, select, text
+from sqlalchemy.exc import OperationalError
 
 from app.config.settings import settings
 from app.repositories.db import Base, SessionLocal, engine
 from app.repositories.models import PolicySnapshotModel, RulesetModel, SafetyTemplateModel
 
 
+def _ensure_runtime_schema_extensions() -> None:
+    inspector = inspect(engine)
+
+    with engine.begin() as connection:
+        guideline_columns = {column["name"] for column in inspector.get_columns("guideline_topics")}
+        if "import_batch_id" not in guideline_columns:
+            try:
+                connection.execute(text("ALTER TABLE guideline_topics ADD COLUMN import_batch_id VARCHAR(128)"))
+            except OperationalError as exc:
+                if "duplicate column name" not in str(exc).lower():
+                    raise
+        if "prerequisites" not in guideline_columns:
+            try:
+                connection.execute(text("ALTER TABLE guideline_topics ADD COLUMN prerequisites JSON NOT NULL DEFAULT '[]'"))
+            except OperationalError as exc:
+                if "duplicate column name" not in str(exc).lower():
+                    raise
+        connection.execute(text("CREATE INDEX IF NOT EXISTS ix_guideline_topics_import_batch_id ON guideline_topics (import_batch_id)"))
+
+        evidence_columns = {column["name"] for column in inspector.get_columns("evidence_studies")}
+        if "import_batch_id" not in evidence_columns:
+            try:
+                connection.execute(text("ALTER TABLE evidence_studies ADD COLUMN import_batch_id VARCHAR(128)"))
+            except OperationalError as exc:
+                if "duplicate column name" not in str(exc).lower():
+                    raise
+        connection.execute(text("CREATE INDEX IF NOT EXISTS ix_evidence_studies_import_batch_id ON evidence_studies (import_batch_id)"))
+
+
 def bootstrap_database() -> None:
     Base.metadata.create_all(bind=engine)
+    _ensure_runtime_schema_extensions()
 
     with SessionLocal() as session:
         ruleset = session.execute(select(RulesetModel).where(RulesetModel.version == settings.ruleset_version)).scalar_one_or_none()
@@ -19,8 +50,9 @@ def bootstrap_database() -> None:
                     relevance_gate_rules={
                         "disease": "NSCLC only",
                         "setting": "exact or mixed",
-                        "histology": "exact or mixed or all_nsclc",
-                        "biomarkers": "exact or unspecified",
+                        "histology": "exact, non_squamous family, or mixed/all_nsclc",
+                        "line_of_therapy": "exact or mixed or unspecified",
+                        "biomarkers": "exact, unspecified, or rule-expression match",
                     },
                     ers_tables={
                         "evidenceStrength": {
@@ -90,4 +122,3 @@ def bootstrap_database() -> None:
             )
 
         session.commit()
-

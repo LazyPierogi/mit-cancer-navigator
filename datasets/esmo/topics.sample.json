@@ -5,6 +5,7 @@
     "topicApplicability": {
       "diseaseSetting": ["metastatic"],
       "histology": ["adenocarcinoma"],
+      "lineOfTherapy": ["first_line"],
       "biomarkerConditions": ["EGFR=no", "ALK=no", "ROS1=no", "PDL1Bucket=ge50"]
     },
     "topicInterventionTags": ["PD-1", "PD-L1", "immunotherapy", "pembrolizumab"],
@@ -17,6 +18,7 @@
     "topicApplicability": {
       "diseaseSetting": ["metastatic"],
       "histology": ["squamous"],
+      "lineOfTherapy": ["first_line"],
       "biomarkerConditions": ["EGFR=no", "ALK=no", "ROS1=no"]
     },
     "topicInterventionTags": ["platinum", "doublet", "chemotherapy"],
@@ -24,4 +26,3 @@
     "stanceNotes": "Placeholder topic to exercise conditional mapping."
   }
 ]
-

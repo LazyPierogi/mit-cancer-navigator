@@ -60,11 +60,13 @@ class GuidelineTopicRecord(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     topic_id: Mapped[str] = mapped_column(String(128), unique=True, index=True)
+    import_batch_id: Mapped[str | None] = mapped_column(String(128), nullable=True, index=True)
     topic_title: Mapped[str] = mapped_column(String(255))
     topic_applicability: Mapped[dict] = mapped_column(JSON)
     topic_intervention_tags: Mapped[list] = mapped_column(JSON)
     guideline_stance: Mapped[str] = mapped_column(String(64))
     stance_notes: Mapped[str | None] = mapped_column(Text, nullable=True)
+    prerequisites: Mapped[list] = mapped_column(JSON, default=list)
 
 
 class EvidenceStudyRecord(Base):
@@ -72,6 +74,7 @@ class EvidenceStudyRecord(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     evidence_id: Mapped[str] = mapped_column(String(128), unique=True, index=True)
+    import_batch_id: Mapped[str | None] = mapped_column(String(128), nullable=True, index=True)
     title: Mapped[str] = mapped_column(String(255))
     publication_year: Mapped[int | None] = mapped_column(Integer, nullable=True)
     evidence_type: Mapped[str] = mapped_column(String(64))
@@ -103,3 +106,20 @@ class EvalRunRecord(Base):
     notes: Mapped[list] = mapped_column(JSON)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
+
+class ImportBatchRecord(Base):
+    __tablename__ = "import_batches"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    batch_id: Mapped[str] = mapped_column(String(128), unique=True, index=True)
+    dataset_kind: Mapped[str] = mapped_column(String(32), index=True)
+    dataset_shape: Mapped[str] = mapped_column(String(32))
+    source_path: Mapped[str] = mapped_column(Text)
+    status: Mapped[str] = mapped_column(String(64), index=True)
+    record_count: Mapped[int] = mapped_column(Integer)
+    imported_count: Mapped[int] = mapped_column(Integer, default=0)
+    error_count: Mapped[int] = mapped_column(Integer, default=0)
+    warning_count: Mapped[int] = mapped_column(Integer, default=0)
+    validation_payload: Mapped[dict] = mapped_column(JSON)
+    notes: Mapped[list] = mapped_column(JSON, default=list)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)

@@ -14,12 +14,14 @@ class AnalysisService:
             histology=payload["histology"],
             performanceStatus=payload["performanceStatus"],
             biomarkers=Biomarkers(**payload["biomarkers"]),
+            lineOfTherapy=payload.get("lineOfTherapy", "unspecified"),
         )
         response, trace = analyze_records(
             vignette,
             load_sample_evidence(),
             load_sample_topics(),
             current_year=2026,
+            input_schema_version=settings.input_schema_version,
             ruleset_version=settings.ruleset_version,
             corpus_version=settings.corpus_version,
             safety_footer_key=settings.safety_template_version,
@@ -28,4 +30,3 @@ class AnalysisService:
 
 
 analysis_service = AnalysisService()
-

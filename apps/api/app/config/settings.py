@@ -18,9 +18,9 @@ class Settings(BaseSettings):
     pubmed_email: str = "team@example.edu"
     pubmed_tool: str = "lung-cancer-treatment-navigator"
     ruleset_version: str = "mvp-2026-02-28"
-    corpus_version: str = "sample-corpus-v1"
+    corpus_version: str = "curated-preview-v2"
     safety_template_version: str = "safety-v1"
-    input_schema_version: str = "vignette-v1"
+    input_schema_version: str = "vignette-v2"
     api_base_url: str = "http://127.0.0.1:8000"
 
     model_config = SettingsConfigDict(env_file=".env", env_prefix="", extra="ignore")

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from dataclasses import asdict
 from datetime import datetime
 from uuid import uuid4
 
@@ -45,6 +44,15 @@ FORBIDDEN_LANGUAGE = (
     "approved for this patient",
 )
 
+PDL1_BUCKET_ORDER = {
+    "lt1": 0,
+    "1to49": 1,
+    "ge50": 2,
+    "unspecified": -1,
+}
+
+PERFORMANCE_STATUS_ORDER = {str(index): index for index in range(5)}
+
 
 def biomarker_dict(vignette: VignetteInput) -> dict[str, str]:
     markers: Biomarkers = vignette.biomarkers
@@ -53,7 +61,29 @@ def biomarker_dict(vignette: VignetteInput) -> dict[str, str]:
         "ALK": markers.ALK,
         "ROS1": markers.ROS1,
         "PDL1Bucket": markers.PDL1Bucket,
+        "BRAF": markers.BRAF,
+        "RET": markers.RET,
+        "MET": markers.MET,
+        "KRAS": markers.KRAS,
+        "NTRK": markers.NTRK,
+        "HER2": markers.HER2,
+        "EGFRExon20ins": markers.EGFRExon20ins,
     }
+
+
+def histology_matches(candidate: str, expected: str) -> bool:
+    if candidate == expected:
+        return True
+    if candidate in {"mixed", "all_nsclc"} or expected in {"mixed", "all_nsclc"}:
+        return True
+    non_squamous_family = {"adenocarcinoma", "non_squamous"}
+    return candidate in non_squamous_family and expected in non_squamous_family
+
+
+def line_of_therapy_matches(candidate: str, expected: str) -> bool:
+    if expected == "unspecified":
+        return True
+    return candidate in {expected, "mixed", "unspecified"}
 
 
 def relevance_gate(vignette: VignetteInput, evidence: EvidenceRecord) -> tuple[bool, list[str]]:
@@ -64,8 +94,11 @@ def relevance_gate(vignette: VignetteInput, evidence: EvidenceRecord) -> tuple[b
     if evidence.populationTags.diseaseSetting not in (vignette.diseaseSetting, "mixed"):
         reasons.append("setting_mismatch")
 
-    if evidence.populationTags.histology not in (vignette.histology, "mixed", "all_nsclc"):
+    if not histology_matches(evidence.populationTags.histology, vignette.histology):
         reasons.append("histology_mismatch")
+
+    if not line_of_therapy_matches(evidence.populationTags.lineOfTherapy, vignette.lineOfTherapy):
+        reasons.append("line_of_therapy_mismatch")
 
     for key, vignette_value in biomarker_dict(vignette).items():
         evidence_value = evidence.populationTags.biomarkers.get(key, "unspecified")
@@ -111,23 +144,90 @@ def compute_ers(evidence: EvidenceRecord, current_year: int) -> ScoreBreakdown:
     )
 
 
-def _condition_matches(vignette: VignetteInput, condition: str) -> bool:
-    if "=" not in condition:
-        return False
-    key, expected = condition.split("=", 1)
-    if key in {"EGFR", "ALK", "ROS1", "PDL1Bucket"}:
-        return biomarker_dict(vignette).get(key) == expected
+def _subject_value(vignette: VignetteInput, key: str) -> str:
+    if key in biomarker_dict(vignette):
+        return biomarker_dict(vignette).get(key, "unspecified")
     if key == "diseaseSetting":
-        return vignette.diseaseSetting == expected
+        return vignette.diseaseSetting
     if key == "histology":
-        return vignette.histology == expected
+        return vignette.histology
+    if key == "lineOfTherapy":
+        return vignette.lineOfTherapy
+    if key == "performanceStatus":
+        return vignette.performanceStatus
+    return "unspecified"
+
+
+def _compare_bucket(actual: str, expected: str, operator: str, order: dict[str, int]) -> bool:
+    if actual not in order or expected not in order or actual == "unspecified":
+        return False
+    actual_value = order[actual]
+    expected_value = order[expected]
+    if operator == ">=":
+        return actual_value >= expected_value
+    if operator == "<=":
+        return actual_value <= expected_value
+    if operator == ">":
+        return actual_value > expected_value
+    if operator == "<":
+        return actual_value < expected_value
     return False
 
 
+def _condition_matches(vignette: VignetteInput, condition: str) -> bool:
+    normalized = condition.strip()
+
+    if normalized.startswith("any_positive(") and normalized.endswith(")"):
+        keys = [item.strip() for item in normalized[len("any_positive(") : -1].split(",") if item.strip()]
+        return any(_subject_value(vignette, key) == "yes" for key in keys)
+
+    if normalized.startswith("all_negative(") and normalized.endswith(")"):
+        keys = [item.strip() for item in normalized[len("all_negative(") : -1].split(",") if item.strip()]
+        return all(_subject_value(vignette, key) == "no" for key in keys)
+
+    if " in [" in normalized and normalized.endswith("]"):
+        key, raw_values = normalized.split(" in [", 1)
+        options = [item.strip() for item in raw_values[:-1].split(",") if item.strip()]
+        actual = _subject_value(vignette, key.strip())
+        return actual in options
+
+    for operator in (">=", "<=", ">", "<"):
+        if operator in normalized:
+            key, expected = normalized.split(operator, 1)
+            actual = _subject_value(vignette, key.strip())
+            key = key.strip()
+            expected = expected.strip()
+            if key == "PDL1Bucket":
+                return _compare_bucket(actual, expected, operator, PDL1_BUCKET_ORDER)
+            if key == "performanceStatus":
+                return _compare_bucket(actual, expected, operator, PERFORMANCE_STATUS_ORDER)
+            return False
+
+    if "=" in normalized:
+        key, expected = normalized.split("=", 1)
+        actual = _subject_value(vignette, key.strip())
+        expected = expected.strip()
+        if key.strip() == "histology":
+            return histology_matches(actual, expected)
+        return actual == expected
+
+    return False
+
+
+def _applicability_list_matches(value: str, allowed_values: list[str], *, kind: str) -> bool:
+    if "unspecified" in allowed_values:
+        return True
+    if kind == "histology":
+        return any(histology_matches(value, candidate) for candidate in allowed_values)
+    return value in allowed_values
+
+
 def topic_applies(vignette: VignetteInput, topic: GuidelineTopic) -> bool:
-    if vignette.diseaseSetting not in topic.topicApplicability.diseaseSetting:
+    if not _applicability_list_matches(vignette.diseaseSetting, topic.topicApplicability.diseaseSetting, kind="plain"):
         return False
-    if vignette.histology not in topic.topicApplicability.histology:
+    if not _applicability_list_matches(vignette.histology, topic.topicApplicability.histology, kind="histology"):
+        return False
+    if not _applicability_list_matches(vignette.lineOfTherapy, topic.topicApplicability.lineOfTherapy, kind="plain"):
         return False
     return all(_condition_matches(vignette, condition) for condition in topic.topicApplicability.biomarkerConditions)
 
@@ -174,9 +274,12 @@ def applicability_note(vignette: VignetteInput, evidence: EvidenceRecord, gate_r
     notes = [
         f"Matches {vignette.diseaseSetting} setting",
         f"histology {vignette.histology}",
+        f"line of therapy {vignette.lineOfTherapy}",
     ]
     if any(value == "unspecified" for value in evidence.populationTags.biomarkers.values()):
         notes.append("includes unspecified biomarker applicability")
+    if evidence.populationTags.lineOfTherapy == "unspecified":
+        notes.append("line of therapy unspecified in evidence record")
     return "; ".join(notes) + "."
 
 
@@ -186,6 +289,7 @@ def analyze_records(
     topics: list[GuidelineTopic],
     *,
     current_year: int,
+    input_schema_version: str,
     ruleset_version: str,
     corpus_version: str,
     safety_footer_key: str,
@@ -273,7 +377,7 @@ def analyze_records(
     trace = {
         "traceId": trace_id,
         "runId": run.id,
-        "inputSchemaVersion": "vignette-v1",
+        "inputSchemaVersion": input_schema_version,
         "rulesetVersion": ruleset_version,
         "corpusVersion": corpus_version,
         "gateCandidateCount": gate_candidate_count,
@@ -298,4 +402,3 @@ def system_integrity_checks(response: AnalyzeRunResponse) -> dict[str, bool]:
 
 def assert_safety_language(text: str) -> list[str]:
     return [phrase for phrase in FORBIDDEN_LANGUAGE if phrase in text.lower()]
-
