@@ -1,0 +1,38 @@
+{
+  "packId": "frozen-pack-curated-preview-v1",
+  "cases": [
+    {
+      "caseId": "VIG-CURATED-001",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "histology": "squamous",
+        "lineOfTherapy": "first_line",
+        "performanceStatus": "1",
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "ge50",
+          "BRAF": "unspecified",
+          "RET": "unspecified",
+          "MET": "unspecified",
+          "KRAS": "unspecified",
+          "NTRK": "unspecified",
+          "HER2": "unspecified",
+          "EGFRExon20ins": "unspecified"
+        }
+      },
+      "reference": {
+        "expectedTopEvidence": [
+          "PMID-40118215",
+          "PMID-40446626"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-40118215": "aligned",
+          "PMID-40446626": "aligned"
+        }
+      }
+    }
+  ]
+}

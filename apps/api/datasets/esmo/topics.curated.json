@@ -1,0 +1,307 @@
+[
+  {
+    "topicId": "SQCC_IV_01",
+    "topicTitle": "Pembrolizumab monotherapy in PD-L1 \u226550%",
+    "topicApplicability": {
+      "diseaseSetting": [
+        "metastatic"
+      ],
+      "histology": [
+        "squamous"
+      ],
+      "lineOfTherapy": [
+        "first_line"
+      ],
+      "biomarkerConditions": [
+        "all_negative(EGFR,ALK,ROS1)",
+        "PDL1Bucket>=ge50"
+      ]
+    },
+    "topicInterventionTags": [
+      "pd1",
+      "ici",
+      "immunotherapy-monotherapy"
+    ],
+    "guidelineStance": "recommend",
+    "stanceNotes": "PS 0\u20132 & PD-L1 \u226550% \u2192 Pembrolizumab [I, A] | ECOG PS 0\u20132 and PD-L1 expression \u226550%, no contraindication to immunotherapy.",
+    "prerequisites": [
+      "line_of_therapy:first-line",
+      "source_biomarkers:PD-L1 \u226550%"
+    ]
+  },
+  {
+    "topicId": "SQCC_IV_02",
+    "topicTitle": "Atezolizumab monotherapy in high PD-L1",
+    "topicApplicability": {
+      "diseaseSetting": [
+        "metastatic"
+      ],
+      "histology": [
+        "squamous"
+      ],
+      "lineOfTherapy": [
+        "first_line"
+      ],
+      "biomarkerConditions": [
+        "all_negative(EGFR,ALK,ROS1)",
+        "PDL1Bucket>=ge50"
+      ]
+    },
+    "topicInterventionTags": [
+      "pdl1",
+      "ici",
+      "immunotherapy-monotherapy"
+    ],
+    "guidelineStance": "recommend",
+    "stanceNotes": "Atezolizumab (also for ICs \u226510%) [I, A] | ECOG PS 0\u20132 with PD-L1 \u226550%.",
+    "prerequisites": [
+      "line_of_therapy:first-line",
+      "source_biomarkers:PD-L1 \u226550% (TC \u226550% or IC \u226510%)"
+    ]
+  },
+  {
+    "topicId": "SQCC_IV_03",
+    "topicTitle": "Pembrolizumab + carboplatin + (nab-)paclitaxel",
+    "topicApplicability": {
+      "diseaseSetting": [
+        "metastatic"
+      ],
+      "histology": [
+        "squamous"
+      ],
+      "lineOfTherapy": [
+        "first_line"
+      ],
+      "biomarkerConditions": [
+        "all_negative(EGFR,ALK,ROS1)"
+      ]
+    },
+    "topicInterventionTags": [
+      "pd1",
+      "ici",
+      "chemo-ici",
+      "platinum-doublet"
+    ],
+    "guidelineStance": "recommend",
+    "stanceNotes": "PS 0\u20131 & any PD-L1 \u2192 Pembrolizumab\u2013carboplatin\u2013(nab-)paclitaxel [I, A] | ECOG PS 0\u20131 regardless of PD-L1 level.",
+    "prerequisites": [
+      "line_of_therapy:first-line",
+      "pdl1:any",
+      "source_biomarkers:Any PD-L1 expression"
+    ]
+  },
+  {
+    "topicId": "SQCC_IV_04",
+    "topicTitle": "Nivolumab + ipilimumab + short-course platinum chemotherapy",
+    "topicApplicability": {
+      "diseaseSetting": [
+        "metastatic"
+      ],
+      "histology": [
+        "squamous"
+      ],
+      "lineOfTherapy": [
+        "first_line"
+      ],
+      "biomarkerConditions": [
+        "all_negative(EGFR,ALK,ROS1)"
+      ]
+    },
+    "topicInterventionTags": [
+      "pd1",
+      "ctla4",
+      "dual-ici",
+      "chemo-ici",
+      "platinum-doublet"
+    ],
+    "guidelineStance": "recommend",
+    "stanceNotes": "Nivolumab\u2013ipilimumab + 2 cycles platinum-doublet ChT [I, A] | ECOG PS 0\u20131, any PD-L1 expression.",
+    "prerequisites": [
+      "line_of_therapy:first-line",
+      "pdl1:any",
+      "source_biomarkers:Any PD-L1 expression"
+    ]
+  },
+  {
+    "topicId": "SQCC_IV_05",
+    "topicTitle": "Nivolumab + ipilimumab (PD-L1 \u22651%)",
+    "topicApplicability": {
+      "diseaseSetting": [
+        "metastatic"
+      ],
+      "histology": [
+        "squamous"
+      ],
+      "lineOfTherapy": [
+        "first_line"
+      ],
+      "biomarkerConditions": [
+        "all_negative(EGFR,ALK,ROS1)",
+        "PDL1Bucket>=1to49"
+      ]
+    },
+    "topicInterventionTags": [
+      "pd1",
+      "ctla4",
+      "dual-ici"
+    ],
+    "guidelineStance": "recommend",
+    "stanceNotes": "Nivolumab\u2013ipilimumab (only for PD-L1 \u22651%) [I, A] | ECOG PS 0\u20131 and PD-L1 \u22651%.",
+    "prerequisites": [
+      "line_of_therapy:first-line",
+      "pdl1:ge1",
+      "source_biomarkers:PD-L1 \u22651%"
+    ]
+  },
+  {
+    "topicId": "SQCC_IV_06",
+    "topicTitle": "Platinum-doublet chemotherapy (PS 2, PD-L1 <50%)",
+    "topicApplicability": {
+      "diseaseSetting": [
+        "metastatic"
+      ],
+      "histology": [
+        "squamous"
+      ],
+      "lineOfTherapy": [
+        "first_line"
+      ],
+      "biomarkerConditions": [
+        "all_negative(EGFR,ALK,ROS1)",
+        "PDL1Bucket<ge50"
+      ]
+    },
+    "topicInterventionTags": [
+      "chemotherapy",
+      "platinum-doublet"
+    ],
+    "guidelineStance": "recommend",
+    "stanceNotes": "PS 2 & PD-L1 <50% \u2192 Platinum-doublet (carboplatin preferred) [I, A] | ECOG PS 2 and PD-L1 <50%. Carboplatin preferred.",
+    "prerequisites": [
+      "line_of_therapy:first-line",
+      "performance_status:2",
+      "pdl1:lt50",
+      "source_biomarkers:PD-L1 <50%"
+    ]
+  },
+  {
+    "topicId": "SQCC_IV_07",
+    "topicTitle": "Single-agent chemotherapy (frail patients)",
+    "topicApplicability": {
+      "diseaseSetting": [
+        "metastatic"
+      ],
+      "histology": [
+        "squamous"
+      ],
+      "lineOfTherapy": [
+        "first_line"
+      ],
+      "biomarkerConditions": []
+    },
+    "topicInterventionTags": [
+      "chemotherapy",
+      "single-agent-chemo"
+    ],
+    "guidelineStance": "recommend",
+    "stanceNotes": "Single-agent ChT (gemcitabine, vinorelbine, docetaxel) [I, B] | ECOG PS 2 unsuitable for combination therapy.",
+    "prerequisites": [
+      "line_of_therapy:first-line",
+      "frailty:yes",
+      "source_biomarkers:Not biomarker-driven"
+    ]
+  },
+  {
+    "topicId": "SQCC_IV_08",
+    "topicTitle": "Second-line immune checkpoint inhibitor after progression",
+    "topicApplicability": {
+      "diseaseSetting": [
+        "metastatic"
+      ],
+      "histology": [
+        "squamous"
+      ],
+      "lineOfTherapy": [
+        "second_line",
+        "later_line"
+      ],
+      "biomarkerConditions": []
+    },
+    "topicInterventionTags": [
+      "pd1",
+      "pdl1",
+      "ici",
+      "immunotherapy"
+    ],
+    "guidelineStance": "recommend",
+    "stanceNotes": "Nivolumab / Atezolizumab / Pembrolizumab [I, A] | Disease progression after platinum-based chemotherapy; PS 0\u20132.",
+    "prerequisites": [
+      "line_of_therapy:second-line",
+      "source_biomarkers:PD-L1 \u22651% for pembrolizumab"
+    ]
+  },
+  {
+    "topicId": "SQCC_IV_09",
+    "topicTitle": "Ramucirumab + docetaxel after progression",
+    "topicApplicability": {
+      "diseaseSetting": [
+        "metastatic"
+      ],
+      "histology": [
+        "squamous"
+      ],
+      "lineOfTherapy": [
+        "second_line",
+        "later_line"
+      ],
+      "biomarkerConditions": []
+    },
+    "topicInterventionTags": [
+      "antiangiogenic",
+      "docetaxel",
+      "chemotherapy"
+    ],
+    "guidelineStance": "recommend",
+    "stanceNotes": "Ramucirumab\u2013docetaxel [I, B] | Progression after platinum-based therapy; ECOG PS 0\u20132.",
+    "prerequisites": [
+      "line_of_therapy:second-line",
+      "source_biomarkers:None"
+    ]
+  },
+  {
+    "topicId": "SQCC_IV_10",
+    "topicTitle": "Targeted therapy for oncogenic driver-positive tumors",
+    "topicApplicability": {
+      "diseaseSetting": [
+        "metastatic"
+      ],
+      "histology": [
+        "squamous"
+      ],
+      "lineOfTherapy": [
+        "first_line"
+      ],
+      "biomarkerConditions": [
+        "any_positive(EGFR,ALK,ROS1,BRAF,RET,MET,EGFRExon20ins,KRAS,NTRK,HER2)"
+      ]
+    },
+    "topicInterventionTags": [
+      "egfr-targeted",
+      "alk-targeted",
+      "ros1-targeted",
+      "braf-targeted",
+      "ret-targeted",
+      "met-targeted",
+      "kras-targeted",
+      "ntrk-targeted",
+      "her2-targeted"
+    ],
+    "guidelineStance": "recommend",
+    "stanceNotes": "Molecular test positive \u2192 Targeted therapy | Never/light smokers (<15 pack-years), long-time ex-smokers or age <50 years with positive molecular test.",
+    "prerequisites": [
+      "line_of_therapy:first-line",
+      "oncogenic_driver:required",
+      "source_biomarkers:EGFR, ALK, ROS1, BRAF, RET, MET, EGFR exon20ins, KRAS G12C, NTRK, HER2"
+    ]
+  }
+]

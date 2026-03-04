@@ -15,6 +15,7 @@ from app.repositories.corpus_store import corpus_store
 
 
 ROOT = Path(__file__).resolve().parents[4]
+API_ROOT = Path(__file__).resolve().parents[2]
 
 
 def _load_json(path: Path):
@@ -32,6 +33,8 @@ def _load_first_available(paths: list[Path]):
 def load_sample_topics() -> list[GuidelineTopic]:
     payload = corpus_store.get_guideline_topics() or _load_first_available(
         [
+            API_ROOT / "datasets" / "esmo" / "topics.curated.json",
+            API_ROOT / "datasets" / "esmo" / "topics.sample.json",
             ROOT / "datasets" / "esmo" / "topics.curated.json",
             ROOT / "datasets" / "esmo" / "topics.sample.json",
         ]
@@ -53,6 +56,8 @@ def load_sample_topics() -> list[GuidelineTopic]:
 def load_sample_evidence() -> list[EvidenceRecord]:
     payload = corpus_store.get_evidence_studies() or _load_first_available(
         [
+            API_ROOT / "datasets" / "pubmed" / "evidence.curated.json",
+            API_ROOT / "datasets" / "pubmed" / "evidence.sample.json",
             ROOT / "datasets" / "pubmed" / "evidence.curated.json",
             ROOT / "datasets" / "pubmed" / "evidence.sample.json",
         ]
@@ -76,6 +81,8 @@ def load_sample_evidence() -> list[EvidenceRecord]:
 def load_sample_vignette() -> VignetteInput:
     payload = _load_first_available(
         [
+            API_ROOT / "datasets" / "vignettes" / "frozen_pack.curated.json",
+            API_ROOT / "datasets" / "vignettes" / "frozen_pack.sample.json",
             ROOT / "datasets" / "vignettes" / "frozen_pack.curated.json",
             ROOT / "datasets" / "vignettes" / "frozen_pack.sample.json",
         ]
@@ -94,6 +101,8 @@ def load_sample_vignette() -> VignetteInput:
 def load_frozen_pack() -> dict:
     return _load_first_available(
         [
+            API_ROOT / "datasets" / "vignettes" / "frozen_pack.curated.json",
+            API_ROOT / "datasets" / "vignettes" / "frozen_pack.sample.json",
             ROOT / "datasets" / "vignettes" / "frozen_pack.curated.json",
             ROOT / "datasets" / "vignettes" / "frozen_pack.sample.json",
         ]

@@ -47,3 +47,4 @@ pnpm-debug.log*
 
 # OS metadata
 **/.DS_Store
+.vercel

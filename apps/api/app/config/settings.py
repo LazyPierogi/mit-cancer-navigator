@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from pydantic import Field, AliasChoices
@@ -5,13 +6,21 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 ROOT_DIR = Path(__file__).resolve().parents[4]
+DEFAULT_SQLITE_PATH = ROOT_DIR / "apps" / "api" / "navigator.db"
+VERCEL_SQLITE_PATH = Path("/tmp/navigator.db")
+
+
+def _default_database_url() -> str:
+    if os.getenv("VERCEL"):
+        return f"sqlite:///{VERCEL_SQLITE_PATH}"
+    return f"sqlite:///{DEFAULT_SQLITE_PATH}"
 
 
 class Settings(BaseSettings):
     app_name: str = "Lung Cancer Treatment Navigator API"
     app_env: str = "development"
     database_url: str = Field(
-        default=f"sqlite:///{ROOT_DIR / 'apps' / 'api' / 'navigator.db'}",
+        default_factory=_default_database_url,
         validation_alias=AliasChoices("DATABASE_URL", "POSTGRES_URL"),
     )
     redis_url: str = "redis://localhost:6379/0"
