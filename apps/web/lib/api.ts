@@ -1,4 +1,12 @@
-import { AnalyzeRunResponse, ImportBatch, ImportSummary, TracePayload, VignetteInput } from "@/lib/contracts";
+import {
+  AnalyzeRunResponse,
+  ImportBatch,
+  ImportDebugConfig,
+  ImportDebugLogEntry,
+  ImportSummary,
+  TracePayload,
+  VignetteInput
+} from "@/lib/contracts";
 import { sampleRun, sampleTrace } from "@/lib/sample-data";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://127.0.0.1:8000";
@@ -97,4 +105,19 @@ export async function getImportBatch(batchId: string): Promise<ImportBatch> {
 
 export async function getImportSummary(): Promise<ImportSummary> {
   return apiFetch<ImportSummary>("/api/v1/imports/summary");
+}
+
+export async function getImportDebugConfig(): Promise<ImportDebugConfig> {
+  return apiFetch<ImportDebugConfig>("/api/v1/imports/debug/config");
+}
+
+export async function updateImportDebugConfig(payload: ImportDebugConfig): Promise<ImportDebugConfig> {
+  return apiFetch<ImportDebugConfig>("/api/v1/imports/debug/config", {
+    method: "PUT",
+    body: JSON.stringify(payload)
+  });
+}
+
+export async function getImportDebugLogs(limit = 80): Promise<ImportDebugLogEntry[]> {
+  return apiFetch<ImportDebugLogEntry[]>(`/api/v1/imports/debug/logs?limit=${limit}`);
 }

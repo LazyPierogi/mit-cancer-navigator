@@ -163,6 +163,20 @@ class ImportSummaryModel(BaseModel):
     runtimeSources: RuntimeSourcesModel
 
 
+class ImportDebugConfigModel(BaseModel):
+    strictMvpPubmed: bool = False
+
+
+class ImportDebugLogEntryModel(BaseModel):
+    timestamp: datetime
+    level: str
+    event: str
+    datasetKind: str | None = None
+    path: str | None = None
+    message: str
+    details: dict[str, str | int | bool | float | None] | dict[str, object] = Field(default_factory=dict)
+
+
 class EvalMetricModel(BaseModel):
     name: str
     value: float | int

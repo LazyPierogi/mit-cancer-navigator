@@ -130,3 +130,17 @@ export type ImportSummary = {
   latestByKind: Record<string, ImportSummaryKind>;
   runtimeSources: RuntimeSources;
 };
+
+export type ImportDebugConfig = {
+  strictMvpPubmed: boolean;
+};
+
+export type ImportDebugLogEntry = {
+  timestamp: string;
+  level: string;
+  event: string;
+  datasetKind: string | null;
+  path: string | null;
+  message: string;
+  details: Record<string, unknown>;
+};

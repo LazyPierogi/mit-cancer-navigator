@@ -14,6 +14,7 @@ const navItems = [
   { href: "/datasets", label: "Datasets" },
   { href: "/labs/evals", label: "Eval Lab" },
   { href: "/labs/embeddings", label: "Embedding Lab" },
+  { href: "/labs/debug", label: "Debug Console" },
   { href: "/docs/governance", label: "Governance" }
 ];
 

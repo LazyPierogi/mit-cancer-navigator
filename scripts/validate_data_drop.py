@@ -53,6 +53,23 @@ PUBMED_RAW_REQUIRED_FIELDS = {
     "notes",
 }
 
+PUBMED_RAW_V2_REQUIRED_FIELDS = {
+    "pmid",
+    "title",
+    "abstract",
+    "publicationYear",
+    "publicationType",
+    "journalTitle",
+    "evidenceType",
+    "diseaseSetting",
+    "histology",
+    "lineOfTherapy",
+    "biomarkers",
+    "interventionTags",
+    "outcomeTags",
+    "relevantN",
+}
+
 PUBMED_CANONICAL_REQUIRED_FIELDS = {
     "evidenceId",
     "title",
@@ -77,8 +94,14 @@ CANONICAL_EVIDENCE_TYPES = {
     "case_series",
     "expert_opinion",
 }
+CANONICAL_EVIDENCE_TYPE_ALIASES = {
+    "randomized control trial": "phase3_rct",
+    "randomized controlled trial": "phase3_rct",
+    "systematic review": "systematic_review",
+}
 CANONICAL_BIOMARKER_FLAGS = {"yes", "no", "unspecified"}
 CANONICAL_PDL1_BUCKETS = {"lt1", "1to49", "ge50", "unspecified"}
+RAW_PDL1_BUCKETS = CANONICAL_PDL1_BUCKETS | {"any"}
 CANONICAL_BIOMARKER_KEYS = {
     "EGFR",
     "ALK",
@@ -94,8 +117,10 @@ CANONICAL_BIOMARKER_KEYS = {
 }
 CANONICAL_INTERVENTION_TAG_RE = re.compile(r"^[a-z0-9][a-z0-9\-]*$")
 RAW_BIOMARKER_RED_FLAGS = {"positive", "negative"}
+RAW_PDL1_FLAG_KEYS = {"PDL1_ge50", "PDL1_1to49", "PDL1_lt1", "PDL1_any"}
 RAW_PDL1_FREE_TEXT_THRESHOLD = 80
 MULTI_SCENARIO_RE = re.compile(r"(first[- ]line.*second[- ]line|second[- ]line.*first[- ]line)", re.IGNORECASE)
+STRICT_MVP_PUBMED_EVIDENCE_TYPES = {"phase3_rct", "systematic_review"}
 
 
 @dataclass(slots=True)
@@ -273,9 +298,179 @@ def _split_csv_values(value: str) -> list[str]:
     return [item.strip() for item in value.split(",") if item.strip()]
 
 
-def _validate_pubmed_raw(records: list[dict[str, str]], report: ValidationReport) -> None:
+def _normalize_token(value: str) -> str:
+    normalized = value.strip().lower().replace("-", "_").replace(" ", "_")
+    while "__" in normalized:
+        normalized = normalized.replace("__", "_")
+    return normalized
+
+
+def _parse_list_cell(value: str) -> list[str]:
+    raw = value.strip()
+    if not raw:
+        return []
+
+    if raw.startswith("[") and raw.endswith("]"):
+        try:
+            parsed = json.loads(raw)
+            if isinstance(parsed, list):
+                return [str(item).strip() for item in parsed if str(item).strip()]
+        except json.JSONDecodeError:
+            pass
+
+    return [item.strip() for item in raw.split(",") if item.strip()]
+
+
+def _parse_biomarkers_cell(value: str) -> dict[str, str] | None:
+    raw = value.strip()
+    if not raw:
+        return {}
+
+    if raw.startswith("{") and raw.endswith("}"):
+        try:
+            parsed = json.loads(raw)
+            if isinstance(parsed, dict):
+                return {str(key).strip(): str(item).strip() for key, item in parsed.items()}
+        except json.JSONDecodeError:
+            return None
+
+    if "=" not in raw:
+        return None
+
+    payload: dict[str, str] = {}
+    for chunk in raw.split(","):
+        part = chunk.strip()
+        if not part:
+            continue
+        if "=" not in part:
+            return None
+        key, item = part.split("=", 1)
+        payload[key.strip()] = item.strip()
+    return payload
+
+
+def _validate_pubmed_raw_v2(
+    item: dict[str, str], report: ValidationReport, seen_ids: set[str], *, strict_mvp_pubmed: bool = False
+) -> None:
+    record_id = item.get("pmid") or "<missing>"
+    missing = _has_missing_fields(item, PUBMED_RAW_V2_REQUIRED_FIELDS)
+    if missing:
+        report.add("error", "missing_required_fields", f"Missing raw PubMed v2 fields: {sorted(missing)}", record_id)
+        return
+
+    if record_id in seen_ids:
+        report.add("error", "duplicate_pmid", "Duplicate pmid.", record_id)
+    seen_ids.add(record_id)
+
+    for field in ("title", "abstract", "publicationYear", "publicationType", "journalTitle", "evidenceType"):
+        if not _validate_non_empty_string(item.get(field)):
+            report.add("error", "empty_required_value", f"Field `{field}` must be a non-empty string.", record_id)
+
+    publication_year = item.get("publicationYear", "").strip()
+    if publication_year and publication_year not in {"unspecified", "null"} and not publication_year.isdigit():
+        report.add("error", "invalid_publication_year", f"publicationYear `{publication_year}` is not numeric.", record_id)
+
+    evidence_type = _normalize_token(item.get("evidenceType", ""))
+    effective_evidence_type = evidence_type
+    if evidence_type not in CANONICAL_EVIDENCE_TYPES:
+        mapped = CANONICAL_EVIDENCE_TYPE_ALIASES.get(item.get("evidenceType", "").strip().lower())
+        if mapped is None:
+            report.add(
+                "error",
+                "invalid_evidence_type",
+                f"evidenceType `{item.get('evidenceType')}` is not normalized to canonical tokens.",
+                record_id,
+            )
+        else:
+            effective_evidence_type = mapped
+            report.add(
+                "error" if strict_mvp_pubmed else "warning",
+                "noncanonical_evidence_type_alias",
+                f"evidenceType `{item.get('evidenceType')}` should be sent as `{mapped}`.",
+                record_id,
+            )
+
+    if strict_mvp_pubmed and effective_evidence_type not in STRICT_MVP_PUBMED_EVIDENCE_TYPES:
+        report.add(
+            "error",
+            "evidence_type_outside_mvp_scope",
+            f"evidenceType `{effective_evidence_type}` is outside MVP scope {sorted(STRICT_MVP_PUBMED_EVIDENCE_TYPES)}.",
+            record_id,
+        )
+
+    for field, allowed in (
+        ("diseaseSetting", CANONICAL_DISEASE_SETTINGS),
+        ("histology", CANONICAL_HISTOLOGY),
+        ("lineOfTherapy", CANONICAL_LINE_OF_THERAPY),
+    ):
+        raw_value = item.get(field, "").strip()
+        if not raw_value:
+            report.add("error", "empty_required_value", f"Field `{field}` must be a non-empty string.", record_id)
+            continue
+
+        if "," in raw_value:
+            normalized = "mixed"
+        else:
+            normalized = _normalize_token(raw_value)
+        if normalized not in allowed:
+            report.add("error", f"invalid_{field}", f"Unknown {field} `{raw_value}`.", record_id)
+
+    biomarkers = _parse_biomarkers_cell(item.get("biomarkers", ""))
+    if biomarkers is None:
+        report.add("error", "invalid_biomarkers_payload", "`biomarkers` cannot be parsed.", record_id)
+    else:
+        pdl1_flag_values: dict[str, str] = {}
+        pdl1_bucket_seen = False
+        for key, raw_value in biomarkers.items():
+            value = _normalize_token(raw_value)
+            if key in RAW_PDL1_FLAG_KEYS:
+                pdl1_flag_values[key] = value
+                if value not in CANONICAL_BIOMARKER_FLAGS:
+                    report.add("error", "invalid_biomarker_flag", f"Unknown value `{raw_value}` for `{key}`.", record_id)
+                continue
+
+            if key == "PDL1Bucket":
+                pdl1_bucket_seen = True
+                if value not in RAW_PDL1_BUCKETS:
+                    report.add("error", "invalid_pdl1_bucket", f"Unknown PDL1Bucket `{raw_value}`.", record_id)
+                continue
+
+            if key not in CANONICAL_BIOMARKER_KEYS:
+                report.add("warning", "unknown_biomarker_key", f"Unknown biomarker key `{key}`.", record_id)
+                continue
+            if value not in CANONICAL_BIOMARKER_FLAGS:
+                report.add("error", "invalid_biomarker_flag", f"Unknown biomarker value `{raw_value}` for `{key}`.", record_id)
+
+        if pdl1_flag_values and pdl1_bucket_seen:
+            report.add(
+                "warning",
+                "mixed_pdl1_encodings",
+                "Found both `PDL1Bucket` and `PDL1_*` flags. Prefer only `PDL1Bucket`.",
+                record_id,
+            )
+        if pdl1_flag_values:
+            positives = [key for key, val in pdl1_flag_values.items() if val == "yes"]
+            if len(positives) > 1:
+                report.add(
+                    "error",
+                    "ambiguous_pdl1_flags",
+                    f"Multiple PD-L1 flags are marked `yes`: {sorted(positives)}.",
+                    record_id,
+                )
+
+    for field, warning_code in (("interventionTags", "missing_intervention_tags"), ("outcomeTags", "missing_outcome_tags")):
+        values = _parse_list_cell(item.get(field, ""))
+        if not values or values == ["unspecified"]:
+            report.add("error" if strict_mvp_pubmed and field == "interventionTags" else "warning", warning_code, f"{field} are missing or unspecified.", record_id)
+
+
+def _validate_pubmed_raw(records: list[dict[str, str]], report: ValidationReport, *, strict_mvp_pubmed: bool = False) -> None:
     seen_ids: set[str] = set()
     for item in records:
+        if not _has_missing_fields(item, PUBMED_RAW_V2_REQUIRED_FIELDS):
+            _validate_pubmed_raw_v2(item, report, seen_ids, strict_mvp_pubmed=strict_mvp_pubmed)
+            continue
+
         record_id = item.get("pmid") or "<missing>"
         missing = _has_missing_fields(item, PUBMED_RAW_REQUIRED_FIELDS)
         if missing:
@@ -398,7 +593,7 @@ def _detect_dataset_shape(path: Path) -> tuple[str, list[dict[str, Any]]]:
     return "canonical", records
 
 
-def validate_dataset(path: Path, dataset_kind: str) -> ValidationReport:
+def validate_dataset(path: Path, dataset_kind: str, *, strict_mvp_pubmed: bool = False) -> ValidationReport:
     if not path.exists():
         report = ValidationReport(dataset_kind=dataset_kind, dataset_shape="missing", path=str(path))
         report.add("error", "file_not_found", "Dataset path does not exist.")
@@ -425,7 +620,7 @@ def validate_dataset(path: Path, dataset_kind: str) -> ValidationReport:
             _validate_esmo_canonical(records, report)
     elif dataset_kind == "pubmed":
         if dataset_shape == "raw":
-            _validate_pubmed_raw(records, report)
+            _validate_pubmed_raw(records, report, strict_mvp_pubmed=strict_mvp_pubmed)
         else:
             _validate_pubmed_canonical(records, report)
     else:
@@ -479,6 +674,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Return a failing exit code if warnings are present.",
     )
+    parser.add_argument(
+        "--strict-mvp-pubmed",
+        action="store_true",
+        help="For PubMed raw validation, escalate non-MVP evidence types and missing intervention tags to errors.",
+    )
     return parser.parse_args()
 
 
@@ -487,12 +687,15 @@ def main() -> int:
 
     reports: list[ValidationReport] = []
     if args.current:
-        reports = [validate_dataset(path, dataset_kind) for dataset_kind, path in _default_paths(ROOT)]
+        reports = [
+            validate_dataset(path, dataset_kind, strict_mvp_pubmed=args.strict_mvp_pubmed)
+            for dataset_kind, path in _default_paths(ROOT)
+        ]
     else:
         if not args.dataset or not args.path:
             print("Use --current or provide both --dataset and --path.", file=sys.stderr)
             return 2
-        reports = [validate_dataset(Path(args.path), args.dataset)]
+        reports = [validate_dataset(Path(args.path), args.dataset, strict_mvp_pubmed=args.strict_mvp_pubmed)]
 
     if args.format == "json":
         print(json.dumps([report.to_dict() for report in reports], indent=2, ensure_ascii=True))

@@ -1,8 +1,14 @@
 from __future__ import annotations
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 
-from app.schemas.contracts import ImportBatchModel, ImportRequestModel, ImportSummaryModel
+from app.schemas.contracts import (
+    ImportBatchModel,
+    ImportDebugConfigModel,
+    ImportDebugLogEntryModel,
+    ImportRequestModel,
+    ImportSummaryModel,
+)
 from app.services.import_pipeline import import_pipeline_service
 
 router = APIRouter(prefix="/api/v1", tags=["imports"])
@@ -35,6 +41,21 @@ def list_imports():
 @router.get("/imports/summary", response_model=ImportSummaryModel)
 def get_import_summary():
     return import_pipeline_service.get_import_summary()
+
+
+@router.get("/imports/debug/config", response_model=ImportDebugConfigModel)
+def get_import_debug_config():
+    return import_pipeline_service.get_debug_config()
+
+
+@router.put("/imports/debug/config", response_model=ImportDebugConfigModel)
+def update_import_debug_config(payload: ImportDebugConfigModel):
+    return import_pipeline_service.update_debug_config(strict_mvp_pubmed=payload.strictMvpPubmed)
+
+
+@router.get("/imports/debug/logs", response_model=list[ImportDebugLogEntryModel])
+def get_import_debug_logs(limit: int = Query(default=80, ge=1, le=300)):
+    return import_pipeline_service.get_debug_logs(limit=limit)
 
 
 @router.get("/jobs/{job_id}", response_model=ImportBatchModel)

@@ -379,6 +379,50 @@ li {
   margin: 0;
 }
 
+.debug-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.debug-actions button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--paper);
+  font: inherit;
+  cursor: pointer;
+}
+
+.debug-actions button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.debug-actions .debug-secondary {
+  background: rgba(17, 33, 42, 0.1);
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.debug-log-details {
+  max-width: 34ch;
+  word-break: break-word;
+}
+
+.debug-log-details pre {
+  margin: 6px 0 0;
+  max-height: 110px;
+  overflow: auto;
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(17, 33, 42, 0.06);
+  font-size: 0.75rem;
+}
+
 .embedding-stage {
   min-height: 360px;
   border-radius: var(--radius-lg);
