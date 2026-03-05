@@ -20,6 +20,12 @@ const labelClassMap: Record<string, string> = {
   conflict: "tone-bad"
 };
 
+const labelDisplayMap: Record<string, string> = {
+  aligned: "Aligned",
+  guideline_silent: "Silent",
+  conflict: "Conflict"
+};
+
 export function EvidenceRibbon({ items }: { items: EvidenceItem[] }) {
   return (
     <div className="ribbon">
@@ -30,15 +36,22 @@ export function EvidenceRibbon({ items }: { items: EvidenceItem[] }) {
           <div className="ribbon-body">
             <div className="eyebrow">{item.evidenceId}</div>
             <h3>{item.title}</h3>
-            <p>{item.mappedTopicTitle ?? "No guideline topic matched this evidence item."}</p>
+            {item.mappedTopicTitle && (
+              <p>
+                <strong>Guideline topic:</strong> {item.mappedTopicTitle}
+              </p>
+            )}
+            {!item.mappedTopicTitle && (
+              <p className="muted">No guideline topic matched — labeled as silent.</p>
+            )}
             <p className="muted">{item.applicabilityNote}</p>
             <div className="score-grid compact">
               <div>
-                <span className="eyebrow">ERS</span>
+                <span className="eyebrow">ERS Total</span>
                 <strong>{item.ersTotal}</strong>
               </div>
               <div>
-                <span className="eyebrow">Evidence</span>
+                <span className="eyebrow">Strength</span>
                 <strong>{item.ersBreakdown.evidenceStrength}</strong>
               </div>
               <div>
@@ -52,7 +65,7 @@ export function EvidenceRibbon({ items }: { items: EvidenceItem[] }) {
             </div>
           </div>
           <div className={`status-pill ${labelClassMap[item.mappingLabel] ?? "tone-muted"}`}>
-            {item.mappingLabel.replace("_", " ")}
+            {labelDisplayMap[item.mappingLabel] ?? item.mappingLabel.replace(/_/g, " ")}
           </div>
         </article>
       ))}

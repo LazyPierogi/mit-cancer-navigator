@@ -19,6 +19,10 @@ __pycache__/
 htmlcov/
 .turbo/
 .vercel/
+.agent
+.codex
+.claude
+.ai-playbook
 .next-cache/
 .eslintcache
 dist/

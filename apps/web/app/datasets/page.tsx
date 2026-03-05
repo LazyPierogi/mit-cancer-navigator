@@ -159,7 +159,9 @@ export default async function DatasetsPage() {
         <span className="eyebrow">Latest By Dataset</span>
         <h2>Source-specific latest drops</h2>
         <p>Quick read on the newest persisted import for each source family we are currently running.</p>
-        <div className="dataset-grid">{["esmo", "pubmed"].map((kind) => renderDatasetCard(kind, importSummary))}</div>
+        <div className="dataset-grid">
+          {["esmo", "pubmed", "vignettes"].map((kind) => renderDatasetCard(kind, importSummary))}
+        </div>
       </section>
 
       <section className="table-card">
@@ -178,35 +180,35 @@ export default async function DatasetsPage() {
           <tbody>
             {hasRealData
               ? importBatches.map((batch) => (
-                  <tr key={batch.batchId}>
-                    <td>
-                      <Link href={`/datasets/${batch.batchId}`}>{batch.batchId}</Link>
-                    </td>
-                    <td>{sourceName(batch)}</td>
-                    <td>
-                      <span className={`status-tag ${statusTone(batch.status)}`}>{batch.status.replaceAll("_", " ")}</span>
-                    </td>
-                    <td>
-                      {batch.importedCount}/{batch.recordCount}
-                    </td>
-                    <td>
-                      {batch.errorCount} errors / {batch.warningCount} warnings
-                    </td>
-                    <td>{formatDate(batch.createdAt)}</td>
-                  </tr>
-                ))
+                <tr key={batch.batchId}>
+                  <td>
+                    <Link href={`/datasets/${batch.batchId}`}>{batch.batchId}</Link>
+                  </td>
+                  <td>{sourceName(batch)}</td>
+                  <td>
+                    <span className={`status-tag ${statusTone(batch.status)}`}>{batch.status.replaceAll("_", " ")}</span>
+                  </td>
+                  <td>
+                    {batch.importedCount}/{batch.recordCount}
+                  </td>
+                  <td>
+                    {batch.errorCount} errors / {batch.warningCount} warnings
+                  </td>
+                  <td>{formatDate(batch.createdAt)}</td>
+                </tr>
+              ))
               : fallbackDatasets.map((dataset) => (
-                  <tr key={dataset.id}>
-                    <td>{dataset.id}</td>
-                    <td>{dataset.source}</td>
-                    <td>
-                      <span className={`status-tag tone-muted`}>{dataset.status.replaceAll("_", " ")}</span>
-                    </td>
-                    <td>{dataset.records}</td>
-                    <td>n/a</td>
-                    <td>n/a</td>
-                  </tr>
-                ))}
+                <tr key={dataset.id}>
+                  <td>{dataset.id}</td>
+                  <td>{dataset.source}</td>
+                  <td>
+                    <span className={`status-tag tone-muted`}>{dataset.status.replaceAll("_", " ")}</span>
+                  </td>
+                  <td>{dataset.records}</td>
+                  <td>n/a</td>
+                  <td>n/a</td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </section>

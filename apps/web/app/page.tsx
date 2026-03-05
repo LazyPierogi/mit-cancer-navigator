@@ -11,18 +11,19 @@ export default function HomePage() {
     <>
       <div className="hero-grid">
         <section className="hero-card">
-          <span className="eyebrow">Deterministic Evidence Triage Platform</span>
-          <h1>Navigate NSCLC evidence with receipts, not vibes.</h1>
+          <span className="eyebrow">Evidence Triage for NSCLC</span>
+          <h1>Navigate treatment evidence with clarity.</h1>
           <p>
-            This scaffold frames the product as a governed clinical evidence atlas: structured vignette input,
-            deterministic scoring, guideline mapping, benchmark-gated updates, and visible safety boundaries.
+            Enter a structured clinical profile. Receive ranked evidence from peer-reviewed
+            sources, mapped against treatment guidelines. Every decision is traceable,
+            every exclusion is logged, every uncertainty is disclosed.
           </p>
           <div className="hero-actions">
             <Link className="cta-link" href="/workspace">
-              Launch workspace
+              Open workspace
             </Link>
             <Link className="cta-link" href="/docs/method">
-              Inspect methodology
+              Read the methodology
             </Link>
           </div>
           <PolicyStrip
@@ -31,7 +32,7 @@ export default function HomePage() {
             uncertaintyFlags={sampleRun.uncertaintyFlags}
           />
         </section>
-        <SectionCard eyebrow="Frozen Governance" title="Product boundaries are visible by design">
+        <SectionCard eyebrow="Safety boundaries" title="What the system will not do">
           <ul className="list-clean">
             {policy.safetyBoundaries.map((item) => (
               <li key={item}>{item}</li>
@@ -41,14 +42,21 @@ export default function HomePage() {
       </div>
 
       <div className="content-grid">
-        <SectionCard eyebrow="Evidence Ribbon" title="The core result view is an atlas, not a chatbot">
+        <SectionCard eyebrow="Example result" title="Evidence ribbon — the core output">
+          <p>
+            Each run produces a ranked list of evidence. Items are scored deterministically
+            and labeled against clinical guidelines (aligned, silent, or in conflict).
+          </p>
           <EvidenceRibbon items={sampleRun.topEvidence} />
         </SectionCard>
-        <SectionCard eyebrow="Benchmark Targets" title="Evaluation remains a product surface, not an afterthought">
+        <SectionCard eyebrow="Evaluation targets" title="How we measure quality" variant="highlight">
+          <p>
+            These metrics are evaluated against a frozen set of clinical vignettes.
+            Results are reproducible and version-pinned.
+          </p>
           <MetricGrid metrics={benchmarkMetrics} />
         </SectionCard>
       </div>
     </>
   );
 }
-

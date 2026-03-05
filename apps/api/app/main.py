@@ -35,6 +35,19 @@ def startup_event():
     bootstrap_database()
 
 
+@app.get("/")
+def root():
+    return {
+        "service": settings.app_name,
+        "status": "ok",
+        "endpoints": {
+            "health": "/health",
+            "docs": "/docs",
+            "openapi": "/openapi.json",
+        },
+    }
+
+
 @app.get("/health")
 def healthcheck():
     return {"status": "ok", "service": settings.app_name, "databaseUrl": settings.database_url}
