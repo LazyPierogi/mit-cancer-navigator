@@ -19,6 +19,7 @@ export const sampleRun = {
       mappedTopicId: "topic-met-nsclc-pdl1-ge50-first-line",
       mappedTopicTitle: "Metastatic NSCLC, driver-negative, PD-L1 >=50: first systemic therapy evidence",
       applicabilityNote: "Matches metastatic setting; histology adenocarcinoma.",
+      abstract: "This study evaluated the efficacy of pembrolizumab as a first-line therapy in patients with metastatic non-small-cell lung cancer (NSCLC) and a PD-L1 tumor proportion score of 50% or greater. The trial demonstrated significantly longer overall survival and progression-free survival compared to platinum-based chemotherapy. The results suggest pembrolizumab is highly effective in this patient population, establishing it as a new standard of care.",
       ersBreakdown: {
         evidenceStrength: 16,
         datasetRobustness: 15,

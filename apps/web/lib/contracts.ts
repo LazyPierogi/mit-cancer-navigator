@@ -44,6 +44,7 @@ export type AnalyzeRunResponse = {
     mappedTopicTitle: string | null;
     mappingLabel: "aligned" | "guideline_silent" | "conflict";
     applicabilityNote: string;
+    abstract?: string;
     citations: Array<{
       sourceId: string;
       title: string;

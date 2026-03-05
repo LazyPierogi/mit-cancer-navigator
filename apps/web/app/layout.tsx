@@ -1,25 +1,13 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import "./globals.css";
+import { STYLES } from "@/lib/theme";
+import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Lung Cancer Treatment Navigator",
-  description: "Clinical Atlas / Signal Lab for deterministic NSCLC evidence triage."
+  title: "NSCLC Navigator",
+  description: "Deterministic Evidence Engine for Lung Cancer Treatment"
 };
-
-const primaryNav = [
-  { href: "/", label: "Atlas" },
-  { href: "/workspace", label: "Workspace" },
-  { href: "/datasets", label: "Datasets" },
-  { href: "/docs/governance", label: "Governance" }
-];
-
-const labsNav = [
-  { href: "/labs/evals", label: "Eval Lab" },
-  { href: "/labs/embeddings", label: "Embedding Lab" },
-  { href: "/labs/debug", label: "Debug Console" }
-];
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -28,41 +16,35 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body>
-        <div className="shell">
-          <header className="site-header">
-            <Link href="/" className="brand-lockup">
-              <div>
-                <p className="brand-kicker">Clinical Atlas · Signal Lab</p>
-                <span className="brand-title">Lung Cancer Treatment Navigator</span>
-              </div>
-            </Link>
-            <nav className="site-nav" aria-label="Primary">
-              {primaryNav.map((item) => (
-                <Link href={item.href} key={item.href}>
-                  {item.label}
-                </Link>
-              ))}
-              <div className="nav-group">
-                <button className="nav-group-trigger" type="button">
-                  Labs
-                </button>
-                <div className="nav-group-menu">
-                  {labsNav.map((item) => (
-                    <Link href={item.href} key={item.href}>
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </nav>
-          </header>
-          <main>{children}</main>
-        </div>
+      <body className={`min-h-screen ${STYLES.bg} font-sans ${STYLES.textMain} flex flex-col selection:bg-[#C96557] selection:text-white`}>
+        <Header />
+
+        <main className="flex-1 max-w-[1400px] mx-auto w-full px-8 py-12">
+          {children}
+        </main>
+
+        {/* Editorial Footer */}
+        <footer className="bg-[#2E2E2E] text-[#6B6B6B] py-16 mt-20 border-t-[6px] border-[#C96557]">
+          <div className="max-w-[1400px] mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div className="flex items-center gap-4">
+              <div className="w-3 h-3 rounded-full bg-[#E8F2EC] animate-pulse shadow-[0_0_12px_rgba(232,242,236,0.4)]" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#EAE6DF]">System Integrity Verified</span>
+            </div>
+            <div className="text-[11px] font-medium text-[#EAE6DF]/60 text-center uppercase tracking-[0.2em] leading-loose">
+              Project: NSCLC Treatment Navigator<br />
+              Team 3: BUNDYRA, WIDMER, ESPELAND, LEŚNIEWSKI, RIEKEN, THEIS.
+            </div>
+            <div className="flex justify-end gap-8">
+              <button className="text-[11px] font-bold hover:text-[#FFFFFF] transition-colors uppercase tracking-[0.2em]">API Docs</button>
+              <button className="text-[11px] font-bold hover:text-[#FFFFFF] transition-colors uppercase tracking-[0.2em]">Logs</button>
+              <button className="text-[11px] font-bold hover:text-[#FFFFFF] transition-colors uppercase tracking-[0.2em]">ESMO V2024</button>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
