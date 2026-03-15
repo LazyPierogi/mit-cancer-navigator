@@ -1,0 +1,17 @@
+{
+  "name": "mit-cancer-navigator",
+  "version": "0.2.0",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "packages/design-tokens"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace apps/web run dev",
+    "build:web": "npm --workspace apps/web run build",
+    "test:domain": "PYTHONPATH=apps/api python3 -m unittest discover -s apps/api/tests -p 'test_*.py'",
+    "dev:api": "uv run --project apps/api uvicorn app.main:app --reload",
+    "dev:worker": "uv run --project apps/worker python -m app.worker",
+    "migrate:api": "uv run --project apps/api alembic -c apps/api/alembic.ini upgrade head"
+  }
+}

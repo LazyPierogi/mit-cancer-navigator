@@ -1,0 +1,785 @@
+{
+  "packId": "frozen-pack-canonical-v2",
+  "packLabel": "Frozen Benchmark Pack",
+  "schemaVersion": "frozen-benchmark-v2",
+  "description": "Canonical 15-case NSCLC frozen benchmark pack derived from the structured golden vignette PDF.",
+  "categoryDistribution": {
+    "targeted": 5,
+    "immunotherapy": 4,
+    "progression_second_line": 3,
+    "early_consolidation_adjuvant": 2,
+    "edge_case": 1
+  },
+  "labelDistribution": {
+    "aligned": 11,
+    "guideline_silent": 2,
+    "conflict": 2
+  },
+  "showcaseCaseIds": [
+    "V1",
+    "V6",
+    "V4",
+    "V13"
+  ],
+  "cases": [
+    {
+      "caseId": "V1",
+      "caseLabel": "EGFR 1L",
+      "detail": "Stage IV adeno \u00b7 activating EGFR mutation \u00b7 treatment-naive first line",
+      "category": "targeted",
+      "clinicalQuestion": "Should first-line osimertinib-aligned evidence dominate this activating EGFR metastatic vignette?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "adenocarcinoma",
+        "lineOfTherapy": "first_line",
+        "performanceStatus": "1",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "treatment_naive",
+        "clinicalModifiers": {
+          "brainMetastases": "unspecified"
+        },
+        "biomarkers": {
+          "EGFR": "yes",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "unspecified",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "systematic_review",
+          "intervention": "osimertinib first-line EGFR TKI",
+          "reasoning": "Classical activating EGFR metastatic disease should align to first-line targeted therapy."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "EGFR_IV_01",
+          "topicTitle": "Osimertinib first-line for classical activating EGFR mutation"
+        },
+        "expectedPrimaryLabel": "aligned",
+        "expectedTopEvidence": [
+          "PMID-36470213"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-36470213": "aligned"
+        }
+      }
+    },
+    {
+      "caseId": "V2",
+      "caseLabel": "ALK 1L",
+      "detail": "Stage IV adeno \u00b7 ALK rearranged \u00b7 treatment-naive first line",
+      "category": "targeted",
+      "clinicalQuestion": "Does the engine surface first-line ALK TKI evidence and the ALK guideline topic cleanly?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "adenocarcinoma",
+        "lineOfTherapy": "first_line",
+        "performanceStatus": "0",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "treatment_naive",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "yes",
+          "ROS1": "no",
+          "PDL1Bucket": "unspecified",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "systematic_review",
+          "intervention": "first-line ALK inhibitor",
+          "reasoning": "Driver-positive ALK disease should prioritize alectinib, brigatinib, or lorlatinib-aligned evidence."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "ALK_IV_01",
+          "topicTitle": "First-line ALK TKI: alectinib, brigatinib or lorlatinib"
+        },
+        "expectedPrimaryLabel": "aligned",
+        "expectedTopEvidence": [
+          "PMID-36380511"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-36380511": "aligned"
+        }
+      }
+    },
+    {
+      "caseId": "V3",
+      "caseLabel": "ROS1 1L",
+      "detail": "Stage IV adeno \u00b7 ROS1 fusion \u00b7 treatment-naive first line",
+      "category": "targeted",
+      "clinicalQuestion": "Does first-line ROS1-targeted evidence map to the correct guideline topic?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "adenocarcinoma",
+        "lineOfTherapy": "first_line",
+        "performanceStatus": "1",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "treatment_naive",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "yes",
+          "PDL1Bucket": "unspecified",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "systematic_review",
+          "intervention": "first-line ROS1 inhibitor",
+          "reasoning": "ROS1-positive metastatic disease should align to ROS1 TKI guidance."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "ROS1_IV_01",
+          "topicTitle": "First-line ROS1 TKI: crizotinib or entrectinib"
+        },
+        "expectedPrimaryLabel": "aligned",
+        "expectedTopEvidence": [
+          "PMID-34049720"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-34049720": "aligned"
+        }
+      }
+    },
+    {
+      "caseId": "V4",
+      "caseLabel": "KRAS Progression",
+      "detail": "Stage IV adeno \u00b7 KRAS G12C \u00b7 progressed after platinum chemotherapy",
+      "category": "targeted",
+      "clinicalQuestion": "After prior platinum, does second-line KRAS G12C-targeted evidence rise above generic progression literature?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "adenocarcinoma",
+        "lineOfTherapy": "second_line",
+        "performanceStatus": "1",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "post_platinum_chemotherapy",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "1to49",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "yes",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "systematic_review",
+          "intervention": "sotorasib or adagrasib after prior therapy",
+          "reasoning": "KRAS G12C progression should align to post-platinum targeted evidence."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "KRAS_G12C_IV_01",
+          "topicTitle": "KRAS G12C: sotorasib after prior therapy"
+        },
+        "expectedPrimaryLabel": "aligned",
+        "expectedTopEvidence": [
+          "PMID-41700598"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-41700598": "aligned"
+        }
+      }
+    },
+    {
+      "caseId": "V5",
+      "caseLabel": "EGFR T790M",
+      "detail": "Stage IV adeno \u00b7 acquired EGFR T790M \u00b7 progressed on prior EGFR TKI",
+      "category": "targeted",
+      "clinicalQuestion": "For post-EGFR-TKI resistance, do we land on second-line osimertinib rather than broad salvage therapy?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "adenocarcinoma",
+        "lineOfTherapy": "second_line",
+        "performanceStatus": "1",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "post_egfr_tki",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "yes",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "unspecified",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "phase2_rct",
+          "intervention": "osimertinib for T790M-positive resistance",
+          "reasoning": "AURA3-style evidence should align to the T790M resistance topic."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "EGFR_IV_03",
+          "topicTitle": "Second-line osimertinib for T790M-positive resistance"
+        },
+        "expectedPrimaryLabel": "aligned",
+        "expectedTopEvidence": [
+          "PMID-29697876"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-29697876": "aligned"
+        }
+      }
+    },
+    {
+      "caseId": "V6",
+      "caseLabel": "PD-L1 High",
+      "detail": "Stage IV adeno \u00b7 PD-L1 >=50% \u00b7 driver-negative treatment-naive first line",
+      "category": "immunotherapy",
+      "clinicalQuestion": "Does the benchmark show first-line pembrolizumab monotherapy alignment for PD-L1-high disease?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "adenocarcinoma",
+        "lineOfTherapy": "first_line",
+        "performanceStatus": "1",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "treatment_naive",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "ge50",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "retrospective",
+          "intervention": "pembrolizumab monotherapy",
+          "reasoning": "PD-L1-high, driver-negative metastatic disease should align to pembrolizumab monotherapy guidance."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "NSCLC_IV_01",
+          "topicTitle": "Pembrolizumab monotherapy in PD-L1 \u226550%"
+        },
+        "expectedPrimaryLabel": "aligned",
+        "expectedTopEvidence": [
+          "PMID-32022459"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-32022459": "aligned"
+        }
+      }
+    },
+    {
+      "caseId": "V7",
+      "caseLabel": "PD-L1 1-49 Chemo-IO",
+      "detail": "Stage IV non-squamous \u00b7 PD-L1 1-49% \u00b7 driver-negative treatment-naive first line",
+      "category": "immunotherapy",
+      "clinicalQuestion": "For intermediate PD-L1 without drivers, does chemo-immunotherapy-aligned evidence dominate?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "non_squamous",
+        "lineOfTherapy": "first_line",
+        "performanceStatus": "1",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "treatment_naive",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "1to49",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "phase2_rct",
+          "intervention": "nivolumab plus ipilimumab plus chemotherapy",
+          "reasoning": "Chemo-immunotherapy regardless of PD-L1 should align in a driver-negative first-line metastatic case."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "NSCLC_IV_04",
+          "topicTitle": "Chemo-immunotherapy preferred regardless of PD-L1"
+        },
+        "expectedPrimaryLabel": "aligned",
+        "expectedTopEvidence": [
+          "PMID-40446626"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-40446626": "aligned"
+        }
+      }
+    },
+    {
+      "caseId": "V8",
+      "caseLabel": "Squamous IO",
+      "detail": "Stage IV squamous \u00b7 PD-L1 >=50% \u00b7 driver-negative treatment-naive first line",
+      "category": "immunotherapy",
+      "clinicalQuestion": "Does the engine keep a squamous PD-L1-high case aligned with first-line IO guidance?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "squamous",
+        "lineOfTherapy": "first_line",
+        "performanceStatus": "1",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "treatment_naive",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "ge50",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "systematic_review",
+          "intervention": "first-line checkpoint inhibitor strategy in PD-L1-high NSCLC",
+          "reasoning": "The case should still resolve to first-line PD-L1-high IO guidance for squamous disease."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "NSCLC_IV_01",
+          "topicTitle": "Pembrolizumab monotherapy in PD-L1 \u226550%"
+        },
+        "expectedPrimaryLabel": "aligned",
+        "expectedTopEvidence": [
+          "PMID-32313723"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-32313723": "aligned"
+        }
+      }
+    },
+    {
+      "caseId": "V12",
+      "caseLabel": "Poor PS Edge Within IO",
+      "detail": "Stage IV non-squamous \u00b7 PS 3 \u00b7 driver-negative untreated disease",
+      "category": "immunotherapy",
+      "clinicalQuestion": "Does the benchmark transparently expose conflict when broad IO literature clashes with poor-PS guideline caution?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "non_squamous",
+        "lineOfTherapy": "first_line",
+        "performanceStatus": "3",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "treatment_naive",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "ge50",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "systematic_review",
+          "intervention": "immunotherapy outcomes by age and performance status",
+          "reasoning": "Evidence may be treatment-positive, but the guideline topic for PS 3-4 is conservative, so this is a deliberate conflict case."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "NSCLC_IV_20",
+          "topicTitle": "PS 3-4: best supportive care"
+        },
+        "expectedPrimaryLabel": "conflict",
+        "expectedTopEvidence": [
+          "PMID-41063998"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-41063998": "conflict"
+        }
+      }
+    },
+    {
+      "caseId": "V9",
+      "caseLabel": "Post-Platinum 2L",
+      "detail": "Stage IV squamous \u00b7 progressed after platinum chemotherapy \u00b7 second line",
+      "category": "progression_second_line",
+      "clinicalQuestion": "After platinum failure, do we map to second-line PD-(L)1 guidance instead of generic salvage noise?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "squamous",
+        "lineOfTherapy": "second_line",
+        "performanceStatus": "1",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "post_platinum_chemotherapy",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "1to49",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "retrospective",
+          "intervention": "nivolumab after platinum-doublet chemotherapy",
+          "reasoning": "This is a canonical post-platinum second-line checkpoint inhibitor case."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "NSCLC_IV_10",
+          "topicTitle": "Second-line PD-(L)1 inhibitor after platinum-doublet chemotherapy"
+        },
+        "expectedPrimaryLabel": "aligned",
+        "expectedTopEvidence": [
+          "PMID-26984449"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-26984449": "aligned"
+        }
+      }
+    },
+    {
+      "caseId": "V10",
+      "caseLabel": "Post Chemo-IO Progression",
+      "detail": "Stage IV adeno \u00b7 progressed after first-line chemo-immunotherapy",
+      "category": "progression_second_line",
+      "clinicalQuestion": "Can the benchmark expose a guideline-silent gap when strong post-progression literature exists but the canonical topic map is intentionally absent?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "adenocarcinoma",
+        "lineOfTherapy": "second_line",
+        "performanceStatus": "1",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "post_chemo_immunotherapy",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "1to49",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "systematic_review",
+          "intervention": "licensed treatments after prior chemo-immunotherapy",
+          "reasoning": "This case is meant to show transparent guideline silence, not to force-fit a topic."
+        },
+        "expectedGuidelineTopic": null,
+        "expectedPrimaryLabel": "guideline_silent",
+        "expectedTopEvidence": [
+          "PMID-30044785"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-30044785": "guideline_silent"
+        }
+      }
+    },
+    {
+      "caseId": "V11",
+      "caseLabel": "HER2 After Prior Therapy",
+      "detail": "Stage IV adeno \u00b7 activating HER2 mutation \u00b7 progressed after prior systemic therapy",
+      "category": "progression_second_line",
+      "clinicalQuestion": "Does explainability make the conflict legible when HER2-targeted evidence outruns conservative topic handling?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "adenocarcinoma",
+        "lineOfTherapy": "second_line",
+        "performanceStatus": "1",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "post_platinum_chemotherapy",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "unspecified",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "yes",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "unspecified",
+          "intervention": "trastuzumab deruxtecan for HER2-mutant NSCLC",
+          "reasoning": "This is a curated conflict case for evidence-to-guideline tension around HER2-targeted therapy."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "HER2_IV_01",
+          "topicTitle": "HER2 mutation: trastuzumab deruxtecan if available after prior therapy"
+        },
+        "expectedPrimaryLabel": "conflict",
+        "expectedTopEvidence": [
+          "PMID-38970465"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-38970465": "conflict"
+        }
+      }
+    },
+    {
+      "caseId": "V13",
+      "caseLabel": "Stage III Consolidation",
+      "detail": "Stage III unresectable \u00b7 post concurrent chemoradiation \u00b7 consolidation decision",
+      "category": "early_consolidation_adjuvant",
+      "clinicalQuestion": "Does the benchmark now preserve stage III post-CRT context instead of flattening it into metastatic first-line logic?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "locally_advanced",
+        "diseaseStage": "stage_iii",
+        "histology": "non_squamous",
+        "lineOfTherapy": "consolidation",
+        "performanceStatus": "1",
+        "resectabilityStatus": "unresectable",
+        "treatmentContext": "post_chemoradiation",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "1to49",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "systematic_review",
+          "intervention": "durvalumab-style consolidation after CRT",
+          "reasoning": "The case should align to unresectable stage III consolidation guidance."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "NSCLC_UNRESECTABLE_05",
+          "topicTitle": "Consolidation durvalumab after concurrent CRT for EGFR wild-type and PD-L1 \u22651% unresectable stage III NSCLC"
+        },
+        "expectedPrimaryLabel": "aligned",
+        "expectedTopEvidence": [
+          "PMID-39893747"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-39893747": "aligned"
+        }
+      }
+    },
+    {
+      "caseId": "V14",
+      "caseLabel": "Adjuvant EGFR",
+      "detail": "Resected stage II EGFR-mutant NSCLC \u00b7 post surgery adjuvant decision",
+      "category": "early_consolidation_adjuvant",
+      "clinicalQuestion": "Does adjuvant osimertinib stay visible as a distinct early-stage pathway with its own observability trace?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "early",
+        "diseaseStage": "stage_ii",
+        "histology": "adenocarcinoma",
+        "lineOfTherapy": "adjuvant",
+        "performanceStatus": "0",
+        "resectabilityStatus": "resected",
+        "treatmentContext": "post_surgery",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "yes",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "unspecified",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "systematic_review",
+          "intervention": "adjuvant osimertinib after complete resection",
+          "reasoning": "Completely resected stage II EGFR-mutant disease should align to adjuvant EGFR TKI guidance."
+        },
+        "expectedGuidelineTopic": {
+          "topicId": "NSCLC_RESECTABLE_10",
+          "topicTitle": "Adjuvant osimertinib for completely resected EGFR-mutated stage II-IIIA NSCLC"
+        },
+        "expectedPrimaryLabel": "aligned",
+        "expectedTopEvidence": [
+          "PMID-37528390"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-37528390": "aligned"
+        }
+      }
+    },
+    {
+      "caseId": "V15",
+      "caseLabel": "ALK Brain Mets",
+      "detail": "Stage IV adeno \u00b7 ALK-positive with brain metastases \u00b7 treatment-naive first line",
+      "category": "edge_case",
+      "clinicalQuestion": "Can the pack show a brain-metastases-specific evidence win while honestly admitting the benchmark topic map is silent?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "adenocarcinoma",
+        "lineOfTherapy": "first_line",
+        "performanceStatus": "1",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "treatment_naive",
+        "clinicalModifiers": {
+          "brainMetastases": "yes"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "yes",
+          "ROS1": "no",
+          "PDL1Bucket": "unspecified",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      },
+      "reference": {
+        "expectedEvidenceProfile": {
+          "evidenceType": "systematic_review",
+          "intervention": "ALK inhibitors for brain metastases",
+          "reasoning": "This edge case is intentionally benchmarked as guideline-silent while still expecting grounded ALK CNS evidence."
+        },
+        "expectedGuidelineTopic": null,
+        "expectedPrimaryLabel": "guideline_silent",
+        "expectedTopEvidence": [
+          "PMID-30052658"
+        ],
+        "expectedLabelByEvidenceId": {
+          "PMID-30052658": "guideline_silent"
+        }
+      }
+    }
+  ]
+}

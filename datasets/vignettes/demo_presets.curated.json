@@ -1,0 +1,106 @@
+{
+  "packId": "demo-presets-v3",
+  "packLabel": "MIT Demo Presets",
+  "schemaVersion": "demo-presets-v1",
+  "cases": [
+    {
+      "caseId": "preset-1",
+      "caseLabel": "MR. WAYNE",
+      "detail": "Metastatic adeno · 1L · PD-L1-high · pan-driver negative",
+      "category": "demo",
+      "clinicalQuestion": "Does first-line IO monotherapy stay cleanly aligned in a simple PD-L1-high metastatic case?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "metastatic",
+        "diseaseStage": "stage_iv",
+        "histology": "adenocarcinoma",
+        "lineOfTherapy": "first_line",
+        "performanceStatus": "1",
+        "resectabilityStatus": "not_applicable",
+        "treatmentContext": "treatment_naive",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "ge50",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      }
+    },
+    {
+      "caseId": "preset-2",
+      "caseLabel": "MR. STARK",
+      "detail": "Locally advanced squamous · post-CRT consolidation",
+      "category": "demo",
+      "clinicalQuestion": "Does consolidation logic stay distinct for locally advanced disease after chemoradiation?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "locally_advanced",
+        "diseaseStage": "stage_iii",
+        "histology": "squamous",
+        "lineOfTherapy": "consolidation",
+        "performanceStatus": "1",
+        "resectabilityStatus": "unresectable",
+        "treatmentContext": "post_chemoradiation",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "no",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "1to49",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      }
+    },
+    {
+      "caseId": "preset-3",
+      "caseLabel": "MRS. DOUBTFIRE",
+      "detail": "Early adeno · resected · adjuvant EGFR-positive",
+      "category": "demo",
+      "clinicalQuestion": "Does adjuvant EGFR-targeted evidence stay visible for an early-stage resected case?",
+      "vignette": {
+        "cancerType": "NSCLC",
+        "diseaseSetting": "early",
+        "diseaseStage": "stage_ii",
+        "histology": "adenocarcinoma",
+        "lineOfTherapy": "adjuvant",
+        "performanceStatus": "0",
+        "resectabilityStatus": "resected",
+        "treatmentContext": "post_surgery",
+        "clinicalModifiers": {
+          "brainMetastases": "no"
+        },
+        "biomarkers": {
+          "EGFR": "yes",
+          "ALK": "no",
+          "ROS1": "no",
+          "PDL1Bucket": "unspecified",
+          "BRAF": "no",
+          "RET": "no",
+          "MET": "no",
+          "KRAS": "no",
+          "NTRK": "no",
+          "HER2": "no",
+          "EGFRExon20ins": "no"
+        }
+      }
+    }
+  ]
+}

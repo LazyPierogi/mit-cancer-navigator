@@ -1,0 +1,312 @@
+[
+  {
+    "Topic_ID": "SQCC_IV_01",
+    "Title": "Pembrolizumab monotherapy in PD-L1 ≥50%",
+    "Disease_setting": "Stage IV squamous NSCLC",
+    "Line_of_Therapy": "First-line",
+    "Histology": "Squamous-cell carcinoma",
+    "Biomarkers_Required": "PD-L1 ≥50%",
+    "Intervention_Tags": [
+      "PD-1 inhibitor",
+      "Immunotherapy monotherapy"
+    ],
+    "Stance": "recommended",
+    "Applicability_Rules_in_plain_text": "ECOG PS 0–2 and PD-L1 expression ≥50%, no contraindication to immunotherapy.",
+    "Guideline_Excerpt_Short": "PS 0–2 & PD-L1 ≥50% → Pembrolizumab [I, A]",
+    "Normalized_Tags_v0.2": [
+      "biomarker.pdl1.tc.50plus",
+      "evidence.guideline",
+      "histology.squamous",
+      "intervention.ici.pd1",
+      "intervention.ici.single-agent",
+      "nsclc.stage.iv",
+      "phase.first-line",
+      "source.esmo",
+      "status.ecog.0",
+      "status.ecog.1",
+      "status.ecog.2"
+    ],
+    "Normalized_Tags_v0.3.1_3layer": []
+  },
+  {
+    "Topic_ID": "SQCC_IV_02",
+    "Title": "Atezolizumab monotherapy in high PD-L1",
+    "Disease_setting": "Stage IV squamous NSCLC",
+    "Line_of_Therapy": "First-line",
+    "Histology": "Squamous-cell carcinoma",
+    "Biomarkers_Required": "PD-L1 ≥50% (TC ≥50% or IC ≥10%)",
+    "Intervention_Tags": [
+      "PD-L1 inhibitor",
+      "Immunotherapy monotherapy"
+    ],
+    "Stance": "recommended",
+    "Applicability_Rules_in_plain_text": "ECOG PS 0–2 with PD-L1 ≥50%.",
+    "Guideline_Excerpt_Short": "Atezolizumab (also for ICs ≥10%) [I, A]",
+    "Normalized_Tags_v0.2": [
+      "biomarker.pdl1.tc.50plus",
+      "evidence.guideline",
+      "histology.squamous",
+      "intervention.ici.pdl1",
+      "intervention.ici.single-agent",
+      "nsclc.stage.iv",
+      "phase.first-line",
+      "source.esmo",
+      "status.ecog.0",
+      "status.ecog.1",
+      "status.ecog.2"
+    ],
+    "Normalized_Tags_v0.3.1_3layer": []
+  },
+  {
+    "Topic_ID": "SQCC_IV_03",
+    "Title": "Pembrolizumab + carboplatin + (nab-)paclitaxel",
+    "Disease_setting": "Stage IV squamous NSCLC",
+    "Line_of_Therapy": "First-line",
+    "Histology": "Squamous-cell carcinoma",
+    "Biomarkers_Required": "Any PD-L1 expression",
+    "Intervention_Tags": [
+      "Chemo-immunotherapy",
+      "PD-1 inhibitor",
+      "Platinum-doublet"
+    ],
+    "Stance": "recommended",
+    "Applicability_Rules_in_plain_text": "ECOG PS 0–1 regardless of PD-L1 level.",
+    "Guideline_Excerpt_Short": "PS 0–1 & any PD-L1 → Pembrolizumab–carboplatin–(nab-)paclitaxel [I, A]",
+    "Normalized_Tags_v0.2": [
+      "biomarker.pdl1.tc.1-49",
+      "biomarker.pdl1.tc.50plus",
+      "biomarker.pdl1.tc.<1",
+      "evidence.guideline",
+      "histology.squamous",
+      "intervention.cht.carboplatin-based",
+      "intervention.cht.platinum-doublet",
+      "intervention.ici.pd1",
+      "intervention.ici.single-agent",
+      "nsclc.stage.iv",
+      "phase.first-line",
+      "source.esmo",
+      "status.ecog.0",
+      "status.ecog.1"
+    ],
+    "Normalized_Tags_v0.3.1_3layer": [
+      "class.carboplatin-based",
+      "class.platinum-doublet",
+      "regimen.platinum-doublet"
+    ]
+  },
+  {
+    "Topic_ID": "SQCC_IV_04",
+    "Title": "Nivolumab + ipilimumab + short-course platinum chemotherapy",
+    "Disease_setting": "Stage IV squamous NSCLC",
+    "Line_of_Therapy": "First-line",
+    "Histology": "Squamous-cell carcinoma",
+    "Biomarkers_Required": "Any PD-L1 expression",
+    "Intervention_Tags": [
+      "Dual immunotherapy",
+      "CTLA-4 inhibitor",
+      "PD-1 inhibitor",
+      "Chemo-immunotherapy"
+    ],
+    "Stance": "recommended",
+    "Applicability_Rules_in_plain_text": "ECOG PS 0–1, any PD-L1 expression.",
+    "Guideline_Excerpt_Short": "Nivolumab–ipilimumab + 2 cycles platinum-doublet ChT [I, A]",
+    "Normalized_Tags_v0.2": [
+      "biomarker.pdl1.tc.1-49",
+      "biomarker.pdl1.tc.50plus",
+      "biomarker.pdl1.tc.<1",
+      "evidence.guideline",
+      "histology.squamous",
+      "intervention.cht.carboplatin-based",
+      "intervention.cht.platinum-doublet",
+      "intervention.ici.ctla4",
+      "intervention.ici.dual",
+      "intervention.ici.pd1",
+      "intervention.ici.single-agent",
+      "nsclc.stage.iv",
+      "phase.first-line",
+      "source.esmo",
+      "status.ecog.0",
+      "status.ecog.1"
+    ],
+    "Normalized_Tags_v0.3.1_3layer": [
+      "class.carboplatin-based",
+      "class.platinum-doublet",
+      "regimen.dual-ici",
+      "regimen.platinum-doublet"
+    ]
+  },
+  {
+    "Topic_ID": "SQCC_IV_05",
+    "Title": "Nivolumab + ipilimumab (PD-L1 ≥1%)",
+    "Disease_setting": "Stage IV squamous NSCLC",
+    "Line_of_Therapy": "First-line",
+    "Histology": "Squamous-cell carcinoma",
+    "Biomarkers_Required": "PD-L1 ≥1%",
+    "Intervention_Tags": [
+      "Dual immunotherapy",
+      "PD-1 inhibitor",
+      "CTLA-4 inhibitor"
+    ],
+    "Stance": "recommended",
+    "Applicability_Rules_in_plain_text": "ECOG PS 0–1 and PD-L1 ≥1%.",
+    "Guideline_Excerpt_Short": "Nivolumab–ipilimumab (only for PD-L1 ≥1%) [I, A]",
+    "Normalized_Tags_v0.2": [
+      "biomarker.pdl1.tc.1-49",
+      "biomarker.pdl1.tc.50plus",
+      "evidence.guideline",
+      "histology.squamous",
+      "intervention.ici.ctla4",
+      "intervention.ici.dual",
+      "intervention.ici.pd1",
+      "intervention.ici.single-agent",
+      "nsclc.stage.iv",
+      "phase.first-line",
+      "source.esmo",
+      "status.ecog.0",
+      "status.ecog.1"
+    ],
+    "Normalized_Tags_v0.3.1_3layer": [
+      "regimen.dual-ici"
+    ]
+  },
+  {
+    "Topic_ID": "SQCC_IV_06",
+    "Title": "Platinum-doublet chemotherapy (PS 2, PD-L1 <50%)",
+    "Disease_setting": "Stage IV squamous NSCLC",
+    "Line_of_Therapy": "First-line",
+    "Histology": "Squamous-cell carcinoma",
+    "Biomarkers_Required": "PD-L1 <50%",
+    "Intervention_Tags": [
+      "Platinum-doublet chemotherapy"
+    ],
+    "Stance": "recommended",
+    "Applicability_Rules_in_plain_text": "ECOG PS 2 and PD-L1 <50%. Carboplatin preferred.",
+    "Guideline_Excerpt_Short": "PS 2 & PD-L1 <50% → Platinum-doublet (carboplatin preferred) [I, A]",
+    "Normalized_Tags_v0.2": [
+      "biomarker.pdl1.tc.1-49",
+      "biomarker.pdl1.tc.<1",
+      "evidence.guideline",
+      "histology.squamous",
+      "intervention.cht.carboplatin-based",
+      "intervention.cht.platinum-doublet",
+      "nsclc.stage.iv",
+      "phase.first-line",
+      "source.esmo",
+      "status.ecog.2"
+    ],
+    "Normalized_Tags_v0.3.1_3layer": [
+      "class.carboplatin-based",
+      "class.platinum-doublet",
+      "regimen.platinum-doublet"
+    ]
+  },
+  {
+    "Topic_ID": "SQCC_IV_07",
+    "Title": "Single-agent chemotherapy (frail patients)",
+    "Disease_setting": "Stage IV squamous NSCLC",
+    "Line_of_Therapy": "First-line",
+    "Histology": "Squamous-cell carcinoma",
+    "Biomarkers_Required": "Not biomarker-driven",
+    "Intervention_Tags": [
+      "Single-agent chemotherapy"
+    ],
+    "Stance": "recommended",
+    "Applicability_Rules_in_plain_text": "ECOG PS 2 unsuitable for combination therapy.",
+    "Guideline_Excerpt_Short": "Single-agent ChT (gemcitabine, vinorelbine, docetaxel) [I, B]",
+    "Normalized_Tags_v0.2": [
+      "evidence.guideline",
+      "histology.squamous",
+      "intervention.cht.single-agent",
+      "nsclc.stage.iv",
+      "phase.first-line",
+      "source.esmo",
+      "status.ecog.2"
+    ],
+    "Normalized_Tags_v0.3.1_3layer": []
+  },
+  {
+    "Topic_ID": "SQCC_IV_08",
+    "Title": "Second-line immune checkpoint inhibitor after progression",
+    "Disease_setting": "Stage IV squamous NSCLC",
+    "Line_of_Therapy": "Second-line",
+    "Histology": "Squamous-cell carcinoma",
+    "Biomarkers_Required": "PD-L1 ≥1% for pembrolizumab",
+    "Intervention_Tags": [
+      "PD-1 inhibitor",
+      "PD-L1 inhibitor"
+    ],
+    "Stance": "recommended",
+    "Applicability_Rules_in_plain_text": "Disease progression after platinum-based chemotherapy; PS 0–2.",
+    "Guideline_Excerpt_Short": "Nivolumab / Atezolizumab / Pembrolizumab [I, A]",
+    "Normalized_Tags_v0.2": [
+      "biomarker.pdl1.tc.1-49",
+      "biomarker.pdl1.tc.50plus",
+      "evidence.guideline",
+      "histology.squamous",
+      "nsclc.stage.iv",
+      "phase.subsequent-line",
+      "source.esmo",
+      "status.ecog.0",
+      "status.ecog.1",
+      "status.ecog.2"
+    ],
+    "Normalized_Tags_v0.3.1_3layer": []
+  },
+  {
+    "Topic_ID": "SQCC_IV_09",
+    "Title": "Ramucirumab + docetaxel after progression",
+    "Disease_setting": "Stage IV squamous NSCLC",
+    "Line_of_Therapy": "Second-line",
+    "Histology": "Squamous-cell carcinoma",
+    "Biomarkers_Required": "None",
+    "Intervention_Tags": [
+      "VEGFR2 inhibitor",
+      "Anti-angiogenic",
+      "Chemotherapy combination"
+    ],
+    "Stance": "recommended",
+    "Applicability_Rules_in_plain_text": "Progression after platinum-based therapy; ECOG PS 0–2.",
+    "Guideline_Excerpt_Short": "Ramucirumab–docetaxel [I, B]",
+    "Normalized_Tags_v0.2": [
+      "evidence.guideline",
+      "histology.squamous",
+      "intervention.cht.single-agent.docetaxel",
+      "nsclc.stage.iv",
+      "phase.subsequent-line",
+      "source.esmo",
+      "status.ecog.0",
+      "status.ecog.1",
+      "status.ecog.2"
+    ],
+    "Normalized_Tags_v0.3.1_3layer": [
+      "class.single-agent-chemotherapy",
+      "molecule.chemotherapy.docetaxel",
+      "regimen.single-agent"
+    ]
+  },
+  {
+    "Topic_ID": "SQCC_IV_10",
+    "Title": "Targeted therapy for oncogenic driver-positive tumors",
+    "Disease_setting": "Stage IV squamous NSCLC",
+    "Line_of_Therapy": "First-line (if mutation-positive)",
+    "Histology": "Squamous-cell carcinoma (selected patients)",
+    "Biomarkers_Required": "EGFR, ALK, ROS1, BRAF, RET, MET, EGFR exon20ins, KRAS G12C, NTRK, HER2",
+    "Intervention_Tags": [
+      "Targeted therapy",
+      "Precision oncology"
+    ],
+    "Stance": "recommended",
+    "Applicability_Rules_in_plain_text": "Never/light smokers (<15 pack-years), long-time ex-smokers or age <50 years with positive molecular test.",
+    "Guideline_Excerpt_Short": "Molecular test positive → Targeted therapy",
+    "Normalized_Tags_v0.2": [
+      "biomarker.driver.positive",
+      "evidence.guideline",
+      "histology.squamous",
+      "intervention.tt.single-agent",
+      "nsclc.stage.iv",
+      "phase.first-line",
+      "source.esmo"
+    ],
+    "Normalized_Tags_v0.3.1_3layer": []
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "evidenceId": "PMID-10001",
+    "title": "Pembrolizumab first-line therapy in metastatic NSCLC with PD-L1 >= 50%",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 642,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "adenocarcinoma",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "no",
+        "ALK": "no",
+        "ROS1": "no",
+        "PDL1Bucket": "ge50"
+      }
+    },
+    "interventionTags": ["PD-1", "immunotherapy", "pembrolizumab"],
+    "outcomeTags": ["OS", "PFS"]
+  },
+  {
+    "evidenceId": "PMID-10002",
+    "title": "Retrospective study of mixed-histology metastatic NSCLC salvage therapy",
+    "publicationYear": 2018,
+    "evidenceType": "retrospective",
+    "relevantN": 84,
+    "sourceCategory": "specialty_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "mixed",
+      "histology": "mixed",
+      "lineOfTherapy": "later_line",
+      "biomarkers": {
+        "EGFR": "unspecified",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": ["chemotherapy", "salvage"],
+    "outcomeTags": ["response"]
+  },
+  {
+    "evidenceId": "PMID-10003",
+    "title": "EGFR-mutant targeted treatment in advanced NSCLC",
+    "publicationYear": 2024,
+    "evidenceType": "systematic_review",
+    "relevantN": 318,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "yes"
+      }
+    },
+    "interventionTags": ["EGFR", "targeted"],
+    "outcomeTags": ["OS", "PFS"]
+  }
+]

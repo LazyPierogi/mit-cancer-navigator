@@ -1,0 +1,36 @@
+{
+  "schema": "histology-translation-v1",
+  "description": "Compact mapping of raw NSCLC histology labels to normalized JSON histology buckets",
+  "buckets": [
+    "squamous",
+    "non_squamous",
+    "all_nsclc"
+  ],
+  "mapping": {
+    "squamous cell carcinoma": "squamous",
+    "squamous nsclc": "squamous",
+    "keratinizing squamous carcinoma": "squamous",
+    "non-keratinizing squamous carcinoma": "squamous",
+    "basaloid squamous carcinoma": "squamous",
+    "adenocarcinoma": "non_squamous",
+    "acinar adenocarcinoma": "non_squamous",
+    "lepidic adenocarcinoma": "non_squamous",
+    "papillary adenocarcinoma": "non_squamous",
+    "micropapillary adenocarcinoma": "non_squamous",
+    "solid adenocarcinoma": "non_squamous",
+    "invasive mucinous adenocarcinoma": "non_squamous",
+    "large cell carcinoma": "non_squamous",
+    "nsclc favor adenocarcinoma": "non_squamous",
+    "nsclc": "all_nsclc",
+    "nsclc nos": "all_nsclc",
+    "adenosquamous carcinoma": "all_nsclc",
+    "sarcomatoid carcinoma": "all_nsclc",
+    "pleomorphic carcinoma": "all_nsclc"
+  },
+  "notes": {
+    "nsclc nos": "Use all_nsclc by default unless source clearly operationalizes as non_squamous.",
+    "adenosquamous carcinoma": "Use all_nsclc in simplified models unless project-specific rules assign otherwise.",
+    "sarcomatoid carcinoma": "Use all_nsclc unless source provides explicit histology branch.",
+    "pleomorphic carcinoma": "Use all_nsclc unless source provides explicit histology branch."
+  }
+}

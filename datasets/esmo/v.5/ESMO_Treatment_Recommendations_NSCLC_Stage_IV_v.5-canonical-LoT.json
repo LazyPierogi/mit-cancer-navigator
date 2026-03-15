@@ -1,0 +1,3365 @@
+{
+  "datasetName": "ESMO_Treatment_Recommendations_NSCLC_Stage_IV",
+  "datasetVersion": "v2.4.1",
+  "schemaVersion": "esmo-guideline-v2",
+  "records": [
+    {
+      "topicId": "NSCLC_IV_01",
+      "topicTitle": "Pembrolizumab monotherapy in PD-L1 ≥50%",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pd1",
+        "ici",
+        "immunotherapy-monotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "ge50"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1"
+          ],
+          "layer3": [
+            "pembrolizumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "PD-L1 ≥50% -> pembrolizumab is a standard first-line option [I, A].",
+      "applicabilityNotes": "PS 0-1, no contraindication for immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_02",
+      "topicTitle": "Atezolizumab monotherapy in PD-L1-high",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "pdl1",
+        "pd1",
+        "ici",
+        "immunotherapy-monotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "ge50"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1"
+          ],
+          "layer3": [
+            "atezolizumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Alternatives for PD-L1 ≥50% include atezolizumab (also if ICs ≥10%) [I, A].",
+      "applicabilityNotes": "PS 0-1, high PD-L1; note IC ≥10% criterion for atezolizumab in guideline text."
+    },
+    {
+      "topicId": "NSCLC_IV_03",
+      "topicTitle": "Cemiplimab monotherapy in PD-L1 ≥50%",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "pd1",
+        "ici",
+        "immunotherapy-monotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "ge50"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1"
+          ],
+          "layer3": [
+            "cemiplimab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Alternatives for PD-L1 ≥50% include cemiplimab [I, A].",
+      "applicabilityNotes": "PS 0-1, no contraindication for immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_04",
+      "topicTitle": "Chemo-immunotherapy preferred regardless of PD-L1",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemo-ici",
+        "platinum-doublet",
+        "ici"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy",
+            "chemotherapy"
+          ],
+          "layer2": [
+            "chemo-ici"
+          ],
+          "layer3": [
+            "platinum-doublet+pd1/pdl1"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Combinations of platinum-based ChT and anti-PD-(L)1 inhibitors are preferred to platinum-based ChT [I, A].",
+      "applicabilityNotes": "PS 0-1, no contraindication for immunotherapy; applies regardless of PD-L1 status."
+    },
+    {
+      "topicId": "NSCLC_IV_05",
+      "topicTitle": "Nivolumab + ipilimumab option for PD-L1 ≥1%",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "dual-ici",
+        "ctla4",
+        "pd1"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "1to49",
+          "ge50"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "dual-ici"
+          ],
+          "layer3": [
+            "nivolumab+ipilimumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Nivolumab+ipilimumab is an option for PD-L1 ≥1% tumours regardless of histology [I, A] (FDA not EMA).",
+      "applicabilityNotes": "PS 0-1, PD-L1 ≥1%, no contraindication for immunotherapy; regulatory status varies."
+    },
+    {
+      "topicId": "NSCLC_IV_06",
+      "topicTitle": "Monotherapy ICI not recommended for PD-L1 <50%",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "do_not_recommend",
+      "topicInterventionTags": [
+        "ici",
+        "immunotherapy-monotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "lt1",
+          "1to49"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "ici"
+          ],
+          "layer3": [
+            "monotherapy"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Monotherapy ICI is not recommended for tumours with PD-L1 <50% [I, D].",
+      "applicabilityNotes": "Use chemo-immunotherapy combinations instead when eligible."
+    },
+    {
+      "topicId": "NSCLC_IV_07",
+      "topicTitle": "Platinum-doublet chemotherapy for PS 2",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "platinum-doublet",
+        "chemotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "carboplatin-preferred"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Platinum-based (preferably carboplatin) doublets should be considered in eligible patients with PS 2 [I, A].",
+      "applicabilityNotes": "PS 2; histology-specific agent selection per guideline."
+    },
+    {
+      "topicId": "NSCLC_IV_08",
+      "topicTitle": "Single-agent chemotherapy as alternative for PS 2",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "single-agent-chemo",
+        "chemotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "single-agent"
+          ],
+          "layer3": [
+            "gemcitabine/vinorelbine/docetaxel/pemetrexed"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Single-agent ChT is an alternative option for PS 2 patients [II, B].",
+      "applicabilityNotes": "PS 2; pemetrexed restricted to non-squamous histology."
+    },
+    {
+      "topicId": "NSCLC_IV_09",
+      "topicTitle": "Best supportive care for PS 3-4",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "bsc"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "supportive-care"
+          ],
+          "layer2": [
+            "bsc"
+          ],
+          "layer3": [
+            "best-supportive-care"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Patients with PS 3-4 should be offered best supportive care [III, A].",
+      "applicabilityNotes": "PS 3-4."
+    },
+    {
+      "topicId": "NSCLC_IV_10",
+      "topicTitle": "Second-line PD-(L)1 inhibitor after platinum-doublet chemotherapy",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "second_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pd1",
+        "pdl1",
+        "ici"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1/pdl1"
+          ],
+          "layer3": [
+            "nivolumab/pembrolizumab/atezolizumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "PD-(L)1 inhibitors (nivolumab, pembrolizumab, atezolizumab) are treatment of choice for most patients after first-line platinum-doublet ChT [I, A].",
+      "applicabilityNotes": "Previously treated with platinum-doublet; pembrolizumab requires PD-L1 ≥1% in guideline text."
+    },
+    {
+      "topicId": "NSCLC_IV_11",
+      "topicTitle": "Cemiplimab + platinum-doublet chemotherapy",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "chemo_ici_combo",
+        "cemi",
+        "platinum_doublet"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemo-immunotherapy"
+          ],
+          "layer2": [
+            "pd1-plus-chemotherapy"
+          ],
+          "layer3": [
+            "cemiplimab-platinum-doublet"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Cemiplimab-platinum-doublet ChT is an option regardless of histology [I, A; FDA approved, not EMA approved].",
+      "applicabilityNotes": "PS 0-1, no contraindication for immunotherapy; pemetrexed maintenance for non-squamous histology per regimen."
+    },
+    {
+      "topicId": "NSCLC_IV_12",
+      "topicTitle": "Durvalumab + tremelimumab + platinum-doublet chemotherapy",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "chemo_ici_combo",
+        "durva",
+        "tremi",
+        "platinum_doublet"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemo-immunotherapy"
+          ],
+          "layer2": [
+            "pd1-ctla4-plus-chemotherapy"
+          ],
+          "layer3": [
+            "durvalumab-tremelimumab-platinum-doublet"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Durvalumab-tremelimumab-platinum-doublet ChT is an option regardless of histology [I, A; FDA approved, not EMA approved].",
+      "applicabilityNotes": "PS 0-1, no contraindication for immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_13",
+      "topicTitle": "Nivolumab + ipilimumab (PD-L1 ≥1%)",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "ici_combo",
+        "nivo",
+        "ipi",
+        "ctla4"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "1to49",
+          "ge50"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1-ctla4"
+          ],
+          "layer3": [
+            "nivolumab-ipilimumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Nivolumab-ipilimumab is an option for PD-L1 ≥1% tumours regardless of histology [I, A; FDA approved, not EMA approved].",
+      "applicabilityNotes": "PS 0-1, no contraindication for immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_14",
+      "topicTitle": "For PD-L1 ≥50% needing rapid tumour reduction: choose chemo-ICI or nivo+ipi+2c ChT",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "treatment_strategy",
+        "fast_response",
+        "chemo_ici_combo",
+        "nivo_ipi_9la"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "ge50"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "treatment-strategy"
+          ],
+          "layer2": [
+            "intensification"
+          ],
+          "layer3": [
+            "rapid-tumor-reduction"
+          ]
+        }
+      },
+      "sourceExcerptShort": "ChT+ICI or nivolumab-ipilimumab with two cycles of ChT instead of monotherapy anti-PD-(L)1 is an option for PD-L1 ≥50% with need for fast tumour load reduction [IV, B].",
+      "applicabilityNotes": "PS 0-1, PD-L1 ≥50%, no contraindication for immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_15",
+      "topicTitle": "Monotherapy immune checkpoint inhibitor is not recommended when PD-L1 <50%",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "do_not_recommend",
+      "topicInterventionTags": [
+        "ici",
+        "immunotherapy-monotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "lt1",
+          "1to49"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1-pdl1"
+          ],
+          "layer3": [
+            "monotherapy-not-recommended"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Monotherapy ICI is not recommended for tumours with PD-L1 expression <50% [I, D].",
+      "applicabilityNotes": "Applies to PS 0-1 patients without contraindication to immunotherapy; for combination options use chemo-ICI topics."
+    },
+    {
+      "topicId": "NSCLC_IV_16",
+      "topicTitle": "PS 2: consider platinum-based (preferably carboplatin) doublet chemotherapy",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemo",
+        "platinum_doublet",
+        "carboplatin"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "carboplatin-based-doublet"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Platinum-based (preferably carboplatin) doublets should be considered in eligible patients with PS 2 [I, A].",
+      "applicabilityNotes": "ECOG PS 2; eligibility and toxicity discussion required."
+    },
+    {
+      "topicId": "NSCLC_IV_17",
+      "topicTitle": "PS 2: single-agent chemotherapy options (gemcitabine, vinorelbine, docetaxel)",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemo",
+        "single_agent_chemo"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "single-agent"
+          ],
+          "layer3": [
+            "gemcitabine-vinorelbine-docetaxel"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Single-agent ChT with gemcitabine, vinorelbine, docetaxel is an alternative option for PS 2 [I, B].",
+      "applicabilityNotes": "ECOG PS 2; use when not eligible for platinum doublet or when toxicity concerns dominate."
+    },
+    {
+      "topicId": "NSCLC_IV_18",
+      "topicTitle": "PS 2 non-squamous: pemetrexed single-agent chemotherapy option",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemo",
+        "single_agent_chemo",
+        "pemetrexed"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "single-agent"
+          ],
+          "layer3": [
+            "pemetrexed"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Pemetrexed (restricted to non-squamous) is an alternative single-agent option for PS 2 [II, B].",
+      "applicabilityNotes": "ECOG PS 2; non-squamous histology."
+    },
+    {
+      "topicId": "NSCLC_IV_19",
+      "topicTitle": "PS 2: monotherapy ICI may be considered (limited data)",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "ici",
+        "immunotherapy-monotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1-pdl1"
+          ],
+          "layer3": [
+            "ps2-consider"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Insufficient data are available on monotherapy ICI for PS 2, but this option can be considered [III, B].",
+      "applicabilityNotes": "ECOG PS 2; prefer chemo approaches when eligible; consider PD-L1 and comorbidities."
+    },
+    {
+      "topicId": "NSCLC_IV_20",
+      "topicTitle": "PS 3-4: best supportive care",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "bsc"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": "Performance status driven; biomarkers not used for matching."
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "supportive-care"
+          ],
+          "layer2": [
+            "bsc"
+          ],
+          "layer3": [
+            "ps3-ps4"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Patients with PS 3-4 should be offered BSC [III, A].",
+      "applicabilityNotes": "ECOG PS 3-4."
+    },
+    {
+      "topicId": "NSCLC_IV_21",
+      "topicTitle": "Second-line: offer systemic therapy if PS 0-2 and no major comorbidities",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "second_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "second_line",
+        "systemic_therapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "treatment-strategy"
+          ],
+          "layer2": [
+            "second-line"
+          ],
+          "layer3": [
+            "offer-therapy-ps0-2"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Second-line treatment should be offered to patients without major comorbidities and PS 0-2; depends on first-line agents used [I, A].",
+      "applicabilityNotes": "After progression on first-line systemic therapy in metastatic NSCLC when ECOG PS 0-2 and no major comorbidities; includes patients treated with ICI-based regimens and those treated with chemo-only because immunotherapy was contraindicated. Use regimen-specific options below."
+    },
+    {
+      "topicId": "NSCLC_IV_22",
+      "topicTitle": "Second-line: docetaxel",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "second_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemo",
+        "docetaxel",
+        "second_line"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "taxane"
+          ],
+          "layer3": [
+            "docetaxel"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Other options include docetaxel [I, B].",
+      "applicabilityNotes": "Second-line after progression on first-line systemic therapy (ICI-based or chemo-only when immunotherapy is contraindicated); ECOG PS 0-2."
+    },
+    {
+      "topicId": "NSCLC_IV_23",
+      "topicTitle": "Second-line: ramucirumab + docetaxel",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "second_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemo",
+        "docetaxel",
+        "ramucirumab",
+        "anti_vegfr2"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "antiangiogenic-combo"
+          ],
+          "layer3": [
+            "ramucirumab-docetaxel"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Other options include ramucirumab-docetaxel [I, B; MCBS 1].",
+      "applicabilityNotes": "Second-line after progression on first-line systemic therapy (ICI-based or chemo-only when immunotherapy is contraindicated); ECOG PS 0-2; consider bleeding risk and comorbidities."
+    },
+    {
+      "topicId": "NSCLC_IV_24",
+      "topicTitle": "Second-line: consider anti-PD-(L)1 rechallenge after prior clinical benefit and discontinuation not due to PD/toxicity",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "second_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "ici",
+        "rechallenge",
+        "second_line"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1-pdl1"
+          ],
+          "layer3": [
+            "rechallenge"
+          ]
+        }
+      },
+      "sourceExcerptShort": "If substantial clinical benefit from (ChT)+ICI and ICI discontinued previously not for PD or severe toxicity, rechallenge may be considered [III, B].",
+      "applicabilityNotes": "Use only when prior ICI was stopped for reasons other than progression or severe toxicity; PS 0-2."
+    },
+    {
+      "topicId": "NSCLC_IV_25",
+      "topicTitle": "Atezolizumab + bevacizumab + carboplatin + paclitaxel (ABCP) in non-squamous, EGFR/ALK WT",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pdl1",
+        "ici",
+        "immunotherapy-chemo-combo",
+        "vegf_inhibitor",
+        "chemotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy",
+            "anti-angiogenic",
+            "chemotherapy"
+          ],
+          "layer2": [
+            "pdl1",
+            "vegf",
+            "platinum_doublet"
+          ],
+          "layer3": [
+            "atezolizumab",
+            "bevacizumab",
+            "carboplatin",
+            "paclitaxel"
+          ]
+        }
+      },
+      "sourceExcerptShort": "In non-squamous NSCLC with negative molecular tests, atezolizumab + bevacizumab + carboplatin + paclitaxel is a first-line option [I, A].",
+      "applicabilityNotes": "Stage IV non-squamous; EGFR/ALK wild type; PS 0-1; no contraindication to immunotherapy or bevacizumab."
+    },
+    {
+      "topicId": "NSCLC_IV_26",
+      "topicTitle": "Continuation maintenance pemetrexed after platinum + pemetrexed induction",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "maintenance"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "maintenance"
+          ],
+          "layer3": [
+            "pemetrexed"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Continuation maintenance pemetrexed after response/stable disease on platinum doublet is recommended in eligible non-squamous NSCLC [I, A].",
+      "applicabilityNotes": "Non-squamous; after induction platinum+pemetrexed; consider toxicity, PS, patient preference. (Maintenance phase of first-line: continuation maintenance.)"
+    },
+    {
+      "topicId": "NSCLC_IV_27",
+      "topicTitle": "Pembrolizumab + carboplatin + (nab)-paclitaxel then pembrolizumab maintenance in SqCC",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pd1",
+        "ici",
+        "immunotherapy-chemo-combo",
+        "chemotherapy",
+        "platinum_doublet"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy",
+            "chemotherapy"
+          ],
+          "layer2": [
+            "pd1",
+            "platinum_doublet"
+          ],
+          "layer3": [
+            "pembrolizumab",
+            "carboplatin",
+            "paclitaxel",
+            "nab-paclitaxel"
+          ]
+        }
+      },
+      "sourceExcerptShort": "For metastatic SqCC without contraindication to immunotherapy, pembrolizumab + carboplatin + (nab)-paclitaxel followed by pembrolizumab maintenance is a standard option [I, A].",
+      "applicabilityNotes": "SqCC; PS 0-1; any PD-L1."
+    },
+    {
+      "topicId": "NSCLC_IV_28",
+      "topicTitle": "Nivolumab + ipilimumab + 2 cycles platinum-doublet then nivolumab + ipilimumab in SqCC",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pd1",
+        "ctla4",
+        "ici",
+        "immunotherapy-chemo-combo",
+        "platinum_doublet"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy",
+            "chemotherapy"
+          ],
+          "layer2": [
+            "pd1",
+            "ctla4",
+            "platinum_doublet"
+          ],
+          "layer3": [
+            "nivolumab",
+            "ipilimumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Nivolumab + ipilimumab with 2 cycles of platinum-doublet chemotherapy followed by nivolumab + ipilimumab is a first-line option [I, A].",
+      "applicabilityNotes": "SqCC; PS 0-1; any PD-L1; no contraindication to immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_29",
+      "topicTitle": "Cemiplimab + platinum-doublet chemotherapy then cemiplimab maintenance in SqCC",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "pd1",
+        "ici",
+        "immunotherapy-chemo-combo",
+        "platinum_doublet"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy",
+            "chemotherapy"
+          ],
+          "layer2": [
+            "pd1",
+            "platinum_doublet"
+          ],
+          "layer3": [
+            "cemiplimab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Cemiplimab plus platinum-doublet chemotherapy followed by cemiplimab is a first-line option (regional regulatory status may vary).",
+      "applicabilityNotes": "SqCC; PS 0-1; any PD-L1; ensure local approval/availability."
+    },
+    {
+      "topicId": "NSCLC_IV_30",
+      "topicTitle": "Contraindication to immunotherapy (SqCC, PS0-1): platinum-doublet + gemcitabine",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "platinum-doublet",
+        "gemcitabine"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "platinum+gemcitabine"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Platinum-doublet ChT (combined with gemcitabine) [I, A].",
+      "applicabilityNotes": "Stage IV squamous NSCLC; ECOG PS 0-1; contraindication to immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_31",
+      "topicTitle": "Contraindication to immunotherapy (SqCC, PS0-1): platinum-doublet + vinorelbine",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "platinum-doublet",
+        "vinorelbine"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "platinum+vinorelbine"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Platinum-doublet ChT (combined with vinorelbine) [I, A].",
+      "applicabilityNotes": "Stage IV squamous NSCLC; ECOG PS 0-1; contraindication to immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_32",
+      "topicTitle": "Contraindication to immunotherapy (SqCC, PS0-1): platinum-doublet + taxane",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "platinum-doublet",
+        "taxane"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "platinum+taxane"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Platinum-doublet ChT (combined with a taxane) [I, A].",
+      "applicabilityNotes": "Stage IV squamous NSCLC; ECOG PS 0-1; contraindication to immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_33",
+      "topicTitle": "Contraindication to immunotherapy (SqCC, PS0-1): gemcitabine maintenance after gemcitabine-cisplatin",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "maintenance",
+        "gemcitabine"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "maintenance"
+          ],
+          "layer3": [
+            "gemcitabine"
+          ]
+        }
+      },
+      "sourceExcerptShort": "If 4 cycles of gemcitabine–cisplatin: gemcitabine maintenance [I, C].",
+      "applicabilityNotes": "Continuation maintenance option after 4 cycles of gemcitabine–cisplatin in SqCC with contraindication to immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_34",
+      "topicTitle": "Contraindication to immunotherapy (SqCC, PS2): platinum-doublet + gemcitabine",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "platinum-doublet",
+        "gemcitabine"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "platinum+gemcitabine"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Platinum-doublet ChT (combined with gemcitabine) [I, A].",
+      "applicabilityNotes": "Stage IV squamous NSCLC; ECOG PS 2; contraindication to immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_35",
+      "topicTitle": "Contraindication to immunotherapy (SqCC, PS2): platinum-doublet + vinorelbine",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "platinum-doublet",
+        "vinorelbine"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "platinum+vinorelbine"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Platinum-doublet ChT (combined with vinorelbine) [I, A].",
+      "applicabilityNotes": "Stage IV squamous NSCLC; ECOG PS 2; contraindication to immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_36",
+      "topicTitle": "Contraindication to immunotherapy (SqCC, PS2): platinum-doublet + taxane",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "platinum-doublet",
+        "taxane"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "platinum+taxane"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Platinum-doublet ChT (combined with a taxane) [I, A].",
+      "applicabilityNotes": "Stage IV squamous NSCLC; ECOG PS 2; contraindication to immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_IV_37",
+      "topicTitle": "Contraindication to immunotherapy (SqCC, PS2): single-agent gemcitabine",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "single-agent",
+        "gemcitabine"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "single-agent"
+          ],
+          "layer3": [
+            "gemcitabine"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Single-agent ChT (gemcitabine) [I, B].",
+      "applicabilityNotes": "Stage IV squamous NSCLC; ECOG PS 2; contraindication to immunotherapy; consider if platinum doublet not suitable."
+    },
+    {
+      "topicId": "NSCLC_IV_38",
+      "topicTitle": "Contraindication to immunotherapy (SqCC, PS2): single-agent vinorelbine",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "single-agent",
+        "vinorelbine"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "single-agent"
+          ],
+          "layer3": [
+            "vinorelbine"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Single-agent ChT (vinorelbine) [I, B].",
+      "applicabilityNotes": "Stage IV squamous NSCLC; ECOG PS 2; contraindication to immunotherapy; consider if platinum doublet not suitable."
+    },
+    {
+      "topicId": "NSCLC_IV_39",
+      "topicTitle": "Contraindication to immunotherapy (SqCC, PS2): single-agent docetaxel",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "single-agent",
+        "docetaxel"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "single-agent"
+          ],
+          "layer3": [
+            "docetaxel"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Single-agent ChT (docetaxel) [I, B].",
+      "applicabilityNotes": "Stage IV squamous NSCLC; ECOG PS 2; contraindication to immunotherapy; consider if platinum doublet not suitable."
+    },
+    {
+      "topicId": "NSCLC_IV_42",
+      "topicTitle": "Contraindication to immunotherapy (SqCC, PS0-2): afatinib after progression (selected cases)",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "second_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "targeted",
+        "afatinib"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "egfr"
+          ],
+          "layer3": [
+            "afatinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Afatinib [I, C].",
+      "applicabilityNotes": "Guideline notes afatinib as an option in selected cases (e.g., unknown EGFR status or EGFR-wildtype) after progression."
+    },
+    {
+      "topicId": "NSCLC_IV_43",
+      "topicTitle": "Contraindication to immunotherapy (non-squamous, PS0-1): platinum-doublet with pemetrexed preferred",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "platinum-doublet",
+        "pemetrexed"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "platinum+pemetrexed"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Platinum-doublet ChT [I, A] (pemetrexed preferred) [II, A].",
+      "applicabilityNotes": "Stage IV non-squamous NSCLC; ECOG PS 0-1; contraindication to immunotherapy; molecular tests negative."
+    },
+    {
+      "topicId": "NSCLC_IV_44",
+      "topicTitle": "Contraindication to immunotherapy (non-squamous, PS0-1): continuation pemetrexed maintenance",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "maintenance",
+        "pemetrexed"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "maintenance"
+          ],
+          "layer3": [
+            "pemetrexed"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Followed by continuation pemetrexed maintenance [I, A].",
+      "applicabilityNotes": "Continuation maintenance after platinum+pemetrexed induction in non-squamous NSCLC when immunotherapy is contraindicated."
+    },
+    {
+      "topicId": "NSCLC_IV_45",
+      "topicTitle": "Contraindication to immunotherapy (non-squamous, PS0-1): switch maintenance pemetrexed",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "maintenance",
+        "pemetrexed"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "maintenance"
+          ],
+          "layer3": [
+            "pemetrexed"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Switch maintenance pemetrexed [I, B].",
+      "applicabilityNotes": "Switch maintenance pemetrexed option when induction regimen did not include pemetrexed, per algorithm."
+    },
+    {
+      "topicId": "NSCLC_IV_46",
+      "topicTitle": "Contraindication to immunotherapy (non-squamous, PS0-1): gemcitabine maintenance after gemcitabine-cisplatin",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "maintenance",
+        "gemcitabine"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "maintenance"
+          ],
+          "layer3": [
+            "gemcitabine"
+          ]
+        }
+      },
+      "sourceExcerptShort": "If 4 cycles of gemcitabine–cisplatin: continuation maintenance [I, C].",
+      "applicabilityNotes": "Continuation maintenance option after 4 cycles of gemcitabine–cisplatin in non-squamous NSCLC when immunotherapy is contraindicated."
+    },
+    {
+      "topicId": "NSCLC_IV_47",
+      "topicTitle": "Contraindication to immunotherapy (non-squamous, PS0-1): carboplatin + paclitaxel + bevacizumab then bevacizumab maintenance",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "platinum-doublet",
+        "paclitaxel",
+        "bevacizumab"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "chemo+antiangiogenic"
+          ],
+          "layer3": [
+            "carbo+paclitaxel+bevacizumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Carboplatin–paclitaxel–bevacizumab followed by bevacizumab maintenance [I, A].",
+      "applicabilityNotes": "Non-squamous NSCLC; consider when bevacizumab appropriate; immunotherapy contraindicated; molecular tests negative."
+    },
+    {
+      "topicId": "NSCLC_IV_48",
+      "topicTitle": "Contraindication to immunotherapy (non-squamous, PS0-1): platinum + pemetrexed + bevacizumab then pemetrexed + bevacizumab maintenance",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "platinum-doublet",
+        "pemetrexed",
+        "bevacizumab"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "chemo+antiangiogenic"
+          ],
+          "layer3": [
+            "platinum+pemetrexed+bevacizumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Platinum–pemetrexed–bevacizumab followed by pemetrexed–bevacizumab maintenance [I, A].",
+      "applicabilityNotes": "Non-squamous NSCLC; bevacizumab-eligible; immunotherapy contraindicated; molecular tests negative."
+    },
+    {
+      "topicId": "NSCLC_IV_49",
+      "topicTitle": "Contraindication to immunotherapy (non-squamous, PS2): platinum-doublet (carboplatin preferred) with pemetrexed preferred",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "platinum-doublet",
+        "carboplatin",
+        "pemetrexed"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "carbo+pemetrexed"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Platinum-doublet ChT (carboplatin preferred) [I, A; pemetrexed preferred: II, A].",
+      "applicabilityNotes": "Stage IV non-squamous NSCLC; ECOG PS 2; contraindication to immunotherapy; molecular tests negative."
+    },
+    {
+      "topicId": "NSCLC_IV_50",
+      "topicTitle": "Contraindication to immunotherapy (non-squamous, PS2): pemetrexed maintenance if PS improves",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "maintenance",
+        "pemetrexed"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "maintenance"
+          ],
+          "layer3": [
+            "pemetrexed"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Maintenance pemetrexed if improvement to PS 0-1 [MCBS 4].",
+      "applicabilityNotes": "Algorithm suggests pemetrexed maintenance if PS improves to 0-1 after induction; immunotherapy contraindicated."
+    },
+    {
+      "topicId": "NSCLC_IV_51",
+      "topicTitle": "Contraindication to immunotherapy (non-squamous, PS2): single-agent pemetrexed",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "single-agent",
+        "pemetrexed"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "single-agent"
+          ],
+          "layer3": [
+            "pemetrexed"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Single-agent ChT (pemetrexed) [I, B].",
+      "applicabilityNotes": "PS2 non-squamous NSCLC; immunotherapy contraindicated; consider if platinum doublet not suitable."
+    },
+    {
+      "topicId": "NSCLC_IV_52",
+      "topicTitle": "Contraindication to immunotherapy (non-squamous, PS2): single-agent gemcitabine",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "single-agent",
+        "gemcitabine"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "single-agent"
+          ],
+          "layer3": [
+            "gemcitabine"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Single-agent ChT (gemcitabine) [I, B].",
+      "applicabilityNotes": "PS2 non-squamous NSCLC; immunotherapy contraindicated; consider if platinum doublet not suitable."
+    },
+    {
+      "topicId": "NSCLC_IV_53",
+      "topicTitle": "Contraindication to immunotherapy (non-squamous, PS2): single-agent vinorelbine",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "single-agent",
+        "vinorelbine"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "single-agent"
+          ],
+          "layer3": [
+            "vinorelbine"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Single-agent ChT (vinorelbine) [I, B].",
+      "applicabilityNotes": "PS2 non-squamous NSCLC; immunotherapy contraindicated; consider if platinum doublet not suitable."
+    },
+    {
+      "topicId": "NSCLC_IV_54",
+      "topicTitle": "Contraindication to immunotherapy (non-squamous, PS2): single-agent docetaxel",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "single-agent",
+        "docetaxel"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "single-agent"
+          ],
+          "layer3": [
+            "docetaxel"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Single-agent ChT (docetaxel) [I, B].",
+      "applicabilityNotes": "PS2 non-squamous NSCLC; immunotherapy contraindicated; consider if platinum doublet not suitable."
+    },
+    {
+      "topicId": "ALK_IV_01",
+      "topicTitle": "First-line ALK TKI: alectinib, brigatinib or lorlatinib",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "alk",
+        "tki",
+        "targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "ALK"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "alk"
+          ],
+          "layer3": [
+            "alectinib/brigatinib/lorlatinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Patients should be treated first-line with alectinib, brigatinib or lorlatinib [I, A].",
+      "applicabilityNotes": "ALK translocation positive."
+    },
+    {
+      "topicId": "BRAF_IV_01",
+      "topicTitle": "BRAF V600: dabrafenib + trametinib",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "braf",
+        "mek",
+        "targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "BRAF"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "braf"
+          ],
+          "layer3": [
+            "dabrafenib+trametinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "BRAFi–MEK inhibition using dabrafenib–trametinib is recommended [III, A].",
+      "applicabilityNotes": "BRAF V600 mutation (trial enrolled V600E)."
+    },
+    {
+      "topicId": "EGFR_IV_01",
+      "topicTitle": "Osimertinib first-line for classical activating EGFR mutation",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "egfr",
+        "tki",
+        "targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "EGFR"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "egfr"
+          ],
+          "layer3": [
+            "osimertinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Osimertinib is the preferable first-line option for classical activating EGFR mutation [I, A].",
+      "applicabilityNotes": "EGFR exon 19 deletion or exon 21 L858R; especially relevant for CNS metastases."
+    },
+    {
+      "topicId": "EGFR_IV_02",
+      "topicTitle": "Other first-line EGFR TKIs when osimertinib unavailable",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "egfr",
+        "tki",
+        "targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "EGFR"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "egfr"
+          ],
+          "layer3": [
+            "erlotinib/gefitinib/afatinib/dacomitinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Erlotinib, gefitinib, afatinib, dacomitinib are other first-line single-agent options [I, B].",
+      "applicabilityNotes": "Use when osimertinib not available/appropriate."
+    },
+    {
+      "topicId": "EGFR_IV_03",
+      "topicTitle": "Second-line osimertinib for T790M-positive resistance",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "second_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "egfr",
+        "tki",
+        "targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "EGFR"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "egfr"
+          ],
+          "layer3": [
+            "osimertinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "T790M-positive resistance should receive osimertinib as second-line therapy [I, A].",
+      "applicabilityNotes": "Progression on first/second-generation EGFR TKI with confirmed T790M."
+    },
+    {
+      "topicId": "HER2_IV_01",
+      "topicTitle": "HER2 mutation: trastuzumab deruxtecan if available after prior therapy",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "later_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "her2",
+        "adc",
+        "targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "HER2"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "her2"
+          ],
+          "layer3": [
+            "trastuzumab-deruxtecan"
+          ]
+        }
+      },
+      "sourceExcerptShort": "In HER2 exon 20 mutations, trastuzumab deruxtecan, if available, is recommended following prior therapy (not EMA approved) [III, B].",
+      "applicabilityNotes": "HER2 mutation; regulatory availability varies."
+    },
+    {
+      "topicId": "METEX14_IV_01",
+      "topicTitle": "MET exon 14 skipping: capmatinib or tepotinib",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "second_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "met",
+        "tki",
+        "targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "MET"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "met"
+          ],
+          "layer3": [
+            "capmatinib/tepotinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Capmatinib and tepotinib are recommended in MET exon 14 skipping mutation (second line per EMA label) [III, A].",
+      "applicabilityNotes": "MET exon 14 skipping; often after prior immunotherapy and/or platinum-based chemotherapy per EMA label."
+    },
+    {
+      "topicId": "NTRK_IV_01",
+      "topicTitle": "NTRK fusion: larotrectinib or entrectinib when no satisfactory alternatives",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "later_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "ntrk",
+        "tki",
+        "targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "NTRK"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "ntrk"
+          ],
+          "layer3": [
+            "larotrectinib/entrectinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Larotrectinib and entrectinib are recommended for NSCLC with NTRK gene fusion with no satisfactory treatment options [III, A].",
+      "applicabilityNotes": "NTRK fusion positive; used when no satisfactory alternative treatments."
+    },
+    {
+      "topicId": "RET_IV_01",
+      "topicTitle": "RET fusion: selpercatinib or pralsetinib first-line",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "ret",
+        "tki",
+        "targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "RET"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "ret"
+          ],
+          "layer3": [
+            "selpercatinib/pralsetinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Treatment with selpercatinib or pralsetinib is recommended as first-line therapy [III, A].",
+      "applicabilityNotes": "RET fusion positive."
+    },
+    {
+      "topicId": "ROS1_IV_01",
+      "topicTitle": "First-line ROS1 TKI: crizotinib or entrectinib",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "ros1",
+        "tki",
+        "targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "ROS1"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "ros1"
+          ],
+          "layer3": [
+            "crizotinib/entrectinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Crizotinib or entrectinib is recommended first-line [III, A].",
+      "applicabilityNotes": "ROS1 translocation positive; entrectinib preferred with brain metastases (guideline text)."
+    },
+    {
+      "topicId": "EGFR_EX20_IV_01",
+      "topicTitle": "EGFR exon 20 insertion: amivantamab after platinum-doublet",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "second_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "egfr",
+        "egfr-ex20ins",
+        "targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "EGFRExon20ins"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "egfr"
+          ],
+          "layer3": [
+            "amivantamab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Amivantamab is approved for tumours progressing on platinum-doublet ChT and can be recommended [III, B].",
+      "applicabilityNotes": "EGFR exon 20 insertion; progression after platinum-doublet."
+    },
+    {
+      "topicId": "KRAS_G12C_IV_01",
+      "topicTitle": "KRAS G12C: sotorasib after prior therapy",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "later_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "kras",
+        "kras-g12c",
+        "targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "KRAS"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "kras"
+          ],
+          "layer3": [
+            "sotorasib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Sotorasib is recommended for KRAS G12C-mutated NSCLC failing prior therapy [I, B].",
+      "applicabilityNotes": "KRAS G12C mutation; after prior platinum and ICI per trial context."
+    },
+    {
+      "topicId": "NSCLC_NSQ_IV_01",
+      "topicTitle": "Pembrolizumab + platinum + pemetrexed (KEYNOTE-189)",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemo_ici_combo",
+        "pembro",
+        "platinum_doublet",
+        "pemetrexed"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemo-immunotherapy"
+          ],
+          "layer2": [
+            "pd1-plus-chemotherapy"
+          ],
+          "layer3": [
+            "pembrolizumab-platinum-pemetrexed"
+          ]
+        }
+      },
+      "sourceExcerptShort": "First-line combination treatment regardless of PD-L1: platinum-based chemotherapy plus PD-1/PD-L1 blockade is the most common approach.",
+      "applicabilityNotes": "PS 0-1, no contraindication for immunotherapy; non-squamous histology; pemetrexed maintenance per regimen."
+    },
+    {
+      "topicId": "NSCLC_NSQ_IV_02",
+      "topicTitle": "Atezolizumab + carboplatin + nab-paclitaxel (IMpower130)",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "chemo_ici_combo",
+        "atezo",
+        "carboplatin",
+        "nab_paclitaxel"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemo-immunotherapy"
+          ],
+          "layer2": [
+            "pdl1-plus-chemotherapy"
+          ],
+          "layer3": [
+            "atezolizumab-carboplatin-nabpaclitaxel"
+          ]
+        }
+      },
+      "sourceExcerptShort": "In IMpower130 (EGFR/ALK wildtype), carboplatin-nab-paclitaxel plus atezolizumab improved OS versus chemotherapy.",
+      "applicabilityNotes": "PS 0-1, no contraindication for immunotherapy; EGFR/ALK negative."
+    },
+    {
+      "topicId": "NSCLC_NSQ_IV_03",
+      "topicTitle": "Nivolumab + ipilimumab + 2 cycles chemotherapy (CheckMate 9LA)",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemo_ici_combo",
+        "nivo",
+        "ipi",
+        "short_course_chemo"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemo-immunotherapy"
+          ],
+          "layer2": [
+            "pd1-ctla4-plus-chemotherapy"
+          ],
+          "layer3": [
+            "nivolumab-ipilimumab-9la"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Nivolumab-ipilimumab plus two cycles of ChT is a first-line option regardless of histology [I, A].",
+      "applicabilityNotes": "PS 0-1, no contraindication for immunotherapy."
+    },
+    {
+      "topicId": "NSCLC_NSQ_IV_05",
+      "topicTitle": "Second-line non-squamous: pemetrexed if not given in first line",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "second_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemo",
+        "pemetrexed",
+        "second_line"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "antimetabolite"
+          ],
+          "layer3": [
+            "pemetrexed"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Other options are pemetrexed if not given in first line [I, B].",
+      "applicabilityNotes": "Non-squamous histology; second-line after progression on first-line systemic therapy (including chemo-only if immunotherapy is contraindicated); use only if pemetrexed not previously used."
+    },
+    {
+      "topicId": "NSCLC_NSQ_IV_06",
+      "topicTitle": "Second-line: nintedanib + docetaxel",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "second_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemo",
+        "docetaxel",
+        "nintedanib",
+        "antiangiogenic"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "antiangiogenic-combo"
+          ],
+          "layer3": [
+            "nintedanib-docetaxel"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Other options include nintedanib-docetaxel [II, B].",
+      "applicabilityNotes": "Typically used in non-squamous disease as second-line after progression on first-line systemic therapy (including chemo-only if immunotherapy is contraindicated); ECOG PS 0-2."
+    },
+    {
+      "topicId": "NSCLC_SQCC_IV_01",
+      "topicTitle": "Pembrolizumab + carboplatin + (nab)-paclitaxel (KEYNOTE-407)",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemo_ici_combo",
+        "pembro",
+        "carboplatin",
+        "paclitaxel"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemo-immunotherapy"
+          ],
+          "layer2": [
+            "pd1-plus-chemotherapy"
+          ],
+          "layer3": [
+            "pembrolizumab-carboplatin-paclitaxel"
+          ]
+        }
+      },
+      "sourceExcerptShort": "For squamous-cell carcinoma, first-line ChT+ICI options consist of pembrolizumab-carboplatin-(nab)-paclitaxel [I, A].",
+      "applicabilityNotes": "PS 0-1, no contraindication for immunotherapy; benefit preserved across PD-L1 strata."
+    },
+    {
+      "topicId": "NSCLC_SQCC_IV_02",
+      "topicTitle": "Nivolumab + ipilimumab + 2 cycles chemotherapy (CheckMate 9LA)",
+      "diseaseSetting": "metastatic",
+      "histology": "squamous",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemo_ici_combo",
+        "nivo",
+        "ipi",
+        "short_course_chemo"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "BRAF",
+          "RET",
+          "MET",
+          "KRAS",
+          "NTRK",
+          "HER2",
+          "EGFRExon20ins"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemo-immunotherapy"
+          ],
+          "layer2": [
+            "pd1-ctla4-plus-chemotherapy"
+          ],
+          "layer3": [
+            "nivolumab-ipilimumab-9la"
+          ]
+        }
+      },
+      "sourceExcerptShort": "For squamous-cell carcinoma, first-line ChT+ICI options consist of nivolumab-ipilimumab plus two cycles of ChT [I, A].",
+      "applicabilityNotes": "PS 0-1, no contraindication for immunotherapy."
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+[
+  {
+    "evidenceId": "PMID-40118215",
+    "title": "Cemiplimab Monotherapy for First-Line Treatment of Patients with Advanced NSCLC With PD-L1 Expression of 50% or Higher: Five-Year Outcomes of EMPOWER-Lung 1.",
+    "abstract": "INTRODUCTION: Earlier results from the phase 3 EMPOWER-Lung 1 trial indicated significant survival benefits and a generally acceptable safety profile of first-line cemiplimab monotherapy versus chemotherapy for patients with advanced NSCLC with programmed cell death-ligand 1 (PD-L1) expression in 50% or more tumor cells and no EGFR, ALK, or ROS1 aberrations. Here, we report the five-year outcomes. METHODS: Patients were randomized 1:1 to cemiplimab 350 mg intravenously every three weeks for two years or the investigator's choice of chemotherapy. The primary endpoints were overall survival (OS) and progression-free survival. RESULTS: A total of 712 patients were randomized to cemiplimab (n = 357) or chemotherapy (n = 355). The median duration of follow-up was 59.6 months (interquartile range: 55.1-66.7 months) at the data cutoff (January 16, 2024). In patients with verified 50% or higher PD-L1 (n = 565), median OS was 26.1 months for cemiplimab versus 13.3 months for chemotherapy (hazard ratio = 0.59, 95% confidence interval [CI]: 0.48-0.72); the median progression-free survival was 8.1 months versus 5.3 months (hazard ratio = 0.50, 95% confidence interval: 0.41-0.61); and the objective response rate was 46.5% versus 20.6%. The five-year OS probability was 29.0% for cemiplimab and 15.0% for chemotherapy. Improved survival outcomes were observed with both squamous and nonsquamous histology, and increasing activity of cemiplimab was correlated with higher PD-L1 expression, with the highest PD-L1 expression having the best outcome. The safety profile remains consistent with previous results. Grade 3 or higher treatment-related adverse events occurred in 18.3% of patients for cemiplimab and 39.9% for chemotherapy. CONCLUSIONS: At five-year follow-up, first-line cemiplimab monotherapy continued to show durable clinical benefits versus chemotherapy in patients with advanced NSCLC with 50% or higher PD-L1. Patients with 90% or higher PD-L1 derived the largest clinical benefits.",
+    "journalTitle": "Journal of thoracic oncology : official publication of the International Association for the Study of Lung Cancer",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 712,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "no",
+        "ALK": "no",
+        "ROS1": "no",
+        "PDL1Bucket": "ge50"
+      }
+    },
+    "interventionTags": [
+      "pd1",
+      "ici",
+      "immunotherapy-monotherapy",
+      "cemiplimab"
+    ],
+    "outcomeTags": [
+      "OS",
+      "progression-free survival",
+      "ORR",
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40446626",
+    "title": "Nivolumab plus ipilimumab with chemotherapy as first-line treatment of patients with metastatic non-small-cell lung cancer: final, 6-year outcomes from CheckMate 9LA.",
+    "abstract": "BACKGROUND: The phase III CheckMate 9LA study demonstrated durable overall survival (OS) benefit with nivolumab plus ipilimumab with chemotherapy versus chemotherapy in patients with metastatic non-small-cell lung cancer (NSCLC). Here, we report final, 6-year efficacy and safety outcomes. PATIENTS AND METHODS: Treatment-naive adults with stage IV/recurrent NSCLC and no sensitizing EGFR/ALK alterations were randomized to nivolumab plus ipilimumab with chemotherapy (n = 361) or chemotherapy (n = 358). Assessments included OS, progression-free survival, objective response rate, and duration of response (DOR) in all randomized patients and subgroups, and OS by select somatic mutation status (KRAS, STK11, KEAP1, and TP53). RESULTS: With 68.6 months' minimum follow-up, nivolumab plus ipilimumab with chemotherapy demonstrated continued OS benefit versus chemotherapy (hazard ratio 0.74, 95% confidence interval 0.63-0.87, 6-year OS rates 16% versus 10%), regardless of tumor programmed death ligand 1 (PD-L1) expression (PD-L1 <1%, 20% versus 7%; PD-L1 \u22651%, 15% versus 10%) and histology (squamous, 14% versus 5%; non-squamous, 17% versus 12%). The 6-year DOR rate was 19% with nivolumab plus ipilimumab with chemotherapy; all patients in the chemotherapy arm were censored or stopped responding before this timepoint. Trends toward improved OS were observed with nivolumab plus ipilimumab with chemotherapy over chemotherapy regardless of KRAS, STK11, KEAP1, or TP53 mutation status. No new safety signals were observed. CONCLUSIONS: These final analyses demonstrate the durable, long-term OS and response benefit with first-line nivolumab plus ipilimumab with chemotherapy over chemotherapy in patients with metastatic NSCLC, regardless of tumor PD-L1 expression, histology, or select somatic mutation status, further supporting this regimen as a standard-of-care treatment option.",
+    "journalTitle": "ESMO open",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 719,
+    "sourceCategory": "specialty_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "mixed",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "no",
+        "ALK": "no",
+        "ROS1": "no",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "pd1",
+      "ctla4",
+      "dual-ici",
+      "chemo-ici",
+      "platinum-doublet",
+      "nivolumab",
+      "ipilimumab"
+    ],
+    "outcomeTags": [
+      "OS",
+      "progression-free survival",
+      "ORR",
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40473437",
+    "title": "Sacituzumab tirumotecan versus docetaxel for previously treated EGFR-mutated advanced non-small cell lung cancer: multicentre, open label, randomised controlled trial.",
+    "abstract": "OBJECTIVE: To compare the efficacy and safety of sacituzumab tirumotecan (sac-TMT) with docetaxel in patients with locally advanced or metastatic epidermal growth factor receptor (EGFR)-mutated non-small cell lung cancer (NSCLC) after previous treatment failure with EGFR-tyrosine kinase inhibitors and platinum based chemotherapy. DESIGN: Multicentre, open label, randomised controlled trial. SETTING: 48 centres in China, 1 September 2023 to 31 December 2024. PARTICIPANTS: 137 adults (aged 18-75 years) with EGFR-mutated advanced or metastatic NSCLC after previous treatment failure with EGFR-tyrosine kinase inhibitors and platinum based chemotherapy. INTERVENTION: Patients were randomly assigned (2:1) to receive sac-TMT (5 mg/kg) on days 1 and 15 of each four week cycle, or docetaxel (75 mg/m(2)) on day 1 of each three week cycle. Patients in the docetaxel group were permitted to crossover to sac-TMT treatment on disease progression. MAIN OUTCOME MEASURES: The primary endpoint was objective response rate as assessed by a blinded independent review committee (BIRC). The secondary endpoints included objective response rate assessed by the investigator; disease control rate, progression-free survival, time to response, and duration of response assessed by BIRC and the investigator; overall survival; and safety. RESULTS: 137 patients were randomised to receive sac-TMT (n=91) or docetaxel (n=46). Median follow-up was 12.2 months at the data cut-off for efficacy (31 December 2024). BIRC assessed objective response rate was significantly higher in the sac-TMT group (45% (41/91)) v docetaxel (16% (7/45)), with a difference of 29% (95% confidence interval (CI) 15% to 43%; one sided P<0.001). Median progression-free survival was longer with sac-TMT than with docetaxel assessed by BIRC (6.9 v 2.8 months; hazard ratio 0.30, 95% CI 0.20 to 0.46; one sided P<0.001) and the investigator (7.9 v 2.8 months; hazard ratio 0.23, 0.15 to 0.36; one sided P<0.001). The 12 month overall survival rate was 73% with sac-TMT and 54% with docetaxel (hazard ratio 0.49, 0.27 to 0.88; one sided P=0.007). After adjustment for crossover using the rank-preserving structural failure time model, sac-TMT also showed improved overall survival (hazard ratio 0.36, 0.20 to 0.66). Grade \u22653 treatment related adverse events were less frequent with sac-TMT than with docetaxel (56% v 72%), with no new safety signals identified. CONCLUSIONS: Sac-TMT showed statistically significant and clinically meaningful improvements in objective response rate, progression-free survival, and overall survival compared with docetaxel, with a manageable safety profile in patients with EGFR-mutated locally advanced or metastatic NSCLC. TRIAL REGISTRATION: ClinicalTrials.gov NCT05631262.",
+    "journalTitle": "BMJ (Clinical research ed.)",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 137,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "second_line",
+      "biomarkers": {
+        "EGFR": "yes",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "trop2-adc",
+      "docetaxel",
+      "sacituzumab-tirumotecan"
+    ],
+    "outcomeTags": [
+      "OS",
+      "progression-free survival",
+      "ORR",
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-39622410",
+    "title": "RELAY: Final Overall Survival for Erlotinib Plus Ramucirumab or Placebo in Untreated, EGFR-Mutated Metastatic NSCLC.",
+    "abstract": "INTRODUCTION: RELAY, a global double-blind, placebo-controlled phase 3 study (NCT02411448) found statistically significant improvement in progression-free survival (primary end point) for ramucirumab (RAM) plus erlotinib (ERL) (RAM + ERL) in patients with untreated EGFR-mutated metastatic NSCLC (hazard ratio [HR] = 0.59, 95% confidence interval [CI]: 0.46-0.76, p < 0.0001; median progression-free survival: 19.4 versus 12.4 mo). Here, we report the final overall survival (OS; secondary end point) outcomes for the intention-to-treat population. METHODS: Between January 2016 and February 2018, 449 eligible patients with an EGFR exon 19del or L858R mutation and no central nervous system metastases were randomized (1:1) to ERL (150 mg/day) with RAM (10 mg/kg every two weeks, N = 224) or placebo (N = 225). RESULTS: At data cutoff, 297 deaths were reported (overall event rate = 66%), with a median follow-up of 45.1 months (interquartile range: 26.7-71.2), an OS HR of 0.98 (95% CI: 0.78-1.24, p = 0.864), and median OS of 51.1 months (RAM + ERL) and 46.0 months (placebo + ERL). Outcomes in subsets of patients with poor prognosis (L858R or TP53 co-mutation) suggest a directional improvement in OS (L858R: HR = 0.87, 95% CI: 0.62-1.22; exon 19del: HR = 1.13, 95% CI: 0.83-1.55; TP53 co-mutation: HR = 0.83, 95% CI: 0.58-1.19; TP53-wild-type: HR = 1.22, 95% CI: 0.87-1.72). Treatment-emergent T790M rates were similar between arms. Over 80% of patients received post-study discontinuation therapy (>50% received osimertinib in comparable numbers between arms). The safety profile for RAM + ERL was consistent with previous reports with no increased toxicity over time or new safety signals observed. CONCLUSION: In RELAY, OS was not significantly improved with similar long OS durations in both treatment arms. CLINICAL TRIAL INFORMATION: ClinicalTrials.gov Identifier: NCT02411448.",
+    "journalTitle": "Journal of thoracic oncology : official publication of the International Association for the Study of Lung Cancer",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 224,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "yes",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "egfr-targeted",
+      "egfr-tki",
+      "antiangiogenic",
+      "erlotinib",
+      "ramucirumab"
+    ],
+    "outcomeTags": [
+      "OS",
+      "PFS",
+      "progression-free survival",
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40923969",
+    "title": "Enhanced Versus Standard Dermatologic Management With Amivantamab-Lazertinib in EGFR-Mutated Advanced NSCLC: The COCOON Global Randomized Controlled Trial.",
+    "abstract": "INTRODUCTION: Amivantamab plus lazertinib significantly improved progression-free and overall survival versus osimertinib in patients with previously untreated, EGFR-mutant advanced NSCLC. EGFR-targeted therapies are associated with dermatologic adverse events (AEs), which can affect quality of life (QoL). COCOON was conducted to assess prophylactic management and improve treatment experience. METHODS: In the phase 2 COCOON study (NCT06120140), participants with previously untreated, EGFR-mutant, locally advanced or metastatic NSCLC received intravenous amivantamab plus oral lazertinib and were randomized 1:1 to enhanced dermatologic management (COCOON DM) or standard of care (SoC DM) per local guidelines. COCOON DM included oral doxycycline or minocycline (100 mg twice daily; weeks 1-12), clindamycin 1% (on scalp daily; weeks 13-52), chlorhexidine 4% (on fingernails and toenails daily), and ceramide-based moisturizer (on body and face at least daily). Primary end point was incidence of grade 2 or higher dermatologic AEs of interest (DAEIs) by week 12. RESULTS: In total, 201 participants were randomized (99 to COCOON DM and 102 to SoC DM). At a median follow-up of 7.1 months, COCOON DM demonstrated significant reduction in the primary end point versus SoC DM (42% versus 75%; OR, 0.24; 95% confidence interval, 0.13-0.45; p < 0.0001). By week 12, the largest benefit with COCOON DM was observed in DAEIs involving the face and body (excludes paronychia; 26% versus 60%; p < 0.0001) and DAEIs involving the scalp (10% versus 26%; p = 0.0049). This benefit was maintained at 6 months, with significant reductions of DAEIs involving face, body, and scalp (excluding paronychia). Patient-reported outcomes favored COCOON DM, indicating reduced impact of dermatologic symptoms on QoL. CONCLUSION: An uncomplicated, widely available, prophylactic regimen (COCOON DM) reduced the incidence of DAEIs with amivantamab-lazertinib and the impact of symptoms on QoL.",
+    "journalTitle": "Journal of thoracic oncology : official publication of the International Association for the Study of Lung Cancer",
+    "publicationYear": 2025,
+    "evidenceType": "phase2_rct",
+    "relevantN": 201,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "yes",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified",
+        "MET": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "supportive-care",
+      "egfr-met-bispecific",
+      "egfr-tki",
+      "amivantamab",
+      "lazertinib"
+    ],
+    "outcomeTags": [
+      "progression-free survival",
+      "AE",
+      "QoL"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40379995",
+    "title": "Atezolizumab plus bevacizumab and chemotherapy in metastatic nonsquamous NSCLC: the randomized double-blind phase 3 IMpower151 trial.",
+    "abstract": "After the global approval of atezolizumab plus bevacizumab and chemotherapy as first-line metastatic nonsquamous non-small-cell lung cancer (nsqNSCLC) treatment, the IMpower151 ( NCT04194203 ) trial was conducted in China to address regional differences. Chemotherapy-naive patients with metastatic nsqNSCLC (N\u2009=\u2009305) were randomized 1:1 to receive either atezolizumab, bevacizumab, carboplatin and paclitaxel or pemetrexed (ABCPem/Pac; n\u2009=\u2009152) or placebo plus bevacizumab, carboplatin and pemetrexed or paclitaxel (BCPem/Pac; n\u2009=\u2009153). The primary endpoint was investigator-assessed progression-free survival (INV-PFS); secondary endpoints included subgroup analyses of INV-PFS, independent review facility-assessed PFS, overall survival, and investigator-assessed objective response rate and duration of response per RECIST v.1.1. Most patients (97%) received pemetrexed, and 53% had EGFR(+) tumors. Median INV-PFS for ABCPem/Pac versus BCPem/Pac was 9.5 versus 7.1 months (stratified hazard ratio: 0.84; 95% confidence interval: 0.65, 1.09; P\u2009=\u20090.184). INV-PFS across subgroups and independent review facility-assessed PFS were consistent with INV-PFS in the intention-to-treat population. Median overall survival was 20.7 versus 18.7 months in the ABCPem/Pac versus BCPem/Pac arms, respectively (stratified hazard ratio: 0.93; 95% confidence interval: 0.67, 1.28). Confirmed objective response rate with ABCPem/Pac versus BCPem/Pac was 48% versus 50%, respectively; median duration of response was 11.3 versus 8.3 months. Adverse events of special interest for atezolizumab were observed in 68% (grades 3 and 4: 11%) and 71% (grades 3 and 4: 7%) of patients receiving ABCPem/Pac and BCPem/Pac, respectively. The most common adverse events of special interest for atezolizumab in the ABCPem/Pac and BCPem/Pac arms were hepatitis (driven by laboratory abnormalities; mostly low grade), hypothyroidism and rash. Overall, IMpower151 did not meet its primary endpoint (INV-PFS) in metastatic nsqNSCLC. ABCPem/Pac was generally well tolerated, with no new safety signals. Trial registration number: ClinicalTrials.gov, NCT02366143.",
+    "journalTitle": "Nature medicine",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 305,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "non_squamous",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "unspecified",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "pdl1",
+      "antiangiogenic",
+      "chemo-ici",
+      "platinum-doublet",
+      "atezolizumab",
+      "bevacizumab"
+    ],
+    "outcomeTags": [
+      "OS",
+      "PFS",
+      "progression-free survival",
+      "ORR",
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40897431",
+    "title": "Cardiovascular adverse events associated with epidermal growth factor receptor tyrosine kinase inhibitors in EGFR-mutated non-small cell lung cancer: systematic review and network meta-analysis.",
+    "abstract": "OBJECTIVE: To evaluate the risk of cardiovascular adverse events associated with epidermal growth factor receptor (EGFR) tyrosine kinase inhibitors in patients with EGFR-mutated non-small cell lung cancer (NSCLC). DESIGN: Systematic review and network meta-analysis. DATA SOURCES: PubMed, Embase, Web of Science, Scopus, Cochrane Central Register of Controlled Trials, and three clinical trial registries, from inception to 20 November 2024. STUDY SELECTION: Randomised controlled trials comparing EGFR tyrosine kinase inhibitor monotherapy with placebo or other treatments in patients with EGFR-mutated NSCLC. DATA EXTRACTION AND SYNTHESIS: Pairs of reviewers extracted data and assessed risk of bias. A random effects network meta-analysis using a frequentist approach compared adverse drug reactions across different treatments. Certainty of evidence was evaluated using the confidence in network meta-analysis approach. Pairwise meta-analyses were done to compare the three generations of EGFR tyrosine kinase inhibitors. RESULTS: The network meta-analysis comprised 89 randomised controlled trials involving 29\u2009813 participants, mean follow-up 2.18 years. Compared with placebo, both first generation (odds ratio 1.51, 95% confidence interval 1.01 to 2.26; high certainty; pooled incidence 3.2%) and third generation EGFR tyrosine kinase inhibitors (2.18, 1.46 to 3.27; high certainty; 9.5%) were associated with increased risks of cardiac adverse events. Among third generation inhibitors, osimertinib (2.53, 1.53 to 4.19; high certainty; 8.9%) and lazertinib (2.84, 1.17 to 6.91; moderate certainty; 2.7%) were associated with cardiac adverse events. Combined therapies, such as antiangiogenesis with erlotinib or gefitinib, were associated with vascular adverse events (high certainty), whereas antiangiogenesis with osimertinib was associated with cardiovascular adverse events (moderate to high certainty). Also, the risk of arrhythmias was significantly higher with third generation inhibitors (3.26, 1.83 to 5.81; high certainty; 7.3%), such as osimertinib alone (3.35, 1.75 to 6.40; high certainty; 6.2%) and in combination with antiangiogenesis. Almonertinib was associated with vascular toxicity. In pairwise meta-analysis, third generation inhibitors were associated with higher risks of any grade and grade \u22653 cardiovascular adverse events compared with first generation inhibitors. CONCLUSIONS: In patients with EGFR-mutated NSCLC, first and third generation EGFR tyrosine kinase inhibitors, as well as combination therapies with antiangiogenesis, were associated with increased risks of cardiovascular adverse events. Risks were significantly higher with third generation compared with first generation inhibitors. SYSTEMATIC REVIEW REGISTRATION: PROSPERO CRD42023433003.",
+    "journalTitle": "BMJ (Clinical research ed.)",
+    "publicationYear": 2025,
+    "evidenceType": "systematic_review",
+    "relevantN": null,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "mixed",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "mixed",
+      "biomarkers": {
+        "EGFR": "yes",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "egfr-targeted",
+      "egfr-tki",
+      "antiangiogenic"
+    ],
+    "outcomeTags": [
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40617394",
+    "title": "Lazertinib Versus Osimertinib in Previously Untreated EGFR-Mutant Advanced NSCLC: A Randomized, Double-Blind, Exploratory Analysis From MARIPOSA.",
+    "abstract": "INTRODUCTION: Lazertinib is a central nervous system-penetrant, third-generation EGFR tyrosine kinase inhibitor (TKI) that was selected for combination with amivantamab due to its relatively low rates of wild-type EGFR toxicities. In the phase 3 MARIPOSA study, amivantamab plus lazertinib (amivantamab-lazertinib) significantly improved progression-free survival (PFS; p < 0.001) versus osimertinib in participants with treatment-naive EGFR-mutant advanced NSCLC. A lazertinib monotherapy arm was included to assess the contribution of components in the combination. This is the first randomized, double-blind comparison of two third-generation EGFR TKIs, lazertinib and osimertinib. METHODS: In MARIPOSA, 1074 participants were randomized 2:2:1 to receive amivantamab-lazertinib (n = 429), osimertinib monotherapy (n = 429), or lazertinib monotherapy (n = 216). This exploratory analysis compared the efficacy and safety of lazertinib and osimertinib. RESULTS: At a median follow-up of 22.0 months, median PFS was 18.5 months for lazertinib versus 16.6 months for osimertinib (hazard ratio = 0.98, 95% confidence interval: 0.79-1.22; p = 0.86). PFS results were comparable between arms among predefined subgroups. Among participants with measurable disease at baseline, objective response rate was 83% for lazertinib versus 85% for osimertinib, with a median duration of response among confirmed responders of 16.6 months versus 16.8 months, respectively. Median overall survival was not reached for both arms (hazard ratio = 1.00, 95% confidence interval: 0.73-1.38) at the interim analysis. Adverse events for both arms were mostly grades 1 to 2 and frequently related to EGFR inhibition. Lazertinib was associated with lower rates of QT interval prolongation versus osimertinib. CONCLUSIONS: Lazertinib demonstrated comparable efficacy and safety to osimertinib, including in predefined subgroups.",
+    "journalTitle": "Journal of thoracic oncology : official publication of the International Association for the Study of Lung Cancer",
+    "publicationYear": 2025,
+    "evidenceType": "phase3_rct",
+    "relevantN": 1074,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "biomarkers": {
+        "EGFR": "yes",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "egfr-targeted",
+      "egfr-tki",
+      "lazertinib",
+      "osimertinib"
+    ],
+    "outcomeTags": [
+      "OS",
+      "PFS",
+      "progression-free survival",
+      "ORR",
+      "AE"
+    ]
+  },
+  {
+    "evidenceId": "PMID-40516821",
+    "title": "A Pooled Analysis of Datopotamab Deruxtecan in Patients With EGFR-Mutated NSCLC.",
+    "abstract": "BACKGROUND: This exploratory analysis assessed datopotamab deruxtecan (Dato-DXd) in pretreated patients with advanced or metastatic NSCLC and EGFR mutations. METHODS: Data were pooled from the phase II TROPION-Lung05 (NCT04484142) and phase III TROPION-Lung01 (NCT04656652) trials. Patients with EGFR-mutated advanced or metastatic NSCLC, who had received previous targeted therapies and platinum-based chemotherapy, received Dato-DXd 6 mg/kg (TROPION-Lung05) or were randomized to Dato-DXd 6 mg/kg or docetaxel 75 mg/m(2) (TROPION-Lung01) once every 3 weeks. End points included objective response rate, duration of response, and progression-free survival, all per blinded independent central review, overall survival, and safety. RESULTS: In total, 117 patients with EGFR mutations who received Dato-DXd were included in the pool. The population was heavily pretreated (median three lines of previous therapies; range, 1-5) and predominantly Asian (69%). The most common mutations were exon 19 deletion (51%), L858R (32%), and T790M (27%); more than one EGFR mutation could be present. The confirmed objective response rate was 43% (95% confidence interval [CI]: 34-52), including five complete responses (4%). Median duration of response was 7.0 months (95% CI: 4.2-9.8). Median progression-free survival and overall survival were 5.8 (95% CI: 5.4-8.2) and 15.6 months (95% CI: 13.1-19.0), respectively. The safety profile of Dato-DXd was consistent with the individual studies. No new safety signals were observed. Rates of grade greater than or equal to 3 treatment-related adverse events and serious adverse events were 23% and 6%, respectively. CONCLUSION: Dato-DXd demonstrated meaningful clinical activity in patients with EGFR-mutated advanced or metastatic NSCLC who had progressed on EGFR-directed therapies and chemotherapy, with an acceptable safety profile.",
+    "journalTitle": "Journal of thoracic oncology : official publication of the International Association for the Study of Lung Cancer",
+    "publicationYear": 2025,
+    "evidenceType": "phase2_rct",
+    "relevantN": 117,
+    "sourceCategory": "high_impact_journal",
+    "populationTags": {
+      "disease": "NSCLC",
+      "diseaseSetting": "metastatic",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "later_line",
+      "biomarkers": {
+        "EGFR": "yes",
+        "ALK": "unspecified",
+        "ROS1": "unspecified",
+        "PDL1Bucket": "unspecified"
+      }
+    },
+    "interventionTags": [
+      "trop2-adc",
+      "datopotamab-deruxtecan"
+    ],
+    "outcomeTags": [
+      "OS",
+      "progression-free survival",
+      "ORR",
+      "AE"
+    ]
+  }
+]

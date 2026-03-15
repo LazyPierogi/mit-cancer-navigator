@@ -1,0 +1,181 @@
+[
+  {
+    "topicId": "SQCC_IV_01",
+    "topicTitle": "Pembrolizumab monotherapy in PD-L1 ≥50%",
+    "diseaseSetting": "metastatic",
+    "histology": "squamous",
+    "lineOfTherapy": "first_line",
+    "guidelineStance": "recommend",
+    "topicInterventionTags": [
+      "pd1",
+      "ici"
+    ],
+    "biomarkerConditions": [
+      "PDL1_ge50"
+    ],
+    "sourceExcerptShort": "PS 0–2 & PD-L1 ≥50% → Pembrolizumab [I, A]",
+    "applicabilityNotes": "ECOG PS 0–2 and PD-L1 expression ≥50%, no contraindication to immunotherapy."
+  },
+  {
+    "topicId": "SQCC_IV_02",
+    "topicTitle": "Atezolizumab monotherapy in high PD-L1",
+    "diseaseSetting": "metastatic",
+    "histology": "squamous",
+    "lineOfTherapy": "first_line",
+    "guidelineStance": "recommend",
+    "topicInterventionTags": [
+      "pdl1",
+      "ici"
+    ],
+    "biomarkerConditions": [
+      "PDL1_ge50"
+    ],
+    "sourceExcerptShort": "Atezolizumab (also for ICs ≥10%) [I, A]",
+    "applicabilityNotes": "ECOG PS 0–2 with PD-L1 ≥50%."
+  },
+  {
+    "topicId": "SQCC_IV_03",
+    "topicTitle": "Pembrolizumab + carboplatin + (nab-)paclitaxel",
+    "diseaseSetting": "metastatic",
+    "histology": "squamous",
+    "lineOfTherapy": "first_line",
+    "guidelineStance": "recommend",
+    "topicInterventionTags": [
+      "pd1",
+      "ici",
+      "chemo-ici",
+      "platinum-doublet",
+      "chemotherapy"
+    ],
+    "biomarkerConditions": [
+      "PDL1_any"
+    ],
+    "sourceExcerptShort": "PS 0–1 & any PD-L1 → Pembrolizumab–carboplatin–(nab-)paclitaxel [I, A]",
+    "applicabilityNotes": "ECOG PS 0–1 regardless of PD-L1 level."
+  },
+  {
+    "topicId": "SQCC_IV_04",
+    "topicTitle": "Nivolumab + ipilimumab + short-course platinum chemotherapy",
+    "diseaseSetting": "metastatic",
+    "histology": "squamous",
+    "lineOfTherapy": "first_line",
+    "guidelineStance": "recommend",
+    "topicInterventionTags": [
+      "pd1",
+      "ici",
+      "ctla4",
+      "dual-ici",
+      "chemo-ici",
+      "platinum-doublet",
+      "chemotherapy"
+    ],
+    "biomarkerConditions": [
+      "PDL1_any"
+    ],
+    "sourceExcerptShort": "Nivolumab–ipilimumab + 2 cycles platinum-doublet ChT [I, A]",
+    "applicabilityNotes": "ECOG PS 0–1, any PD-L1 expression."
+  },
+  {
+    "topicId": "SQCC_IV_05",
+    "topicTitle": "Nivolumab + ipilimumab (PD-L1 ≥1%)",
+    "diseaseSetting": "metastatic",
+    "histology": "squamous",
+    "lineOfTherapy": "first_line",
+    "guidelineStance": "recommend",
+    "topicInterventionTags": [
+      "pd1",
+      "ici",
+      "ctla4",
+      "dual-ici"
+    ],
+    "biomarkerConditions": [
+      "PDL1_1to49",
+      "PDL1_ge50"
+    ],
+    "sourceExcerptShort": "Nivolumab–ipilimumab (only for PD-L1 ≥1%) [I, A]",
+    "applicabilityNotes": "ECOG PS 0–1 and PD-L1 ≥1%."
+  },
+  {
+    "topicId": "SQCC_IV_06",
+    "topicTitle": "Platinum-doublet chemotherapy (PS 2, PD-L1 <50%)",
+    "diseaseSetting": "metastatic",
+    "histology": "squamous",
+    "lineOfTherapy": "first_line",
+    "guidelineStance": "recommend",
+    "topicInterventionTags": [
+      "platinum-doublet",
+      "chemotherapy"
+    ],
+    "biomarkerConditions": [
+      "PDL1_lt1",
+      "PDL1_1to49"
+    ],
+    "sourceExcerptShort": "PS 2 & PD-L1 <50% → Platinum-doublet (carboplatin preferred) [I, A]",
+    "applicabilityNotes": "ECOG PS 2 and PD-L1 <50%. Carboplatin preferred."
+  },
+  {
+    "topicId": "SQCC_IV_07",
+    "topicTitle": "Single-agent chemotherapy (frail patients)",
+    "diseaseSetting": "metastatic",
+    "histology": "squamous",
+    "lineOfTherapy": "first_line",
+    "guidelineStance": "recommend",
+    "topicInterventionTags": [
+      "chemotherapy",
+      "single-agent"
+    ],
+    "biomarkerConditions": [],
+    "sourceExcerptShort": "Single-agent ChT (gemcitabine, vinorelbine, docetaxel) [I, B]",
+    "applicabilityNotes": "ECOG PS 2 unsuitable for combination therapy."
+  },
+  {
+    "topicId": "SQCC_IV_08",
+    "topicTitle": "Second-line immune checkpoint inhibitor after progression",
+    "diseaseSetting": "metastatic",
+    "histology": "squamous",
+    "lineOfTherapy": "second_line",
+    "guidelineStance": "recommend",
+    "topicInterventionTags": [
+      "pd1",
+      "ici",
+      "pdl1"
+    ],
+    "biomarkerConditions": [
+      "PDL1_any"
+    ],
+    "sourceExcerptShort": "Nivolumab / Atezolizumab / Pembrolizumab [I, A]",
+    "applicabilityNotes": "Disease progression after platinum-based chemotherapy; PS 0–2."
+  },
+  {
+    "topicId": "SQCC_IV_09",
+    "topicTitle": "Ramucirumab + docetaxel after progression",
+    "diseaseSetting": "metastatic",
+    "histology": "squamous",
+    "lineOfTherapy": "second_line",
+    "guidelineStance": "recommend",
+    "topicInterventionTags": [
+      "docetaxel",
+      "chemotherapy",
+      "antiangiogenic"
+    ],
+    "biomarkerConditions": [],
+    "sourceExcerptShort": "Ramucirumab–docetaxel [I, B]",
+    "applicabilityNotes": "Progression after platinum-based therapy; ECOG PS 0–2."
+  },
+  {
+    "topicId": "SQCC_IV_10",
+    "topicTitle": "Targeted therapy for oncogenic driver-positive tumors",
+    "diseaseSetting": "metastatic",
+    "histology": "squamous",
+    "lineOfTherapy": "first_line",
+    "guidelineStance": "recommend",
+    "topicInterventionTags": [
+      "targeted"
+    ],
+    "biomarkerConditions": [
+      "any_positive(EGFR,ALK,ROS1,BRAF,RET,MET,KRAS,NTRK,HER2,EGFRExon20ins)"
+    ],
+    "sourceExcerptShort": "Molecular test positive → Targeted therapy",
+    "applicabilityNotes": "Never/light smokers (<15 pack-years), long-time ex-smokers or age <50 years with positive molecular test."
+  }
+]

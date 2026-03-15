@@ -1,0 +1,47 @@
+{
+  "version": "0.4",
+  "architecture": "3-layer ontology (Molecule / Class / Regimen)",
+  "change_log": [
+    "Added next-generation EGFR TKIs (lazertinib, almonertinib)",
+    "Added MET inhibitor savolitinib",
+    "Added EGFR-MET bispecific antibody amivantamab",
+    "Added anti-angiogenic agents (bevacizumab, ramucirumab)",
+    "Added TROP2 ADCs (sacituzumab tirumotecan, datopotamab deruxtecan)",
+    "Expanded class layer for antiangiogenesis, TROP2-ADC, EGFR-MET-bispecific",
+    "Expanded regimen layer for complex targeted and triple combinations"
+  ],
+  "molecule_layer": [
+    "molecule.egfr-tki.osimertinib",
+    "molecule.egfr-tki.erlotinib",
+    "molecule.pd1.pembrolizumab",
+    "molecule.pd1.nivolumab",
+    "molecule.ctla4.ipilimumab",
+    "molecule.her2.trastuzumab-deruxtecan",
+    "molecule.egfr-tki.lazertinib",
+    "molecule.egfr-tki.almonertinib",
+    "molecule.met.savolitinib",
+    "molecule.egfr-met-bispecific.amivantamab",
+    "molecule.antiangiogenesis.bevacizumab",
+    "molecule.antiangiogenesis.ramucirumab",
+    "molecule.adc.sacituzumab-tirumotecan",
+    "molecule.adc.datopotamab-deruxtecan"
+  ],
+  "class_layer": [
+    "class.egfr-tki",
+    "class.pd1",
+    "class.ctla4",
+    "class.her2-adc",
+    "class.egfr-met-bispecific",
+    "class.antiangiogenesis",
+    "class.trop2-adc"
+  ],
+  "regimen_layer": [
+    "regimen.single-agent",
+    "regimen.dual-ici",
+    "regimen.chemo-ici",
+    "regimen.dual-targeted",
+    "regimen.egfr-antiangiogenic",
+    "regimen.egfr-met-combination",
+    "regimen.chemo-ici-antiangiogenic"
+  ]
+}

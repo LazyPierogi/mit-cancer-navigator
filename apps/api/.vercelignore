@@ -1,0 +1,11 @@
+.git
+.DS_Store
+.env*
+.venv
+__pycache__
+*.pyc
+alembic
+navigator.db
+tests
+uv.lock
+*.egg-info

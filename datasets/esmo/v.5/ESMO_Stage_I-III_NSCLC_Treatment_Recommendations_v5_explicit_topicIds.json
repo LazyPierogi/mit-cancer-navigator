@@ -1,0 +1,1179 @@
+{
+  "datasetName": "ESMO_Stage_I-III_NSCLC_Recommended_Treatments",
+  "datasetVersion": "v2.0-explicit-topicids",
+  "schemaVersion": "esmo-guideline-v2",
+  "records": [
+    {
+      "topicId": "NSCLC_STAGE1_01",
+      "topicTitle": "SBRT for medically inoperable stage I NSCLC",
+      "diseaseSetting": "early",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "sbrt",
+        "radiotherapy",
+        "local-therapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "radiotherapy"
+          ],
+          "layer2": [
+            "sbrt"
+          ],
+          "layer3": [
+            "curative-sbrt"
+          ]
+        }
+      },
+      "sourceExcerptShort": "SBRT is recommended as the non-surgical treatment of choice for stage I NSCLC [II, A].",
+      "applicabilityNotes": "Use for medically inoperable stage I disease; also recommended in severe COPD, elderly and/or frail patients."
+    },
+    {
+      "topicId": "NSCLC_STAGE1_02",
+      "topicTitle": "Sublobar resection for peripheral stage I tumors ≤2 cm or pure ground-glass lesions",
+      "diseaseSetting": "early",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "surgery",
+        "sublobar-resection",
+        "segmentectomy",
+        "wedge-resection"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "surgery"
+          ],
+          "layer2": [
+            "limited-resection"
+          ],
+          "layer3": [
+            "sublobar-resection"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Sublobar resection is recommended for peripherally located, resectable tumours ≤2 cm with no nodal metastases; it can be recommended for pure ground-glass lesions [I, A]/[III, B].",
+      "applicabilityNotes": "Peripheral resectable tumour ≤2 cm with CT/PET node-negative disease, or pure ground-glass lesion; anatomical resection preferred over wedge when feasible."
+    },
+    {
+      "topicId": "NSCLC_STAGE1_03",
+      "topicTitle": "Lobectomy for operable stage I tumors >2 cm with solid appearance",
+      "diseaseSetting": "early",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "surgery",
+        "lobectomy",
+        "anatomic-resection"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "surgery"
+          ],
+          "layer2": [
+            "anatomic-resection"
+          ],
+          "layer3": [
+            "lobectomy"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Lobectomy can be recommended as the standard surgical treatment of tumours >2 cm that have a solid appearance on CT [II, B].",
+      "applicabilityNotes": "Operable stage I disease; VATS or RATS recommended where appropriate; systematic nodal dissection should accompany surgery."
+    },
+    {
+      "topicId": "NSCLC_STAGE1_04",
+      "topicTitle": "Salvage surgery after local progression following SBRT",
+      "diseaseSetting": "early",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "surgery",
+        "salvage-surgery",
+        "post-sbrt"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "surgery"
+          ],
+          "layer2": [
+            "salvage-therapy"
+          ],
+          "layer3": [
+            "salvage-surgery"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Salvage surgery after SBRT can be offered, if feasible, using the same indications as for primary surgery [IV, B].",
+      "applicabilityNotes": "Applies after local recurrence or new primary following SBRT in a patient who remains operable; higher operative risk should be acknowledged."
+    },
+    {
+      "topicId": "NSCLC_STAGE1_05",
+      "topicTitle": "PORT after R1 resection",
+      "diseaseSetting": "early",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "port",
+        "radiotherapy",
+        "postoperative-radiotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "radiotherapy"
+          ],
+          "layer2": [
+            "postoperative-radiotherapy"
+          ],
+          "layer3": [
+            "port"
+          ]
+        }
+      },
+      "sourceExcerptShort": "PORT (60 Gy in 30 fractions) may be recommended after R1 resection, following MDT discussion [III, C].",
+      "applicabilityNotes": "Sequence relative to adjuvant systemic therapy should be individualized by MDT; record intended for incompletely resected curative-intent cases."
+    },
+    {
+      "topicId": "NSCLC_STAGE1_06",
+      "topicTitle": "Do not use PORT after R0 resection",
+      "diseaseSetting": "early",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "do_not_recommend",
+      "topicInterventionTags": [
+        "port",
+        "radiotherapy",
+        "postoperative-radiotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "radiotherapy"
+          ],
+          "layer2": [
+            "postoperative-radiotherapy"
+          ],
+          "layer3": [
+            "port"
+          ]
+        }
+      },
+      "sourceExcerptShort": "PORT cannot be recommended after R0 resection, including for patients with extracapsular nodal involvement if margins are negative [I, D].",
+      "applicabilityNotes": "Applies when surgical margins are negative after complete resection."
+    },
+    {
+      "topicId": "NSCLC_STAGE1_07",
+      "topicTitle": "Adjuvant osimertinib for resected EGFR-mutated stage IB NSCLC",
+      "diseaseSetting": "early",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "targeted",
+        "egfr-tki",
+        "osimertinib",
+        "adjuvant"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "EGFR"
+        ],
+        "allNegative": [],
+        "notes": "Restrict to sensitising EGFR exon 19 deletion or L858R."
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "egfr"
+          ],
+          "layer3": [
+            "osimertinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Adjuvant osimertinib for 3 years is recommended for completely resected EGFR-mutated (exon 19 deletion or L858R) stage IB-IIIA NSCLC [I, A].",
+      "applicabilityNotes": "For stage IB, applies particularly to tumours >3 cm or other high-risk features; use after chemotherapy as appropriate."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_01",
+      "topicTitle": "Neoadjuvant nivolumab plus platinum-based chemotherapy for resectable EGFR/ALK wild-type stage II-III NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pd1",
+        "ici",
+        "chemo-ici",
+        "nivolumab",
+        "neoadjuvant"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1",
+            "chemo-ici"
+          ],
+          "layer3": [
+            "nivolumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Neoadjuvant nivolumab–ChT is recommended for resectable stage II-III NSCLC without EGFR or ALK alterations [I, A].",
+      "applicabilityNotes": "Use in ChT–ICI-eligible resectable stage II-III disease; FDA/EMA approval note for PD-L1 TC ≥1% should be handled operationally if regulatory filtering is needed."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_02",
+      "topicTitle": "Perioperative pembrolizumab plus platinum-based chemotherapy for resectable EGFR/ALK wild-type stage II-III NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pd1",
+        "ici",
+        "chemo-ici",
+        "pembrolizumab",
+        "perioperative"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1",
+            "chemo-ici"
+          ],
+          "layer3": [
+            "pembrolizumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Neoadjuvant pembrolizumab–ChT followed by adjuvant pembrolizumab is recommended for resectable stage II-III NSCLC without EGFR or ALK alterations [I, A].",
+      "applicabilityNotes": "Use in ChT–ICI-eligible resectable stage II-III disease."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_03",
+      "topicTitle": "Perioperative durvalumab plus platinum-based chemotherapy for resectable EGFR/ALK wild-type stage II-III NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pdl1",
+        "ici",
+        "chemo-ici",
+        "durvalumab",
+        "perioperative"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pdl1",
+            "chemo-ici"
+          ],
+          "layer3": [
+            "durvalumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Neoadjuvant durvalumab–ChT followed by adjuvant durvalumab is recommended for resectable stage II-III NSCLC without EGFR or ALK alterations [I, A].",
+      "applicabilityNotes": "Use in ChT–ICI-eligible resectable stage II-III disease."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_04",
+      "topicTitle": "Perioperative nivolumab plus platinum-based chemotherapy for resectable EGFR/ALK wild-type stage II-III NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pd1",
+        "ici",
+        "chemo-ici",
+        "nivolumab",
+        "perioperative"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1",
+            "chemo-ici"
+          ],
+          "layer3": [
+            "nivolumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Neoadjuvant nivolumab–ChT followed by adjuvant nivolumab is recommended for resectable stage II-III NSCLC without EGFR or ALK alterations [I, A].",
+      "applicabilityNotes": "Use in ChT–ICI-eligible resectable stage II-III disease; FDA/EMA approval note for PD-L1 TC ≥1% should be handled operationally if regulatory filtering is needed."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_05",
+      "topicTitle": "Perioperative tislelizumab plus platinum-based chemotherapy for resectable EGFR/ALK wild-type stage II-III NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pd1",
+        "ici",
+        "chemo-ici",
+        "tislelizumab",
+        "perioperative"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1",
+            "chemo-ici"
+          ],
+          "layer3": [
+            "tislelizumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Neoadjuvant tislelizumab–ChT followed by adjuvant tislelizumab is recommended for resectable stage II-III NSCLC without EGFR or ALK alterations [I, A].",
+      "applicabilityNotes": "Use in ChT–ICI-eligible resectable stage II-III disease; EMA approved and not FDA approved at guideline publication."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_06",
+      "topicTitle": "Adjuvant cisplatin-based chemotherapy for completely resected EGFR/ALK wild-type stage II-III NSCLC not eligible for ChT–ICI",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "adjuvant",
+        "cisplatin",
+        "platinum-doublet"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "cisplatin-based-adjuvant-chemotherapy"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Adjuvant cisplatin-based ChT is recommended for completely resected EGFR and ALK wild-type stage II-III NSCLC not eligible for ChT–ICI [I, A].",
+      "applicabilityNotes": "Use after R0 resection when perioperative/neoadjuvant chemo-immunotherapy is not used or not suitable."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_07",
+      "topicTitle": "Carboplatin-based adjuvant chemotherapy when cisplatin is not suitable",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "adjuvant",
+        "carboplatin",
+        "platinum-doublet"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "carboplatin-based-adjuvant-chemotherapy"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Carboplatin-based regimens can be recommended for patients who are not eligible for cisplatin [II, B].",
+      "applicabilityNotes": "Use for renal, neurological or other cisplatin contraindications."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_08",
+      "topicTitle": "Adjuvant atezolizumab after platinum chemotherapy for PD-L1-positive resected EGFR/ALK wild-type stage II-IIIA NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pdl1",
+        "ici",
+        "atezolizumab",
+        "adjuvant"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "1to49",
+          "ge50"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pdl1"
+          ],
+          "layer3": [
+            "atezolizumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Adjuvant atezolizumab for 1 year is recommended following cisplatin-based ChT for resected stage II-IIIA (T ≥5 cm) NSCLC with PD-L1 TC ≥1% and without EGFR or ALK alterations [I, A].",
+      "applicabilityNotes": "Use after cisplatin-based adjuvant chemotherapy; EMA approval was limited to PD-L1 TC ≥50% at publication, while FDA approval covered PD-L1 TC ≥1%."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_09",
+      "topicTitle": "Adjuvant pembrolizumab after platinum chemotherapy for resected EGFR/ALK wild-type stage II-IIIA NSCLC regardless of PD-L1",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pd1",
+        "ici",
+        "pembrolizumab",
+        "adjuvant"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "any"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR",
+          "ALK"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pd1"
+          ],
+          "layer3": [
+            "pembrolizumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Adjuvant pembrolizumab for 1 year is recommended for resected stage II-IIIA (T ≥4 cm) NSCLC without EGFR or ALK alterations, regardless of PD-L1 expression [I, A].",
+      "applicabilityNotes": "Use after platinum-based chemotherapy."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_10",
+      "topicTitle": "Adjuvant osimertinib for completely resected EGFR-mutated stage II-IIIA NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "targeted",
+        "egfr-tki",
+        "osimertinib",
+        "adjuvant"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "EGFR"
+        ],
+        "allNegative": [],
+        "notes": "Restrict to sensitising EGFR exon 19 deletion or L858R."
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "egfr"
+          ],
+          "layer3": [
+            "osimertinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Adjuvant osimertinib for 3 years is recommended for completely resected EGFR-mutated (exon 19 deletion or L858R) stage IB-IIIA NSCLC [I, A].",
+      "applicabilityNotes": "For stage II-III disease, cisplatin-based chemotherapy before targeted therapy is recommended when the patient is chemotherapy-eligible."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_11",
+      "topicTitle": "Adjuvant cisplatin-based chemotherapy before osimertinib in EGFR-mutated stage II-III NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "adjuvant",
+        "cisplatin",
+        "platinum-doublet",
+        "pre-targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "EGFR"
+        ],
+        "allNegative": [],
+        "notes": "Restrict to sensitising EGFR exon 19 deletion or L858R."
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "cisplatin-based-adjuvant-chemotherapy"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Adjuvant cisplatin-based ChT before targeted therapy is recommended for patients with stage II-III EGFR-mutated disease who are eligible for ChT [I, A].",
+      "applicabilityNotes": "Use before adjuvant osimertinib; carboplatin-based regimens can be considered when cisplatin is unsuitable."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_12",
+      "topicTitle": "Adjuvant alectinib for completely resected ALK fusion-positive stage II-IIIA NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "targeted",
+        "alk-tki",
+        "alectinib",
+        "adjuvant"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "ALK"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "alk"
+          ],
+          "layer3": [
+            "alectinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Adjuvant alectinib for 2 years is recommended for completely resected ALK fusion-positive stage II-IIIA (T ≥4 cm) NSCLC [I, A].",
+      "applicabilityNotes": "Applies to resectable ALK-rearranged disease; molecular testing should be performed preoperatively."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_13",
+      "topicTitle": "Adjuvant chemotherapy before targeted therapy in ALK fusion-positive stage II-IIIA NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "adjuvant",
+        "platinum-doublet",
+        "pre-targeted"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "ALK"
+        ],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "adjuvant-chemotherapy"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Adjuvant ChT before targeted therapy may be considered for ALK-rearranged disease [II, C].",
+      "applicabilityNotes": "Use before adjuvant alectinib when the MDT judges additional platinum-based chemotherapy appropriate."
+    },
+    {
+      "topicId": "NSCLC_RESECTABLE_14",
+      "topicTitle": "Neoadjuvant chemoradiotherapy followed by surgery for superior sulcus tumors",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "chemoradiotherapy",
+        "neoadjuvant",
+        "surgery",
+        "trimodality"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "multimodality-therapy"
+          ],
+          "layer2": [
+            "chemoradiotherapy"
+          ],
+          "layer3": [
+            "neoadjuvant-crt-followed-by-surgery"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Neoadjuvant CRT followed by surgery can be recommended for patients with superior sulcus tumours (T3-4 N0-1) after MDT discussion [III, B].",
+      "applicabilityNotes": "Use only after MDT review in potentially resectable superior sulcus disease."
+    },
+    {
+      "topicId": "NSCLC_UNRESECTABLE_01",
+      "topicTitle": "Concurrent chemoradiotherapy for unresectable stage III NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemoradiotherapy",
+        "concurrent-crt",
+        "radiotherapy",
+        "chemotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "multimodality-therapy"
+          ],
+          "layer2": [
+            "chemoradiotherapy"
+          ],
+          "layer3": [
+            "concurrent-crt"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Concurrent CRT is recommended for patients with stage IIIA-C NSCLC deemed unresectable by an MDT [I, A].",
+      "applicabilityNotes": "RT dose should be 60 Gy in once-daily fractions; use platinum-based doublet chemotherapy for two to three cycles."
+    },
+    {
+      "topicId": "NSCLC_UNRESECTABLE_02",
+      "topicTitle": "Sequential chemoradiotherapy or radiotherapy alone for unresectable stage III NSCLC when concurrent CRT is not suitable",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemoradiotherapy",
+        "sequential-crt",
+        "radiotherapy"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "multimodality-therapy"
+          ],
+          "layer2": [
+            "chemoradiotherapy"
+          ],
+          "layer3": [
+            "sequential-crt"
+          ]
+        }
+      },
+      "sourceExcerptShort": "In patients who are not fit for concurrent CRT, sequential CRT or RT alone is recommended as an alternative [I, A].",
+      "applicabilityNotes": "Use for frail patients or those with substantial comorbidities that make concurrent CRT unsuitable."
+    },
+    {
+      "topicId": "NSCLC_UNRESECTABLE_03",
+      "topicTitle": "Platinum-based doublet chemotherapy backbone for unresectable stage III NSCLC treated with CRT",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "chemotherapy",
+        "platinum-doublet",
+        "crt-backbone"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "chemotherapy"
+          ],
+          "layer2": [
+            "platinum-doublet"
+          ],
+          "layer3": [
+            "crt-backbone-chemotherapy"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Concurrent or sequential platinum-based doublet ChT for two to three cycles is recommended [I, A].",
+      "applicabilityNotes": "Preferred regimens: cisplatin–etoposide or carboplatin–paclitaxel for all histologies; cisplatin–pemetrexed for non-squamous histology."
+    },
+    {
+      "topicId": "NSCLC_UNRESECTABLE_04",
+      "topicTitle": "Consolidation osimertinib after CRT for EGFR-mutated unresectable stage III NSCLC without progression",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "targeted",
+        "egfr-tki",
+        "osimertinib",
+        "consolidation"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "EGFR"
+        ],
+        "allNegative": [],
+        "notes": "Restrict to sensitising EGFR exon 19 deletion or L858R."
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "targeted-therapy"
+          ],
+          "layer2": [
+            "egfr"
+          ],
+          "layer3": [
+            "osimertinib"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Osimertinib consolidation is recommended after concurrent or sequential CRT in patients with EGFR-mutated unresectable stage III NSCLC without disease progression [I, A].",
+      "applicabilityNotes": "Use after either concurrent or sequential CRT; based on LAURA, primarily sensitising exon 19 deletion or L858R disease."
+    },
+    {
+      "topicId": "NSCLC_UNRESECTABLE_05",
+      "topicTitle": "Consolidation durvalumab after concurrent CRT for EGFR wild-type and PD-L1 ≥1% unresectable stage III NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "recommend",
+      "topicInterventionTags": [
+        "pdl1",
+        "ici",
+        "durvalumab",
+        "consolidation"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "1to49",
+          "ge50"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pdl1"
+          ],
+          "layer3": [
+            "durvalumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Durvalumab consolidation for 1 year (initiated within 42 days after the end of CRT) is recommended after concurrent CRT in patients with EGFR wild-type stage III NSCLC without disease progression [I, A].",
+      "applicabilityNotes": "Figure 3 restricts this branch to EGFR wild-type and PD-L1 ≥1%; regulatory note: EMA approval required PD-L1 TC ≥1% at publication."
+    },
+    {
+      "topicId": "NSCLC_UNRESECTABLE_06",
+      "topicTitle": "Consolidation durvalumab after sequential CRT for EGFR wild-type and PD-L1 ≥1% unresectable stage III NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "conditional",
+      "topicInterventionTags": [
+        "pdl1",
+        "ici",
+        "durvalumab",
+        "consolidation"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "1to49",
+          "ge50"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [],
+        "allNegative": [
+          "EGFR"
+        ],
+        "notes": ""
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pdl1"
+          ],
+          "layer3": [
+            "durvalumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "Durvalumab consolidation for 1 year can also be recommended after sequential CRT in patients with EGFR wild-type stage III NSCLC without disease progression [III, B].",
+      "applicabilityNotes": "Figure 3 restricts this branch to EGFR wild-type and PD-L1 ≥1%; EMA approved for PD-L1 TC ≥1%, not FDA approved at publication."
+    },
+    {
+      "topicId": "NSCLC_UNRESECTABLE_07",
+      "topicTitle": "Avoid consolidation durvalumab in unresectable stage III EGFR-mutated NSCLC",
+      "diseaseSetting": "locally_advanced",
+      "histology": "all_nsclc",
+      "lineOfTherapy": "first_line",
+      "guidelineStance": "do_not_recommend",
+      "topicInterventionTags": [
+        "pdl1",
+        "ici",
+        "durvalumab",
+        "consolidation"
+      ],
+      "biomarkerRequirements": {
+        "PDL1Bucket": [
+          "unspecified"
+        ]
+      },
+      "biomarkerLogic": {
+        "anyPositive": [
+          "EGFR"
+        ],
+        "allNegative": [],
+        "notes": "Based on expert consensus after lack of clear PACIFIC benefit and toxicity concerns when TKIs follow immunotherapy."
+      },
+      "semanticNormalization": {
+        "tagDictionaryVersion": "v1",
+        "ontologyTags": {
+          "layer1": [
+            "immunotherapy"
+          ],
+          "layer2": [
+            "pdl1"
+          ],
+          "layer3": [
+            "durvalumab"
+          ]
+        }
+      },
+      "sourceExcerptShort": "An ESMO expert consensus statement recommended avoiding durvalumab in patients with unresectable stage III EGFR-mutated NSCLC following concurrent CRT.",
+      "applicabilityNotes": "Use osimertinib consolidation instead for sensitising EGFR exon 19 deletion or L858R disease without progression after CRT."
+    }
+  ]
+}
