@@ -15,6 +15,7 @@ Use this checklist when preparing a local environment or a public-facing release
 - Update `VERSION.json` and `apps/api/VERSION.json` when the repository metadata shown in the product should change.
 - Verify `rulesetVersion`, `corpusVersion`, and `buildLabel` still describe the intended runtime state.
 - Review `README.md`, `docs/PROJECT_PLAN.md`, and `docs/ROADMAP.md` if behavior or scope changed.
+- If Supabase is in the path, confirm every `public` table has an intentional RLS posture before shipping.
 
 ## Verification
 

@@ -1,14 +1,13 @@
 {
-  "productVersion": "0.3.56",
+  "productVersion": "0.3.57",
   "uiVersion": "0.3.54",
-  "backendVersion": "0.3.56",
+  "backendVersion": "0.3.57",
   "rulesetVersion": "mvp-2026-02-28",
   "corpusVersion": "canonical-frozen-pack-v2",
-  "releaseDate": "2026-03-15",
-  "buildLabel": "open-source-prep-v1",
+  "releaseDate": "2026-04-01",
+  "buildLabel": "supabase-rulesets-rls-v1",
   "notes": [
-    "Repository metadata was cleaned up for public release preparation.",
-    "Presentation-only documents and local agent bootstrap artifacts were removed from the public tree.",
-    "README and public-facing docs now focus on setup, scope, contracts, and data workflows."
+    "Supabase `public.rulesets` now has Row Level Security enabled through an Alembic migration, closing the public-schema exposure flagged by the Supabase linter.",
+    "The repository continues to keep `rulesets` backend-managed only, so the new RLS boundary does not require any public read policy."
   ]
 }
