@@ -16,6 +16,7 @@ Use this checklist when preparing a local environment or a public-facing release
 - Verify `rulesetVersion`, `corpusVersion`, and `buildLabel` still describe the intended runtime state.
 - Review `README.md`, `docs/PROJECT_PLAN.md`, and `docs/ROADMAP.md` if behavior or scope changed.
 - If Supabase is in the path, confirm every `public` table has an intentional RLS posture before shipping.
+- If creating new Supabase tables through dashboard/platform tooling, confirm project Data API/default grant settings do not re-grant `anon` or `authenticated` access unintentionally.
 
 ## Verification
 

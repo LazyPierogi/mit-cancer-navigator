@@ -1,0 +1,308 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "NSCLC Navigator Deterministic Evidence Engine" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+        - generic [ref=e9]:
+          - heading "NSCLC Navigator" [level=1] [ref=e10]
+          - paragraph [ref=e11]: Deterministic Evidence Engine
+      - navigation [ref=e12]:
+        - link "Navigator" [ref=e13] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e14]:
+            - img [ref=e15]
+            - text: Navigator
+        - link "Labs" [ref=e23] [cursor=pointer]:
+          - /url: /labs
+          - generic [ref=e24]:
+            - img [ref=e25]
+            - text: Labs
+        - link "About" [ref=e30] [cursor=pointer]:
+          - /url: /about
+          - generic [ref=e31]:
+            - img [ref=e32]
+            - text: About
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - paragraph [ref=e38]: MIT User
+          - paragraph [ref=e39]: MIT Student Class
+        - generic [ref=e40]: MIT
+  - main [ref=e41]:
+    - generic [ref=e42]:
+      - complementary [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - heading "Patient Profile" [level=2] [ref=e46]:
+              - img [ref=e47]
+              - text: Patient Profile
+            - img [ref=e51]
+          - generic [ref=e54]:
+            - generic [ref=e55]: Navigator Presets
+            - generic [ref=e56]:
+              - button "MR. WAYNE Metastatic adeno · 1L · PD-L1-high · pan-driver negative" [ref=e57] [cursor=pointer]:
+                - generic [ref=e58]: MR. WAYNE
+                - generic [ref=e59]: Metastatic adeno · 1L · PD-L1-high · pan-driver negative
+              - button "MR. STARK Locally advanced squamous · post-CRT consolidation" [ref=e60] [cursor=pointer]:
+                - generic [ref=e61]: MR. STARK
+                - generic [ref=e62]: Locally advanced squamous · post-CRT consolidation
+              - button "MRS. DOUBTFIRE Early adeno · resected · adjuvant EGFR-positive" [ref=e63] [cursor=pointer]:
+                - generic [ref=e64]: MRS. DOUBTFIRE
+                - generic [ref=e65]: Early adeno · resected · adjuvant EGFR-positive
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - text: Disease Setting
+              - generic [ref=e69]:
+                - button "Early" [ref=e70] [cursor=pointer]
+                - button "Locally Advanced" [ref=e71] [cursor=pointer]
+                - button "Metastatic" [ref=e72] [cursor=pointer]
+            - generic [ref=e73]:
+              - text: Histology
+              - generic [ref=e74]:
+                - button "Adenocarcinoma" [ref=e75] [cursor=pointer]
+                - button "Squamous Cell" [ref=e76] [cursor=pointer]
+                - button "Non Squamous" [ref=e77] [cursor=pointer]
+            - generic [ref=e78]:
+              - text: Biomarker Profile
+              - generic [ref=e79]:
+                - button "EGFR+" [ref=e80] [cursor=pointer]
+                - button "ALK+" [ref=e81] [cursor=pointer]
+                - button "ROS1+" [ref=e82] [cursor=pointer]
+                - button "PD-L1 ≥ 50%" [ref=e83] [cursor=pointer]
+                - button "Wild Type" [ref=e84] [cursor=pointer]
+            - generic [ref=e85]:
+              - text: Line of Therapy
+              - generic [ref=e86]:
+                - button "1st Line" [ref=e87] [cursor=pointer]
+                - button "2nd Line" [ref=e88] [cursor=pointer]
+                - button "Later Line" [ref=e89] [cursor=pointer]
+                - button "Adjuvant" [ref=e90] [cursor=pointer]
+                - button "Consolidation" [ref=e91] [cursor=pointer]
+          - button "Run Analysis" [ref=e92] [cursor=pointer]
+      - generic [ref=e93]:
+        - generic [ref=e95]:
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - img [ref=e99]
+              - generic [ref=e102]: "Ruleset:"
+              - generic [ref=e103]: mvp-2026-02-28
+            - generic [ref=e104]:
+              - generic [ref=e105]: "Corpus:"
+              - generic [ref=e106]: canonical-frozen-pack-v2
+            - generic [ref=e107]:
+              - generic [ref=e108]: "Scope:"
+              - generic [ref=e109]: NSCLC treatment evidence only
+            - generic [ref=e110]:
+              - generic [ref=e112]:
+                - img [ref=e113]
+                - generic [ref=e115]: "Uncertainty Flags:"
+                - generic [ref=e116]: "1"
+              - generic [ref=e117]:
+                - img [ref=e118]
+                - generic [ref=e122]: "Engine: Deterministic Runtime"
+          - generic [ref=e124]:
+            - button "Semantic Retrieval Off" [ref=e125] [cursor=pointer]:
+              - img [ref=e127]
+              - generic [ref=e131]:
+                - generic [ref=e132]: Semantic Retrieval
+                - generic [ref=e133]: "Off"
+            - button "LLM Explainability Off" [ref=e136] [cursor=pointer]:
+              - img [ref=e138]
+              - generic [ref=e141]:
+                - generic [ref=e142]: LLM Explainability
+                - generic [ref=e143]: "Off"
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - img [ref=e148]
+            - generic [ref=e150]: "Retrieved:"
+            - generic [ref=e151]: 1 Studies
+          - generic [ref=e152]:
+            - img [ref=e153]
+            - generic [ref=e156]: "Avg ERS:"
+            - generic [ref=e157]: "53.0"
+          - generic [ref=e158]:
+            - img [ref=e159]
+            - generic [ref=e162]: "Aligned:"
+            - generic [ref=e163]: "1"
+          - generic [ref=e164]:
+            - img [ref=e165]
+            - generic [ref=e167]: "Silent:"
+            - generic [ref=e168]: "0"
+          - generic [ref=e169]:
+            - img [ref=e170]
+            - generic [ref=e172]: "Conflict:"
+            - generic [ref=e173]: "0"
+          - 'button "Manual Review: 1 Items" [ref=e174] [cursor=pointer]':
+            - img [ref=e175]
+            - generic [ref=e179]: "Manual Review:"
+            - generic [ref=e180]: 1 Items
+          - generic [ref=e181]:
+            - generic [ref=e182]: Sorted By
+            - combobox [ref=e183] [cursor=pointer]:
+              - option "ALIGNMENT" [selected]
+              - option "RECENCY"
+              - option "ERS SCORE (DESC)"
+        - generic [ref=e184]:
+          - generic [ref=e185]:
+            - heading "Targeted Evidence Cluster" [level=3] [ref=e186]
+            - button "Clear" [ref=e188] [cursor=pointer]:
+              - img [ref=e189]
+              - generic [ref=e192]: Clear
+          - generic [ref=e194]:
+            - generic [ref=e195] [cursor=pointer]:
+              - generic [ref=e196]:
+                - generic [ref=e197]: "53"
+                - generic [ref=e198]: ERS Score
+              - generic [ref=e201]:
+                - generic [ref=e202]:
+                  - heading "Pembrolizumab first-line therapy in metastatic NSCLC with PD-L1 >= 50%" [level=3] [ref=e203]
+                  - generic [ref=e204]:
+                    - img [ref=e205]
+                    - text: Aligned
+                - generic [ref=e209]:
+                  - img [ref=e210]
+                  - text: PubMed source (2024)
+                - generic [ref=e212]:
+                  - generic [ref=e213]: "Topic: Metastatic NSCLC, driver-negative, PD-L1 >=50: first systemic therapy evidence"
+                  - generic [ref=e214]: "Rank: #1"
+              - button [ref=e215]:
+                - img [ref=e216]
+            - generic [ref=e219]:
+              - generic [ref=e220]:
+                - heading "Why this label?" [level=4] [ref=e221]
+                - paragraph [ref=e222]: Matches metastatic setting; histology adenocarcinoma.
+                - generic [ref=e223]:
+                  - heading "Abstract" [level=4] [ref=e224]
+                  - paragraph [ref=e225]: This study evaluated the efficacy of pembrolizumab as a first-line therapy in patients with metastatic non-small-cell lung cancer (NSCLC) and a PD-L1 tumor proportion score of 50% or greater. The trial demonstrated significantly longer overall survival and progression-free survival compared to platinum-based chemotherapy. The results suggest pembrolizumab is highly effective in this patient population, establishing it as a new standard of care.
+                - generic [ref=e226]:
+                  - heading "Citations" [level=4] [ref=e227]
+                  - list [ref=e228]:
+                    - listitem [ref=e229]:
+                      - img [ref=e230]
+                      - generic [ref=e232]: Abstract preview not available. (2024)
+                - link "View Source on PubMed" [ref=e233] [cursor=pointer]:
+                  - /url: https://pubmed.ncbi.nlm.nih.gov/10001/
+                  - text: View Source on PubMed
+                  - img [ref=e234]
+              - generic [ref=e238]:
+                - heading "ERS Breakdown" [level=4] [ref=e239]
+                - generic [ref=e240]:
+                  - generic "Evidence Strength explanation" [ref=e241]:
+                    - generic [ref=e242]:
+                      - generic [ref=e243]: EVIDENCE STRENGTH
+                      - generic [ref=e244]: 16.0/35
+                    - tooltip "Evidence Strength How strong the underlying study design and outcome signal are. Randomized trials and rigorous syntheses usually score higher than weaker or less directly actionable evidence. Higher means the study is more decision-useful, not just more interesting.":
+                      - generic: Evidence Strength
+                      - paragraph: How strong the underlying study design and outcome signal are. Randomized trials and rigorous syntheses usually score higher than weaker or less directly actionable evidence.
+                      - paragraph: Higher means the study is more decision-useful, not just more interesting.
+                  - generic "Dataset Robustness explanation" [ref=e247]:
+                    - generic [ref=e248]:
+                      - generic [ref=e249]: DATASET ROBUSTNESS
+                      - generic [ref=e250]: 15.0/25
+                    - tooltip "Dataset Robustness How complete and dependable the structured dataset is for this record. It reflects whether the system has enough clean metadata to classify the study safely. Higher means less missing or ambiguous structure, so the ranking is standing on firmer ground.":
+                      - generic: Dataset Robustness
+                      - paragraph: How complete and dependable the structured dataset is for this record. It reflects whether the system has enough clean metadata to classify the study safely.
+                      - paragraph: Higher means less missing or ambiguous structure, so the ranking is standing on firmer ground.
+                  - generic "Source Credibility explanation" [ref=e253]:
+                    - generic [ref=e254]:
+                      - generic [ref=e255]: SOURCE CREDIBILITY
+                      - generic [ref=e256]: 12.0/25
+                    - tooltip "Source Credibility How trustworthy the publication source appears in context, based on the journal and the type of evidence channel the study came through. Higher means the source is treated as more reliable for clinical triage.":
+                      - generic: Source Credibility
+                      - paragraph: How trustworthy the publication source appears in context, based on the journal and the type of evidence channel the study came through.
+                      - paragraph: Higher means the source is treated as more reliable for clinical triage.
+                  - generic "Recency explanation" [ref=e259]:
+                    - generic [ref=e260]:
+                      - generic [ref=e261]: RECENCY
+                      - generic [ref=e262]: 10.0/15
+                    - tooltip "Recency How recent the publication is. Newer studies score higher because the tool prefers evidence that is less likely to be outdated. Higher means the evidence is more current, not automatically more correct.":
+                      - generic: Recency
+                      - paragraph: How recent the publication is. Newer studies score higher because the tool prefers evidence that is less likely to be outdated.
+                      - paragraph: Higher means the evidence is more current, not automatically more correct.
+          - button "Expand Dataset" [ref=e265] [cursor=pointer]:
+            - text: Expand Dataset
+            - img [ref=e266]
+        - generic [ref=e268]:
+          - generic [ref=e269]:
+            - heading "Manual Review Required" [level=3] [ref=e270]
+            - generic [ref=e273]: Review Queue
+          - generic [ref=e274]: These studies may still matter clinically, but the structured source metadata does not let us confirm the study type with enough confidence. We keep them visible for clinician review and exclude them from the primary ERS ranking. When a matched topic is explicitly do-not-recommend, we surface that separately as a potential conflict rather than claiming a hard conflict verdict.
+          - generic [ref=e277]:
+            - generic [ref=e278] [cursor=pointer]:
+              - generic [ref=e279]:
+                - img [ref=e281]
+                - generic [ref=e285]: Manual Review
+              - generic [ref=e286]:
+                - generic [ref=e287]:
+                  - heading "Real-world NSCLC cohort with incomplete study-type metadata" [level=3] [ref=e288]
+                  - generic [ref=e289]:
+                    - img [ref=e290]
+                    - text: Manual Review Required
+                - generic [ref=e294]:
+                  - generic [ref=e295]:
+                    - img [ref=e296]
+                    - text: PubMed source (2025)
+                  - generic [ref=e298]: Study type not confirmed
+                - generic [ref=e300]:
+                  - img [ref=e301]
+                  - text: No Clear Guideline Match
+              - button [ref=e303]:
+                - img [ref=e304]
+            - generic [ref=e307]:
+              - generic [ref=e308]:
+                - heading "Why manual review?" [level=4] [ref=e309]
+                - paragraph [ref=e310]: Evidence type could not be reliably determined from structured source metadata. This item is shown for clinician review only and is excluded from the primary ERS ranking.
+                - generic [ref=e311]:
+                  - heading "How the system treats this item" [level=4] [ref=e312]
+                  - paragraph [ref=e313]: This study stays visible for clinician review, but it is excluded from the primary ERS ranking until the evidence type is confirmed.
+                - generic [ref=e314]:
+                  - heading "Citations" [level=4] [ref=e315]
+                  - list [ref=e316]:
+                    - listitem [ref=e317]:
+                      - img [ref=e318]
+                      - generic [ref=e320]: Abstract preview not available. (2025)
+                - link "View Source on PubMed" [ref=e321] [cursor=pointer]:
+                  - /url: https://pubmed.ncbi.nlm.nih.gov/10004/
+                  - text: View Source on PubMed
+                  - img [ref=e322]
+              - generic [ref=e326]:
+                - heading "Review Flags" [level=4] [ref=e327]
+                - generic [ref=e328]:
+                  - generic [ref=e329]: Manual review required
+                  - generic [ref=e330]: "Reason: evidence type unspecified"
+                  - generic [ref=e331]: "Rank impact: excluded from scored evidence list"
+        - generic [ref=e333]:
+          - generic [ref=e334]:
+            - generic [ref=e335]:
+              - heading "Guideline Stance Matrix" [level=3] [ref=e336]
+              - paragraph [ref=e337]: ESMO 2023 Correlation
+            - button "Export Mapping" [ref=e338] [cursor=pointer]
+          - table [ref=e340]:
+            - rowgroup [ref=e341]:
+              - row "Guideline Topic Official Stance Current Evidence Safety Risk" [ref=e342]:
+                - columnheader "Guideline Topic" [ref=e343]
+                - columnheader "Official Stance" [ref=e344]
+                - columnheader "Current Evidence" [ref=e345]
+                - columnheader "Safety Risk" [ref=e346]
+            - rowgroup [ref=e347]:
+              - 'row "Metastatic NSCLC, driver-negative, PD-L1 >=50: first systemic therapy evidence Recommended 1 Studies Low (0.0)" [ref=e348]':
+                - 'cell "Metastatic NSCLC, driver-negative, PD-L1 >=50: first systemic therapy evidence" [ref=e349]'
+                - cell "Recommended" [ref=e350]
+                - cell "1 Studies" [ref=e351]
+                - cell "Low (0.0)" [ref=e352]
+  - contentinfo [ref=e353]:
+    - generic [ref=e354]:
+      - generic [ref=e357]: System Integrity Verified
+      - generic [ref=e358]:
+        - text: "Project: NSCLC Treatment Navigator"
+        - text: "Team 3: BUNDYRA, WIDMER, ESPELAND, LEŚNIEWSKI, RIEKEN, THEIS."
+      - generic [ref=e359]:
+        - button "API Docs" [ref=e360] [cursor=pointer]
+        - button "Logs" [ref=e361] [cursor=pointer]
+        - button "ESMO V2024" [ref=e362] [cursor=pointer]
+      - generic [ref=e364]:
+        - generic [ref=e365]: Product v0.3.57
+        - generic [ref=e366]: UI v0.3.54
+        - generic [ref=e367]: API voffline
+        - generic [ref=e368]: supabase-rulesets-rls-v1
+  - alert [ref=e369]

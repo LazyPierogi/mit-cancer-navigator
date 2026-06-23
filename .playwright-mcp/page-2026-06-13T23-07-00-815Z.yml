@@ -1,0 +1,134 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "NSCLC Navigator Deterministic Evidence Engine" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+        - generic [ref=e9]:
+          - heading "NSCLC Navigator" [level=1] [ref=e10]
+          - paragraph [ref=e11]: Deterministic Evidence Engine
+      - navigation [ref=e12]:
+        - link "Navigator" [ref=e13] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e14]:
+            - img [ref=e15]
+            - text: Navigator
+        - link "Labs" [ref=e23] [cursor=pointer]:
+          - /url: /labs
+          - generic [ref=e24]:
+            - img [ref=e25]
+            - text: Labs
+        - link "About" [ref=e30] [cursor=pointer]:
+          - /url: /about
+          - generic [ref=e31]:
+            - img [ref=e32]
+            - text: About
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - paragraph [ref=e38]: MIT User
+          - paragraph [ref=e39]: MIT Student Class
+        - generic [ref=e40]: MIT
+  - main [ref=e41]:
+    - generic [ref=e42]:
+      - complementary [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - heading "Patient Profile" [level=2] [ref=e46]:
+              - img [ref=e47]
+              - text: Patient Profile
+            - img [ref=e51]
+          - generic [ref=e54]:
+            - generic [ref=e55]: Navigator Presets
+            - generic [ref=e56]:
+              - button "MR. WAYNE Metastatic adeno · 1L · PD-L1-high · pan-driver negative" [ref=e57] [cursor=pointer]:
+                - generic [ref=e58]: MR. WAYNE
+                - generic [ref=e59]: Metastatic adeno · 1L · PD-L1-high · pan-driver negative
+              - button "MR. STARK Locally advanced squamous · post-CRT consolidation" [ref=e60] [cursor=pointer]:
+                - generic [ref=e61]: MR. STARK
+                - generic [ref=e62]: Locally advanced squamous · post-CRT consolidation
+              - button "MRS. DOUBTFIRE Early adeno · resected · adjuvant EGFR-positive" [ref=e63] [cursor=pointer]:
+                - generic [ref=e64]: MRS. DOUBTFIRE
+                - generic [ref=e65]: Early adeno · resected · adjuvant EGFR-positive
+          - generic:
+            - generic:
+              - text: Disease Setting
+              - generic:
+                - button "Early"
+                - button "Locally Advanced"
+                - button "Metastatic"
+            - generic:
+              - text: Histology
+              - generic:
+                - button "Adenocarcinoma"
+                - button "Squamous Cell"
+                - button "Non Squamous"
+            - generic:
+              - text: Biomarker Profile
+              - generic:
+                - button "EGFR+"
+                - button "ALK+"
+                - button "ROS1+"
+                - button "PD-L1 ≥ 50%"
+                - button "Wild Type"
+            - generic:
+              - text: Line of Therapy
+              - generic:
+                - button "1st Line"
+                - button "2nd Line"
+                - button "Later Line"
+                - button "Adjuvant"
+                - button "Consolidation"
+          - button "Analyzing..." [disabled] [ref=e67]
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - img [ref=e71]
+            - generic [ref=e73]: "Retrieved:"
+            - generic [ref=e74]: 0 Studies
+          - generic [ref=e75]:
+            - img [ref=e76]
+            - generic [ref=e79]: "Avg ERS:"
+            - generic [ref=e80]: "0.0"
+          - generic [ref=e81]:
+            - img [ref=e82]
+            - generic [ref=e85]: "Aligned:"
+            - generic [ref=e86]: "0"
+          - generic [ref=e87]:
+            - img [ref=e88]
+            - generic [ref=e90]: "Silent:"
+            - generic [ref=e91]: "0"
+          - generic [ref=e92]:
+            - img [ref=e93]
+            - generic [ref=e95]: "Conflict:"
+            - generic [ref=e96]: "0"
+          - generic [ref=e97]:
+            - img [ref=e98]
+            - generic [ref=e102]: "Manual Review:"
+            - generic [ref=e103]: 0 Items
+          - generic [ref=e104]:
+            - generic [ref=e105]: Sorted By
+            - combobox [ref=e106] [cursor=pointer]:
+              - option "ALIGNMENT" [selected]
+              - option "RECENCY"
+              - option "ERS SCORE (DESC)"
+        - generic [ref=e108]:
+          - heading "Targeted Evidence Cluster" [level=3] [ref=e109]
+          - button "Clear" [disabled] [ref=e111]:
+            - img [ref=e112]
+            - generic [ref=e115]: Clear
+  - contentinfo [ref=e116]:
+    - generic [ref=e117]:
+      - generic [ref=e120]: System Integrity Verified
+      - generic [ref=e121]:
+        - text: "Project: NSCLC Treatment Navigator"
+        - text: "Team 3: BUNDYRA, WIDMER, ESPELAND, LEŚNIEWSKI, RIEKEN, THEIS."
+      - generic [ref=e122]:
+        - button "API Docs" [ref=e123] [cursor=pointer]
+        - button "Logs" [ref=e124] [cursor=pointer]
+        - button "ESMO V2024" [ref=e125] [cursor=pointer]
+      - generic [ref=e127]:
+        - generic [ref=e128]: Product v0.3.57
+        - generic [ref=e129]: UI v0.3.54
+        - generic [ref=e130]: API checking
+        - generic [ref=e131]: supabase-rulesets-rls-v1
+  - alert [ref=e132]
